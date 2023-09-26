@@ -1,0 +1,69 @@
+# Archivos de compilación y ejecución
+bin/
+obj/
+
+# Carpetas y archivos generados por Visual Studio
+.vscode/
+.vs/
+*.suo
+*.user
+*.sln.docstates
+
+# Archivos de usuario y configuración local
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+*.userprefs
+
+# Carpetas de paquetes NuGet
+packages/
+
+# Archivos de salida de compilación
+[Tt]est[Rr]esult*/
+[Bb]in/
+[Oo]bj/
+*.dll
+*.exe
+*.pdb
+*.log
+*.config
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+
+# Carpeta de caché de ReSharper
+_ReSharper*
+
+# Carpeta de análisis de código de SonarQube
+.sonarqube/
+
+# Carpeta de análisis de código de Roslyn
+roslyn-analyzers/
+
+# Carpeta de registro de errores de Visual Studio
+*.log
+
+# Archivos de configuración de usuario de Visual Studio
+*.suo
+*.user
+*.userosscache
+
+# Carpeta de caché de Rider
+.idea/
+
+# Carpeta de caché de Visual Studio Code
+.vscode/
+
+# Carpeta de caché de Rider
+.idea/
+
+# Carpeta de caché de Rider para Unity
+.idea_caches/
+
+# Carpeta de caché de Rider para Rider
+.idea_codeStyles/
+
+# Archivos comprimidos
+*.zip
+*.rar
