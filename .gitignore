@@ -7,13 +7,13 @@ obj/
 .vs/
 *.suo
 *.user
-*.sln.docstates
+
 
 # Archivos de usuario y configuración local
 *.user
 *.userosscache
 *.suo
-*.sln.docstates
+
 *.userprefs
 
 # Carpetas de paquetes NuGet
