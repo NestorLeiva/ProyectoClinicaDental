@@ -65,6 +65,6 @@ roslyn-analyzers/
 .idea_codeStyles/
 
 # Archivos Varios
-/docs/
+
 *.zip
 *.rar
