@@ -64,6 +64,7 @@ roslyn-analyzers/
 # Carpeta de caché de Rider para Rider
 .idea_codeStyles/
 
-# Archivos comprimidos
+# Archivos Varios
+/docs/
 *.zip
 *.rar
