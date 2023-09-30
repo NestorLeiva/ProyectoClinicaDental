@@ -1,9 +1,12 @@
 
-Proyecto #1 
+Proyecto # 1 
               Clinica Dental Happy Teeth
 
 IDE utilizado:	
               Visual Studio Comunity 2022
+
+Framework:
+              4.7.2
               
 Aprendizaje del proyecto:
               Trabajar con ficheros "XML"
