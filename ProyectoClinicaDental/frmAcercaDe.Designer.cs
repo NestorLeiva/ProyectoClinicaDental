@@ -205,7 +205,7 @@
             Controls.Add(lblTitulo);
             Controls.Add(pbLogo);
             Name = "frmAcercaDe";
-            Text = "frmAcercaDe";
+            Text = "AcercaDe";
             ((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
             ResumeLayout(false);
         }
