@@ -2,7 +2,7 @@
 # _<strong>Clinica Dental Happy Teeth</strong>_
               
 
- IDE utilizado: <br> _*Visual Studio Comunity 2022*_
+ IDE utilizado: <br> _<strong>Visual Studio Comunity 2022_</strong>
               
 
  Framework: <br> _.NET 6_
