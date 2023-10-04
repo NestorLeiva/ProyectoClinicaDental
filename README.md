@@ -1,23 +1,23 @@
 ## Proyecto # 1:  <br>
-# <strong>Clinica Dental Happy Teeth</strong> 
+# _<strong>Clinica Dental Happy Teeth</strong>_
               
 
-## IDE utilizado: <br> Visual Studio Comunity 2022
+ IDE utilizado: <br> Visual Studio Comunity 2022
               
 
-## Framework: <br> .NET 6
+ Framework: <br> .NET 6
              
               
-## Aprendizaje del proyecto: <br> Trabajar con ficheros "XML":  Leer, Escribir, Borrar
+ Aprendizaje del proyecto: <br> Trabajar con ficheros "XML":  Leer, Escribir, Borrar
               
 
-## Institucion: <br> Colegio Universitario de Cartago
+ Institucion: <br> Colegio Universitario de Cartago
               
 
-## Profesor: <br> Roger Rodrigez López 
+ Profesor: <br> Roger Rodrigez López 
               
 
-## Curso: <br> TI-131 Programación II 3C2023
+ Curso: <br> TI-131 Programación II 3C2023
               
 
 
