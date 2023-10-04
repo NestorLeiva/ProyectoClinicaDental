@@ -1,5 +1,5 @@
  _Proyecto # 1:_  <br>
-# _<strong>Clinica Dental Happy Teeth</strong>_
+# _<strong>Clinica Dental Infantil Happy Teeth</strong>_
               
 
  IDE utilizado: <br> _<strong>Visual Studio Comunity 2022_</strong>
