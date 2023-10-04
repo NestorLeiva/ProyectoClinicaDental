@@ -1,8 +1,8 @@
-## Proyecto # 1:  <br>
+ _Proyecto # 1:_  <br>
 # _<strong>Clinica Dental Happy Teeth</strong>_
               
 
- IDE utilizado: <br> _Visual Studio Comunity 2022_
+ IDE utilizado: <br> _*Visual Studio Comunity 2022*_
               
 
  Framework: <br> _.NET 6_
