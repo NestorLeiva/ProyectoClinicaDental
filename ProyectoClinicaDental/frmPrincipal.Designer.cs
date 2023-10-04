@@ -30,6 +30,11 @@
         {
             menuStrip1 = new MenuStrip();
             archivoToolStripMenuItem = new ToolStripMenuItem();
+            mnLogin = new ToolStripMenuItem();
+            mnRegistroPacientes = new ToolStripMenuItem();
+            mnMantenimientoServicios = new ToolStripMenuItem();
+            mnConsultaHistorial = new ToolStripMenuItem();
+            mnVentas = new ToolStripMenuItem();
             mnAcercaDe = new ToolStripMenuItem();
             mnSalir = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
@@ -46,9 +51,45 @@
             // 
             // archivoToolStripMenuItem
             // 
+            archivoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mnLogin, mnRegistroPacientes, mnMantenimientoServicios, mnConsultaHistorial, mnVentas });
             archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             archivoToolStripMenuItem.Size = new Size(60, 20);
             archivoToolStripMenuItem.Text = "Archivo";
+            // 
+            // mnLogin
+            // 
+            mnLogin.Name = "mnLogin";
+            mnLogin.Size = new Size(281, 22);
+            mnLogin.Text = "Inicio Sesion";
+            mnLogin.Click += mnLogin_Click;
+            // 
+            // mnRegistroPacientes
+            // 
+            mnRegistroPacientes.Name = "mnRegistroPacientes";
+            mnRegistroPacientes.Size = new Size(281, 22);
+            mnRegistroPacientes.Text = "Registro Pacientes";
+            mnRegistroPacientes.Click += mnRegistroPacientes_Click;
+            // 
+            // mnMantenimientoServicios
+            // 
+            mnMantenimientoServicios.Name = "mnMantenimientoServicios";
+            mnMantenimientoServicios.Size = new Size(281, 22);
+            mnMantenimientoServicios.Text = "Mantenimiento Servicios Clinica Dental";
+            mnMantenimientoServicios.Click += mnMantenimientoServicios_Click;
+            // 
+            // mnConsultaHistorial
+            // 
+            mnConsultaHistorial.Name = "mnConsultaHistorial";
+            mnConsultaHistorial.Size = new Size(281, 22);
+            mnConsultaHistorial.Text = "Consulta Historial Pacientes";
+            mnConsultaHistorial.Click += mnConsultaHistorial_Click;
+            // 
+            // mnVentas
+            // 
+            mnVentas.Name = "mnVentas";
+            mnVentas.Size = new Size(281, 22);
+            mnVentas.Text = "Ventas";
+            mnVentas.Click += mnVentas_Click;
             // 
             // mnAcercaDe
             // 
@@ -86,5 +127,10 @@
         private ToolStripMenuItem archivoToolStripMenuItem;
         private ToolStripMenuItem mnAcercaDe;
         private ToolStripMenuItem mnSalir;
+        private ToolStripMenuItem mnVentas;
+        private ToolStripMenuItem mnRegistroPacientes;
+        private ToolStripMenuItem mnMantenimientoServicios;
+        private ToolStripMenuItem mnConsultaHistorial;
+        private ToolStripMenuItem mnLogin;
     }
 }
