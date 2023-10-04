@@ -5,19 +5,19 @@
  IDE utilizado: <br> _<strong>Visual Studio Comunity 2022_</strong>
               
 
- Framework: <br> _.NET 6_
+ Framework: <br> _<strong>.NET 6_</trong>
              
               
- Aprendizaje del proyecto: <br> _Trabajar con ficheros "XML":  Leer, Escribir, Borrar_
+ Aprendizaje del proyecto: <br> _<strong>Trabajar con ficheros "XML":  Leer, Escribir, Borrar_</strong>
               
 
- Institucion: <br> _Colegio Universitario de Cartago_
+ Institucion: <br> _<strong>Colegio Universitario de Cartago_</strong>
               
 
- Profesor: <br> _Roger Rodrigez López_
+ Profesor: <br> _<strong>Roger Rodrigez López_</strong>
               
 
- Curso: <br> _TI-131 Programación II 3C2023_
+ Curso: <br> _<strong>TI-131 Programación II 3C2023_</strong>
               
 
 
