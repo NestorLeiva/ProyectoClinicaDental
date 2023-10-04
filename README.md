@@ -1,4 +1,4 @@
-Proyecto # 1:  <br>
+## Proyecto # 1:  <br>
 # <strong>Clinica Dental Happy Teeth</strong> 
               
 
