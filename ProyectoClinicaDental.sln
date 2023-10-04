@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoClinicaDental", "ProyectoClinicaDental\ProyectoClinicaDental.csproj", "{4BCFC003-DFD9-4BAD-AD51-067CE3082014}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoClinicaDental", "ProyectoClinicaDental\ProyectoClinicaDental.csproj", "{3CB7C046-6C6F-4AE0-8C52-6CAA45A78809}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4BCFC003-DFD9-4BAD-AD51-067CE3082014}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4BCFC003-DFD9-4BAD-AD51-067CE3082014}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4BCFC003-DFD9-4BAD-AD51-067CE3082014}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4BCFC003-DFD9-4BAD-AD51-067CE3082014}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CB7C046-6C6F-4AE0-8C52-6CAA45A78809}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CB7C046-6C6F-4AE0-8C52-6CAA45A78809}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CB7C046-6C6F-4AE0-8C52-6CAA45A78809}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CB7C046-6C6F-4AE0-8C52-6CAA45A78809}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {48A741BC-B0D7-4B8B-BFBE-7AE5C9BB7D17}
+		SolutionGuid = {E76F161C-A913-4B6A-BB4B-925A762C9641}
 	EndGlobalSection
 EndGlobal
