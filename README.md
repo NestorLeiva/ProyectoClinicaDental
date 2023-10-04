@@ -1,5 +1,5 @@
 Proyecto # 1:  <br>
-#<strong>Clinica Dental Happy Teeth</strong> 
+# <strong>Clinica Dental Happy Teeth</strong> 
               
 
 IDE utilizado: <br> Visual Studio Comunity 2022
