@@ -6,10 +6,10 @@ IDE utilizado:
               Visual Studio Comunity 2022
 
 Framework:
-              4.7.2
+              .NET 6
               
 Aprendizaje del proyecto:
-              Trabajar con ficheros "XML"
+              Trabajar con ficheros "XML":  Leer, Escribir, Borrar
 
 Institucion:
               Colegio Universitario de Cartago
