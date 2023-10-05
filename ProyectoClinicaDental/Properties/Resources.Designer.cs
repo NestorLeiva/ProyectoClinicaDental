@@ -59,5 +59,15 @@ namespace ProyectoClinicaDental.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logoClinica {
+            get {
+                object obj = ResourceManager.GetObject("logoClinica", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -16,5 +16,18 @@ namespace ProyectoClinicaDental
         {
             InitializeComponent();
         }
+
+        private void pbLogo_Click(object sender, EventArgs e)
+        {
+           // pbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
+           // pbLogo.Image = Image.FromFile(@"/ProyectoClinicaDental/ProyectoClinicaDental/img/logoClinica.png");
+
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtUsuario.Text = "";
+            txtContrasenia.Text = "";
+        }
     }
 }

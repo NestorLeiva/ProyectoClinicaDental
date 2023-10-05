@@ -115,6 +115,7 @@
             MainMenuStrip = menuStrip1;
             Name = "frmPrincipal";
             Text = "Clinica Dental Infantil Happy Teeth";
+            Load += frmPrincipal_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
