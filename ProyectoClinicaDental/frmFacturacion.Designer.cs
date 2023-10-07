@@ -1,6 +1,6 @@
 ﻿namespace ProyectoClinicaDental
 {
-    partial class frmVentas
+    partial class frmFacturacion
     {
         /// <summary>
         /// Required designer variable.
