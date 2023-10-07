@@ -32,12 +32,13 @@
             archivoToolStripMenuItem = new ToolStripMenuItem();
             mnLogin = new ToolStripMenuItem();
             mnRegistroPacientes = new ToolStripMenuItem();
+            registroNuevosFuncionariosToolStripMenuItem = new ToolStripMenuItem();
             mnMantenimientoServicios = new ToolStripMenuItem();
             mnConsultaHistorial = new ToolStripMenuItem();
             mnVentas = new ToolStripMenuItem();
             mnAcercaDe = new ToolStripMenuItem();
             mnSalir = new ToolStripMenuItem();
-            registroNuevosFuncionariosToolStripMenuItem = new ToolStripMenuItem();
+            reporteDeVentasToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -52,7 +53,7 @@
             // 
             // archivoToolStripMenuItem
             // 
-            archivoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mnLogin, mnRegistroPacientes, registroNuevosFuncionariosToolStripMenuItem, mnMantenimientoServicios, mnConsultaHistorial, mnVentas });
+            archivoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mnLogin, mnRegistroPacientes, registroNuevosFuncionariosToolStripMenuItem, mnMantenimientoServicios, mnConsultaHistorial, mnVentas, reporteDeVentasToolStripMenuItem });
             archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             archivoToolStripMenuItem.Size = new Size(60, 20);
             archivoToolStripMenuItem.Text = "Archivo";
@@ -70,6 +71,13 @@
             mnRegistroPacientes.Size = new Size(281, 22);
             mnRegistroPacientes.Text = "Registro Pacientes";
             mnRegistroPacientes.Click += mnRegistroPacientes_Click;
+            // 
+            // registroNuevosFuncionariosToolStripMenuItem
+            // 
+            registroNuevosFuncionariosToolStripMenuItem.Name = "registroNuevosFuncionariosToolStripMenuItem";
+            registroNuevosFuncionariosToolStripMenuItem.Size = new Size(281, 22);
+            registroNuevosFuncionariosToolStripMenuItem.Text = "Registro Funcionarios";
+            registroNuevosFuncionariosToolStripMenuItem.Click += registroNuevosFuncionariosToolStripMenuItem_Click;
             // 
             // mnMantenimientoServicios
             // 
@@ -106,12 +114,12 @@
             mnSalir.Text = "Salir";
             mnSalir.Click += mnSalir_Click;
             // 
-            // registroNuevosFuncionariosToolStripMenuItem
+            // reporteDeVentasToolStripMenuItem
             // 
-            registroNuevosFuncionariosToolStripMenuItem.Name = "registroNuevosFuncionariosToolStripMenuItem";
-            registroNuevosFuncionariosToolStripMenuItem.Size = new Size(281, 22);
-            registroNuevosFuncionariosToolStripMenuItem.Text = "Registro Funcionarios";
-            registroNuevosFuncionariosToolStripMenuItem.Click += registroNuevosFuncionariosToolStripMenuItem_Click;
+            reporteDeVentasToolStripMenuItem.Name = "reporteDeVentasToolStripMenuItem";
+            reporteDeVentasToolStripMenuItem.Size = new Size(281, 22);
+            reporteDeVentasToolStripMenuItem.Text = "Reporte de Ventas";
+            reporteDeVentasToolStripMenuItem.Click += reporteDeVentasToolStripMenuItem_Click;
             // 
             // frmPrincipal
             // 
@@ -142,5 +150,6 @@
         private ToolStripMenuItem mnConsultaHistorial;
         private ToolStripMenuItem mnLogin;
         private ToolStripMenuItem registroNuevosFuncionariosToolStripMenuItem;
+        private ToolStripMenuItem reporteDeVentasToolStripMenuItem;
     }
 }

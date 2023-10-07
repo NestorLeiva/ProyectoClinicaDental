@@ -59,6 +59,14 @@ namespace ProyectoClinicaDental
             this.cargarPantalla(ventanaFuncionarios);
         }
 
+        private void reporteDeVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporteVentas ventanaReporte = new frmReporteVentas();
+            this.cargarPantalla(ventanaReporte);
+        }
+
+
+
         private void cargarPantalla(Form pantalla)
         {
             pantalla.MdiParent = this;
@@ -67,6 +75,6 @@ namespace ProyectoClinicaDental
 
         }
 
- 
+
     }
 }
