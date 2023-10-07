@@ -7,6 +7,11 @@ namespace ProyectoClinicaDental
             InitializeComponent();
         }
 
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void mnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -20,8 +25,8 @@ namespace ProyectoClinicaDental
 
         private void mnVentas_Click(object sender, EventArgs e)
         {
-            frmVentas ventanaVenta = new frmVentas();
-            this.cargarPantalla(ventanaVenta);
+            frmFacturacion ventanaFactura = new frmFacturacion();
+            this.cargarPantalla(ventanaFactura);
         }
 
         private void mnLogin_Click(object sender, EventArgs e)
@@ -48,16 +53,20 @@ namespace ProyectoClinicaDental
             this.cargarPantalla(ventantaConsultaHistorial);
         }
 
-        private void frmPrincipal_Load(object sender, EventArgs e)
+        private void registroNuevosFuncionariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmFuncionarios ventanaFuncionarios = new frmFuncionarios();
+            this.cargarPantalla(ventanaFuncionarios);
         }
-        private void cargarPantalla(Form pantalla) 
-        { 
+
+        private void cargarPantalla(Form pantalla)
+        {
             pantalla.MdiParent = this;
             pantalla.BackColor = BackColor;
             pantalla.Show();
 
         }
+
+ 
     }
 }

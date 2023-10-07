@@ -37,6 +37,7 @@
             mnVentas = new ToolStripMenuItem();
             mnAcercaDe = new ToolStripMenuItem();
             mnSalir = new ToolStripMenuItem();
+            registroNuevosFuncionariosToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -51,7 +52,7 @@
             // 
             // archivoToolStripMenuItem
             // 
-            archivoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mnLogin, mnRegistroPacientes, mnMantenimientoServicios, mnConsultaHistorial, mnVentas });
+            archivoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mnLogin, mnRegistroPacientes, registroNuevosFuncionariosToolStripMenuItem, mnMantenimientoServicios, mnConsultaHistorial, mnVentas });
             archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             archivoToolStripMenuItem.Size = new Size(60, 20);
             archivoToolStripMenuItem.Text = "Archivo";
@@ -88,7 +89,7 @@
             // 
             mnVentas.Name = "mnVentas";
             mnVentas.Size = new Size(281, 22);
-            mnVentas.Text = "Ventas";
+            mnVentas.Text = "Facturacion";
             mnVentas.Click += mnVentas_Click;
             // 
             // mnAcercaDe
@@ -104,6 +105,13 @@
             mnSalir.Size = new Size(41, 20);
             mnSalir.Text = "Salir";
             mnSalir.Click += mnSalir_Click;
+            // 
+            // registroNuevosFuncionariosToolStripMenuItem
+            // 
+            registroNuevosFuncionariosToolStripMenuItem.Name = "registroNuevosFuncionariosToolStripMenuItem";
+            registroNuevosFuncionariosToolStripMenuItem.Size = new Size(281, 22);
+            registroNuevosFuncionariosToolStripMenuItem.Text = "Registro Funcionarios";
+            registroNuevosFuncionariosToolStripMenuItem.Click += registroNuevosFuncionariosToolStripMenuItem_Click;
             // 
             // frmPrincipal
             // 
@@ -133,5 +141,6 @@
         private ToolStripMenuItem mnMantenimientoServicios;
         private ToolStripMenuItem mnConsultaHistorial;
         private ToolStripMenuItem mnLogin;
+        private ToolStripMenuItem registroNuevosFuncionariosToolStripMenuItem;
     }
 }
