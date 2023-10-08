@@ -1,6 +1,7 @@
 # Archivos de compilación y ejecución
 bin/
 obj/
+Datos/
 
 # Carpetas y archivos generados por Visual Studio
 .vscode/
