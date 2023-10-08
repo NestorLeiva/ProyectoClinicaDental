@@ -82,7 +82,7 @@
             // pbLogo
             // 
             pbLogo.Image = Properties.Resources.logoClinica;
-            pbLogo.Location = new Point(12, 12);
+            pbLogo.Location = new Point(22, 12);
             pbLogo.Name = "pbLogo";
             pbLogo.Size = new Size(125, 136);
             pbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -91,10 +91,10 @@
             // 
             // lblTitulo
             // 
-            lblTitulo.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTitulo.Location = new Point(244, 19);
+            lblTitulo.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTitulo.Location = new Point(193, 12);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(268, 34);
+            lblTitulo.Size = new Size(348, 96);
             lblTitulo.TabIndex = 1;
             lblTitulo.Text = "Registro de Pacientes ";
             lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
