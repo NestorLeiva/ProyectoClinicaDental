@@ -37,8 +37,8 @@ namespace ProyectoClinicaDental
 
         private void mnRegistroPacientes_Click(object sender, EventArgs e)
         {
-            frmRegistroPacientes ventanaRegistroPacientes = new frmRegistroPacientes();
-            this.cargarPantalla(ventanaRegistroPacientes);
+            frmPacientes ventanaPacientes = new frmPacientes();
+            this.cargarPantalla(ventanaPacientes);
         }
 
         private void mnMantenimientoServicios_Click(object sender, EventArgs e)
