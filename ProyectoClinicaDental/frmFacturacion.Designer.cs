@@ -41,7 +41,7 @@
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             dataGridView1 = new DataGridView();
-            btnAceptar = new Button();
+            btnPagar = new Button();
             btnCancelar = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -175,15 +175,15 @@
             dataGridView1.Size = new Size(630, 306);
             dataGridView1.TabIndex = 16;
             // 
-            // btnAceptar
+            // btnPagar
             // 
-            btnAceptar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnAceptar.Location = new Point(468, 496);
-            btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(100, 31);
-            btnAceptar.TabIndex = 17;
-            btnAceptar.Text = "Aceptar";
-            btnAceptar.UseVisualStyleBackColor = true;
+            btnPagar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnPagar.Location = new Point(468, 496);
+            btnPagar.Name = "btnPagar";
+            btnPagar.Size = new Size(100, 31);
+            btnPagar.TabIndex = 17;
+            btnPagar.Text = "Pagar";
+            btnPagar.UseVisualStyleBackColor = true;
             // 
             // btnCancelar
             // 
@@ -201,7 +201,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(712, 551);
             Controls.Add(btnCancelar);
-            Controls.Add(btnAceptar);
+            Controls.Add(btnPagar);
             Controls.Add(dataGridView1);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
@@ -237,7 +237,7 @@
         private TextBox textBox1;
         private TextBox textBox2;
         private DataGridView dataGridView1;
-        private Button btnAceptar;
+        private Button btnPagar;
         private Button btnCancelar;
     }
 }

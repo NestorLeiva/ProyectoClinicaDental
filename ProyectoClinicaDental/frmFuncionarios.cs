@@ -21,5 +21,18 @@ namespace ProyectoClinicaDental
         {
 
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtNombreFuncionario.Text = "";
+            txtApellidoFuncionario.Text = "";
+            txtIdentificacionFuncionario.Text = "";
+            lblResEdadFuncionario.Text = "";
+            txtEmailFuncionario.Text = "";
+            txtTelefonoFuncionario.Text = "";
+            txtPuestoFuncionario.Text = "";
+            txtUsuarioFuncionario.Text = "";
+            txtContraseniaFuncionario.Text = "";
+        }
     }
 }

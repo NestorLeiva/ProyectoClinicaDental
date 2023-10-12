@@ -405,7 +405,7 @@
             // cboSexo
             // 
             cboSexo.FormattingEnabled = true;
-            cboSexo.Items.AddRange(new object[] { "Seleccione", "Hombre", "Mujer" });
+            cboSexo.Items.AddRange(new object[] { "Masculino", "Femenino" });
             cboSexo.Location = new Point(169, 379);
             cboSexo.Name = "cboSexo";
             cboSexo.Size = new Size(169, 23);
@@ -431,7 +431,7 @@
             // cboSexoHijo
             // 
             cboSexoHijo.FormattingEnabled = true;
-            cboSexoHijo.Items.AddRange(new object[] { "Seleccione", "Hombre", "Mujer" });
+            cboSexoHijo.Items.AddRange(new object[] { "Masculino", "Femenino" });
             cboSexoHijo.Location = new Point(518, 382);
             cboSexoHijo.Name = "cboSexoHijo";
             cboSexoHijo.Size = new Size(169, 23);
