@@ -28,6 +28,7 @@ namespace ProyectoClinicaDental
             txtApellidoFuncionario.Text = "";
             txtIdentificacionFuncionario.Text = "";
             lblResEdadFuncionario.Text = "";
+            cboSexoFuncionario.Text = "";
             txtEmailFuncionario.Text = "";
             txtTelefonoFuncionario.Text = "";
             txtPuestoFuncionario.Text = "";
