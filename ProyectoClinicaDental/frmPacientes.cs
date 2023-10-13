@@ -16,5 +16,31 @@ namespace ProyectoClinicaDental
         {
             InitializeComponent();
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtNombrePadre.Text = "";
+            txtApellidoPadre.Text = "";
+            txtIdentificacionPadre.Text = "";
+            cboSexoPadre.Text = "";
+            lblResEdadPadre.Text = "";
+            txtTelefonoPadre.Text = "";
+            txtEmailPadre.Text = "";
+            //- ---------------------------------------------
+            txtNombreHijo.Text = "";
+            txtApellidoHijo.Text = "";
+            txtIdentificacionHijo.Text = "";
+            lblResEdadHijo.Text = "";
+            cboSexoHijo.Text = "";
+            txtTelefonoHIjo.Text = "";
+            txtEmailHijo.Text = "";
+            //- ---------------------------------------------
+            cboDireccionProvincia.Text = "";
+            txtDireccionCanton.Text = "";
+            txtDireccionDistrito.Text = "";
+            txtDieccionOtrasSenas.Text = "";
+
+
+        }
     }
 }

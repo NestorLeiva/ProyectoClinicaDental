@@ -41,7 +41,7 @@
             lblCanton = new Label();
             lblOtrasSenas = new Label();
             lblDistrito = new Label();
-            lblEdadRes = new Label();
+            lblResEdadPadre = new Label();
             lblEdad = new Label();
             lblFechaNacPadre = new Label();
             lblNombreHijo = new Label();
@@ -52,30 +52,30 @@
             lblEdadHijo = new Label();
             txtNombrePadre = new TextBox();
             txtApellidoPadre = new TextBox();
-            txtIdPadre = new TextBox();
-            textBox4 = new TextBox();
-            txtTelefono = new TextBox();
-            txtEmail = new TextBox();
+            txtIdentificacionPadre = new TextBox();
+            txtEmailHijo = new TextBox();
+            txtTelefonoPadre = new TextBox();
+            txtEmailPadre = new TextBox();
             txtDireccionCanton = new TextBox();
-            textBox10 = new TextBox();
+            txtNombreHijo = new TextBox();
             txtDieccionOtrasSenas = new TextBox();
             txtDireccionDistrito = new TextBox();
-            textBox7 = new TextBox();
+            txtTelefonoHIjo = new TextBox();
             dtpFechaNac = new DateTimePicker();
-            cboSexo = new ComboBox();
+            cboSexoPadre = new ComboBox();
             dateTimePicker1 = new DateTimePicker();
-            label1 = new Label();
+            lblResEdadHijo = new Label();
             cboSexoHijo = new ComboBox();
             lblTelefonoHijo = new Label();
             lblEmailHijo = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtApellidoHijo = new TextBox();
+            txtIdentificacionHijo = new TextBox();
             btnGuardar = new Button();
             btnLimpiar = new Button();
             btnCancelar = new Button();
             lblDatosPadre = new Label();
             lblTituloHijo = new Label();
-            cboProvinciaPaciente = new ComboBox();
+            cboDireccionProvincia = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             SuspendLayout();
             // 
@@ -209,15 +209,15 @@
             lblDistrito.Text = "Distrito";
             lblDistrito.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // lblEdadRes
+            // lblResEdadPadre
             // 
-            lblEdadRes.BackColor = SystemColors.ActiveBorder;
-            lblEdadRes.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblEdadRes.Location = new Point(169, 335);
-            lblEdadRes.Name = "lblEdadRes";
-            lblEdadRes.Size = new Size(169, 29);
-            lblEdadRes.TabIndex = 13;
-            lblEdadRes.TextAlign = ContentAlignment.MiddleCenter;
+            lblResEdadPadre.BackColor = SystemColors.ActiveBorder;
+            lblResEdadPadre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblResEdadPadre.Location = new Point(169, 335);
+            lblResEdadPadre.Name = "lblResEdadPadre";
+            lblResEdadPadre.Size = new Size(169, 29);
+            lblResEdadPadre.TabIndex = 13;
+            lblResEdadPadre.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblEdad
             // 
@@ -315,37 +315,37 @@
             txtApellidoPadre.Size = new Size(169, 29);
             txtApellidoPadre.TabIndex = 24;
             // 
-            // txtIdPadre
+            // txtIdentificacionPadre
             // 
-            txtIdPadre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtIdPadre.Location = new Point(169, 268);
-            txtIdPadre.Name = "txtIdPadre";
-            txtIdPadre.Size = new Size(169, 29);
-            txtIdPadre.TabIndex = 25;
+            txtIdentificacionPadre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtIdentificacionPadre.Location = new Point(169, 268);
+            txtIdentificacionPadre.Name = "txtIdentificacionPadre";
+            txtIdentificacionPadre.Size = new Size(169, 29);
+            txtIdentificacionPadre.TabIndex = 25;
             // 
-            // textBox4
+            // txtEmailHijo
             // 
-            textBox4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox4.Location = new Point(518, 443);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(169, 29);
-            textBox4.TabIndex = 26;
+            txtEmailHijo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEmailHijo.Location = new Point(518, 443);
+            txtEmailHijo.Name = "txtEmailHijo";
+            txtEmailHijo.Size = new Size(169, 29);
+            txtEmailHijo.TabIndex = 26;
             // 
-            // txtTelefono
+            // txtTelefonoPadre
             // 
-            txtTelefono.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtTelefono.Location = new Point(169, 408);
-            txtTelefono.Name = "txtTelefono";
-            txtTelefono.Size = new Size(169, 29);
-            txtTelefono.TabIndex = 27;
+            txtTelefonoPadre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTelefonoPadre.Location = new Point(169, 408);
+            txtTelefonoPadre.Name = "txtTelefonoPadre";
+            txtTelefonoPadre.Size = new Size(169, 29);
+            txtTelefonoPadre.TabIndex = 27;
             // 
-            // txtEmail
+            // txtEmailPadre
             // 
-            txtEmail.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtEmail.Location = new Point(169, 443);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(169, 29);
-            txtEmail.TabIndex = 28;
+            txtEmailPadre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEmailPadre.Location = new Point(169, 443);
+            txtEmailPadre.Name = "txtEmailPadre";
+            txtEmailPadre.Size = new Size(169, 29);
+            txtEmailPadre.TabIndex = 28;
             // 
             // txtDireccionCanton
             // 
@@ -355,13 +355,13 @@
             txtDireccionCanton.Size = new Size(518, 29);
             txtDireccionCanton.TabIndex = 31;
             // 
-            // textBox10
+            // txtNombreHijo
             // 
-            textBox10.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox10.Location = new Point(518, 198);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(169, 29);
-            textBox10.TabIndex = 32;
+            txtNombreHijo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNombreHijo.Location = new Point(518, 198);
+            txtNombreHijo.Name = "txtNombreHijo";
+            txtNombreHijo.Size = new Size(169, 29);
+            txtNombreHijo.TabIndex = 32;
             // 
             // txtDieccionOtrasSenas
             // 
@@ -379,13 +379,13 @@
             txtDireccionDistrito.Size = new Size(518, 29);
             txtDireccionDistrito.TabIndex = 34;
             // 
-            // textBox7
+            // txtTelefonoHIjo
             // 
-            textBox7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox7.Location = new Point(518, 408);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(169, 29);
-            textBox7.TabIndex = 35;
+            txtTelefonoHIjo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTelefonoHIjo.Location = new Point(518, 408);
+            txtTelefonoHIjo.Name = "txtTelefonoHIjo";
+            txtTelefonoHIjo.Size = new Size(169, 29);
+            txtTelefonoHIjo.TabIndex = 35;
             // 
             // dtpFechaNac
             // 
@@ -394,14 +394,14 @@
             dtpFechaNac.Size = new Size(169, 23);
             dtpFechaNac.TabIndex = 36;
             // 
-            // cboSexo
+            // cboSexoPadre
             // 
-            cboSexo.FormattingEnabled = true;
-            cboSexo.Items.AddRange(new object[] { "Masculino", "Femenino" });
-            cboSexo.Location = new Point(169, 379);
-            cboSexo.Name = "cboSexo";
-            cboSexo.Size = new Size(169, 23);
-            cboSexo.TabIndex = 37;
+            cboSexoPadre.FormattingEnabled = true;
+            cboSexoPadre.Items.AddRange(new object[] { "Masculino", "Femenino" });
+            cboSexoPadre.Location = new Point(169, 379);
+            cboSexoPadre.Name = "cboSexoPadre";
+            cboSexoPadre.Size = new Size(169, 23);
+            cboSexoPadre.TabIndex = 37;
             // 
             // dateTimePicker1
             // 
@@ -410,15 +410,15 @@
             dateTimePicker1.Size = new Size(169, 23);
             dateTimePicker1.TabIndex = 39;
             // 
-            // label1
+            // lblResEdadHijo
             // 
-            label1.BackColor = SystemColors.ActiveBorder;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(518, 344);
-            label1.Name = "label1";
-            label1.Size = new Size(169, 29);
-            label1.TabIndex = 38;
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            lblResEdadHijo.BackColor = SystemColors.ActiveBorder;
+            lblResEdadHijo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblResEdadHijo.Location = new Point(518, 344);
+            lblResEdadHijo.Name = "lblResEdadHijo";
+            lblResEdadHijo.Size = new Size(169, 29);
+            lblResEdadHijo.TabIndex = 38;
+            lblResEdadHijo.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // cboSexoHijo
             // 
@@ -449,21 +449,21 @@
             lblEmailHijo.Text = "Email Hijo";
             lblEmailHijo.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // textBox1
+            // txtApellidoHijo
             // 
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(518, 233);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(169, 29);
-            textBox1.TabIndex = 48;
+            txtApellidoHijo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtApellidoHijo.Location = new Point(518, 233);
+            txtApellidoHijo.Name = "txtApellidoHijo";
+            txtApellidoHijo.Size = new Size(169, 29);
+            txtApellidoHijo.TabIndex = 48;
             // 
-            // textBox2
+            // txtIdentificacionHijo
             // 
-            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(518, 268);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(169, 29);
-            textBox2.TabIndex = 49;
+            txtIdentificacionHijo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtIdentificacionHijo.Location = new Point(518, 268);
+            txtIdentificacionHijo.Name = "txtIdentificacionHijo";
+            txtIdentificacionHijo.Size = new Size(169, 29);
+            txtIdentificacionHijo.TabIndex = 49;
             // 
             // btnGuardar
             // 
@@ -484,6 +484,7 @@
             btnLimpiar.TabIndex = 55;
             btnLimpiar.Text = "Limpiar";
             btnLimpiar.UseVisualStyleBackColor = true;
+            btnLimpiar.Click += btnLimpiar_Click;
             // 
             // btnCancelar
             // 
@@ -515,44 +516,44 @@
             lblTituloHijo.Text = "Datos del Hijo";
             lblTituloHijo.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // cboProvinciaPaciente
+            // cboDireccionProvincia
             // 
-            cboProvinciaPaciente.FormattingEnabled = true;
-            cboProvinciaPaciente.Items.AddRange(new object[] { "Cartago", "San Jose", "Alajuela", "Limon", "Guanacaste", "Heredia", "Puntarenas" });
-            cboProvinciaPaciente.Location = new Point(169, 519);
-            cboProvinciaPaciente.Name = "cboProvinciaPaciente";
-            cboProvinciaPaciente.Size = new Size(518, 23);
-            cboProvinciaPaciente.TabIndex = 59;
+            cboDireccionProvincia.FormattingEnabled = true;
+            cboDireccionProvincia.Items.AddRange(new object[] { "Cartago", "San Jose", "Alajuela", "Limon", "Guanacaste", "Heredia", "Puntarenas" });
+            cboDireccionProvincia.Location = new Point(169, 519);
+            cboDireccionProvincia.Name = "cboDireccionProvincia";
+            cboDireccionProvincia.Size = new Size(518, 23);
+            cboDireccionProvincia.TabIndex = 59;
             // 
             // frmPacientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(736, 722);
-            Controls.Add(cboProvinciaPaciente);
+            Controls.Add(cboDireccionProvincia);
             Controls.Add(lblTituloHijo);
             Controls.Add(lblDatosPadre);
             Controls.Add(btnCancelar);
             Controls.Add(btnLimpiar);
             Controls.Add(btnGuardar);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtIdentificacionHijo);
+            Controls.Add(txtApellidoHijo);
             Controls.Add(lblEmailHijo);
             Controls.Add(lblTelefonoHijo);
             Controls.Add(cboSexoHijo);
             Controls.Add(dateTimePicker1);
-            Controls.Add(label1);
-            Controls.Add(cboSexo);
+            Controls.Add(lblResEdadHijo);
+            Controls.Add(cboSexoPadre);
             Controls.Add(dtpFechaNac);
-            Controls.Add(textBox7);
+            Controls.Add(txtTelefonoHIjo);
             Controls.Add(txtDireccionDistrito);
             Controls.Add(txtDieccionOtrasSenas);
-            Controls.Add(textBox10);
+            Controls.Add(txtNombreHijo);
             Controls.Add(txtDireccionCanton);
-            Controls.Add(txtEmail);
-            Controls.Add(txtTelefono);
-            Controls.Add(textBox4);
-            Controls.Add(txtIdPadre);
+            Controls.Add(txtEmailPadre);
+            Controls.Add(txtTelefonoPadre);
+            Controls.Add(txtEmailHijo);
+            Controls.Add(txtIdentificacionPadre);
             Controls.Add(txtApellidoPadre);
             Controls.Add(txtNombrePadre);
             Controls.Add(lblEdadHijo);
@@ -563,7 +564,7 @@
             Controls.Add(lblNombreHijo);
             Controls.Add(lblFechaNacPadre);
             Controls.Add(lblEdad);
-            Controls.Add(lblEdadRes);
+            Controls.Add(lblResEdadPadre);
             Controls.Add(lblDistrito);
             Controls.Add(lblOtrasSenas);
             Controls.Add(lblCanton);
@@ -599,7 +600,7 @@
         private Label lblCanton;
         private Label lblOtrasSenas;
         private Label lblDistrito;
-        private Label lblEdadRes;
+        private Label lblResEdadPadre;
         private Label lblEdad;
         private Label lblFechaNacPadre;
         private Label lblNombreHijo;
@@ -610,29 +611,29 @@
         private Label lblEdadHijo;
         private TextBox txtNombrePadre;
         private TextBox txtApellidoPadre;
-        private TextBox txtIdPadre;
-        private TextBox textBox4;
-        private TextBox txtTelefono;
-        private TextBox txtEmail;
+        private TextBox txtIdentificacionPadre;
+        private TextBox txtEmailHijo;
+        private TextBox txtTelefonoPadre;
+        private TextBox txtEmailPadre;
         private TextBox txtDireccionCanton;
-        private TextBox textBox10;
+        private TextBox txtNombreHijo;
         private TextBox txtDieccionOtrasSenas;
         private TextBox txtDireccionDistrito;
-        private TextBox textBox7;
+        private TextBox txtTelefonoHIjo;
         private DateTimePicker dtpFechaNac;
-        private ComboBox cboSexo;
+        private ComboBox cboSexoPadre;
         private DateTimePicker dateTimePicker1;
-        private Label label1;
+        private Label lblResEdadHijo;
         private ComboBox cboSexoHijo;
         private Label lblTelefonoHijo;
         private Label lblEmailHijo;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtApellidoHijo;
+        private TextBox txtIdentificacionHijo;
         private Button btnGuardar;
         private Button btnLimpiar;
         private Button btnCancelar;
         private Label lblDatosPadre;
         private Label lblTituloHijo;
-        private ComboBox cboProvinciaPaciente;
+        private ComboBox cboDireccionProvincia;
     }
 }
