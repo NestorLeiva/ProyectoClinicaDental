@@ -306,6 +306,7 @@
             txtNombrePadre.Name = "txtNombrePadre";
             txtNombrePadre.Size = new Size(169, 29);
             txtNombrePadre.TabIndex = 23;
+            txtNombrePadre.KeyPress += txtNombrePadre_KeyPress;
             // 
             // txtApellidoPadre
             // 
@@ -314,6 +315,7 @@
             txtApellidoPadre.Name = "txtApellidoPadre";
             txtApellidoPadre.Size = new Size(169, 29);
             txtApellidoPadre.TabIndex = 24;
+            txtApellidoPadre.KeyPress += txtApellidoPadre_KeyPress;
             // 
             // txtIdentificacionPadre
             // 
@@ -322,6 +324,7 @@
             txtIdentificacionPadre.Name = "txtIdentificacionPadre";
             txtIdentificacionPadre.Size = new Size(169, 29);
             txtIdentificacionPadre.TabIndex = 25;
+            txtIdentificacionPadre.KeyPress += txtIdentificacionPadre_KeyPress;
             // 
             // txtEmailHijo
             // 
@@ -330,6 +333,7 @@
             txtEmailHijo.Name = "txtEmailHijo";
             txtEmailHijo.Size = new Size(169, 29);
             txtEmailHijo.TabIndex = 26;
+            txtEmailHijo.KeyPress += txtEmailHijo_KeyPress;
             // 
             // txtTelefonoPadre
             // 
@@ -338,6 +342,7 @@
             txtTelefonoPadre.Name = "txtTelefonoPadre";
             txtTelefonoPadre.Size = new Size(169, 29);
             txtTelefonoPadre.TabIndex = 27;
+            txtTelefonoPadre.KeyPress += txtTelefonoPadre_KeyPress;
             // 
             // txtEmailPadre
             // 
@@ -346,6 +351,7 @@
             txtEmailPadre.Name = "txtEmailPadre";
             txtEmailPadre.Size = new Size(169, 29);
             txtEmailPadre.TabIndex = 28;
+            txtEmailPadre.KeyPress += txtEmailPadre_KeyPress;
             // 
             // txtDireccionCanton
             // 
@@ -362,6 +368,7 @@
             txtNombreHijo.Name = "txtNombreHijo";
             txtNombreHijo.Size = new Size(169, 29);
             txtNombreHijo.TabIndex = 32;
+            txtNombreHijo.KeyPress += txtNombreHijo_KeyPress;
             // 
             // txtDieccionOtrasSenas
             // 
@@ -386,6 +393,7 @@
             txtTelefonoHIjo.Name = "txtTelefonoHIjo";
             txtTelefonoHIjo.Size = new Size(169, 29);
             txtTelefonoHIjo.TabIndex = 35;
+            txtTelefonoHIjo.KeyPress += txtTelefonoHIjo_KeyPress;
             // 
             // dtpFechaNac
             // 
@@ -456,6 +464,7 @@
             txtApellidoHijo.Name = "txtApellidoHijo";
             txtApellidoHijo.Size = new Size(169, 29);
             txtApellidoHijo.TabIndex = 48;
+            txtApellidoHijo.KeyPress += txtApellidoHijo_KeyPress;
             // 
             // txtIdentificacionHijo
             // 
@@ -464,6 +473,7 @@
             txtIdentificacionHijo.Name = "txtIdentificacionHijo";
             txtIdentificacionHijo.Size = new Size(169, 29);
             txtIdentificacionHijo.TabIndex = 49;
+            txtIdentificacionHijo.KeyPress += txtIdentificacionHijo_KeyPress;
             // 
             // btnGuardar
             // 
