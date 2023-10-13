@@ -8,5 +8,10 @@ namespace BLL
 {
     internal class Direccion
     {
+        private string provincia = "";
+        private string canton = "";
+        private string distrito = "";
+        private string otrasSenas = "";
+
     }
 }

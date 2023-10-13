@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    internal class Funcionario
+    internal class metodosGenericos
     {
-        private string puesto = "";
-        private string usuario = "";
-        private string contrasenia = "";
-
     }
 }
