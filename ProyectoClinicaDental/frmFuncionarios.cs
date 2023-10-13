@@ -25,58 +25,116 @@ namespace ProyectoClinicaDental
         //   ------------------------------------------------------- Validaciones TextBox  -------------------------------------------------------
         private void txtNombreFuncionario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!metodosValidaciones.soloLetras(e.KeyChar.ToString()))
+            try
             {
-                e.Handled = true;
+                if (!metodosValidaciones.soloLetras(e.KeyChar.ToString()))
+                {
+                    e.Handled = true;
+                }
             }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void txtApellidoFuncionario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!metodosValidaciones.soloLetras(e.KeyChar.ToString()))
+            try
             {
-                e.Handled = true;
+                if (!metodosValidaciones.soloLetras(e.KeyChar.ToString()))
+                {
+                    e.Handled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void txtIdentificacionFuncionario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!metodosValidaciones.soloNumeros(e.KeyChar))
+            try
             {
-                e.Handled = true;
+                if (!metodosValidaciones.soloNumeros(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void txtTelefonoFuncionario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!metodosValidaciones.soloNumeros(e.KeyChar))
+            try
             {
-                e.Handled = true;
+                if (!metodosValidaciones.soloNumeros(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void txtEmailFuncionario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            string email = txtEmailFuncionario.Text + e.KeyChar;
-            if (!metodosValidaciones.isEmail(email))
+
+            try
             {
-                e.Handled = true;
+                string email = txtEmailFuncionario.Text + e.KeyChar;
+                if (!metodosValidaciones.isEmail(email))
+                {
+                    e.Handled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void txtPuestoFuncionario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!metodosValidaciones.soloLetras(e.KeyChar.ToString()))
+            try
             {
-                e.Handled = true;
+                if (!metodosValidaciones.soloLetras(e.KeyChar.ToString()))
+                {
+                    e.Handled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void txtUsuarioFuncionario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!metodosValidaciones.soloLetras(e.KeyChar.ToString()))
+            try
             {
-                e.Handled = true;
+                if (!metodosValidaciones.soloLetras(e.KeyChar.ToString()))
+                {
+                    e.Handled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -94,5 +152,15 @@ namespace ProyectoClinicaDental
             txtUsuarioFuncionario.Text = "";
             txtContraseniaFuncionario.Text = "";
         }
-    }
+        private void btnCancerlar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+    } // fin frmFuncionarios : Form
 }

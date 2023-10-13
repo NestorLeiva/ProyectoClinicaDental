@@ -171,6 +171,7 @@
             btnGuardar.TabIndex = 12;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // btnCancerlar
             // 
@@ -181,6 +182,7 @@
             btnCancerlar.TabIndex = 13;
             btnCancerlar.Text = "Cancelar";
             btnCancerlar.UseVisualStyleBackColor = true;
+            btnCancerlar.Click += btnCancerlar_Click;
             // 
             // pbLogo
             // 
