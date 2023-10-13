@@ -6,11 +6,34 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    internal class Funcionario
+    public class Funcionario
     {
-        private string puesto = "";
-        private string usuario = "";
-        private string contrasenia = "";
+        private string puesto ;
+        private string usuario;
+        private string contrasenia;
 
-    }
+        public string Puesto
+        {
+            get { return puesto; }
+            set { puesto = value; }
+        }
+        public string Usuario
+        {
+            get { return usuario; }
+            set { usuario = value; }
+        }
+        public string Contrasenia
+        {
+            get { return contrasenia;}
+            set { contrasenia = value;}
+        }
+
+
+
+
+
+
+
+
+    } // fin class Funcionario
 }

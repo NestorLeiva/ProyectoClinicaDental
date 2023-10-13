@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    internal class Negocio
+    public class Negocio
     {
-    }
+    } // fin class Negocio
 }
