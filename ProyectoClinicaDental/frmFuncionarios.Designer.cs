@@ -125,6 +125,7 @@
             txtNombreFuncionario.Name = "txtNombreFuncionario";
             txtNombreFuncionario.Size = new Size(203, 29);
             txtNombreFuncionario.TabIndex = 7;
+            txtNombreFuncionario.KeyPress += txtNombreFuncionario_KeyPress;
             // 
             // txtIdentificacionFuncionario
             // 
@@ -133,6 +134,7 @@
             txtIdentificacionFuncionario.Name = "txtIdentificacionFuncionario";
             txtIdentificacionFuncionario.Size = new Size(203, 29);
             txtIdentificacionFuncionario.TabIndex = 8;
+            txtIdentificacionFuncionario.KeyPress += txtIdentificacionFuncionario_KeyPress;
             // 
             // txtPuestoFuncionario
             // 
@@ -141,6 +143,7 @@
             txtPuestoFuncionario.Name = "txtPuestoFuncionario";
             txtPuestoFuncionario.Size = new Size(203, 29);
             txtPuestoFuncionario.TabIndex = 9;
+            txtPuestoFuncionario.KeyPress += txtPuestoFuncionario_KeyPress;
             // 
             // txtUsuarioFuncionario
             // 
@@ -149,6 +152,7 @@
             txtUsuarioFuncionario.Name = "txtUsuarioFuncionario";
             txtUsuarioFuncionario.Size = new Size(203, 29);
             txtUsuarioFuncionario.TabIndex = 10;
+            txtUsuarioFuncionario.KeyPress += txtUsuarioFuncionario_KeyPress;
             // 
             // txtContraseniaFuncionario
             // 
@@ -195,6 +199,7 @@
             txtApellidoFuncionario.Name = "txtApellidoFuncionario";
             txtApellidoFuncionario.Size = new Size(203, 29);
             txtApellidoFuncionario.TabIndex = 16;
+            txtApellidoFuncionario.KeyPress += txtApellidoFuncionario_KeyPress;
             // 
             // lblApellidoFuncionario
             // 
@@ -252,6 +257,7 @@
             txtTelefonoFuncionario.Name = "txtTelefonoFuncionario";
             txtTelefonoFuncionario.Size = new Size(203, 29);
             txtTelefonoFuncionario.TabIndex = 22;
+            txtTelefonoFuncionario.KeyPress += txtTelefonoFuncionario_KeyPress;
             // 
             // lblTelefono
             // 
@@ -270,6 +276,7 @@
             txtEmailFuncionario.Name = "txtEmailFuncionario";
             txtEmailFuncionario.Size = new Size(203, 29);
             txtEmailFuncionario.TabIndex = 24;
+            txtEmailFuncionario.KeyPress += txtEmailFuncionario_KeyPress;
             // 
             // lblEmail
             // 
