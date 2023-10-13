@@ -25,7 +25,7 @@
 
 [![Screenshot-2023-10-07-233653.png](https://i.postimg.cc/BbDnF3t1/Screenshot-2023-10-07-233653.png)](https://postimg.cc/BPS3WdTq)
 
-[![Screenshot-2023-10-07-233609.png](https://i.postimg.cc/zfLpK2S1/Screenshot-2023-10-07-233609.png)](https://postimg.cc/XZbw08z2)
+<!-- [![Screenshot-2023-10-07-233609.png](https://i.postimg.cc/zfLpK2S1/Screenshot-2023-10-07-233609.png)](https://postimg.cc/XZbw08z2)-->
 
 [![Screenshot-2023-10-07-233457.png](https://i.postimg.cc/rsZh26qz/Screenshot-2023-10-07-233457.png)](https://postimg.cc/7J71SWGy)
 
