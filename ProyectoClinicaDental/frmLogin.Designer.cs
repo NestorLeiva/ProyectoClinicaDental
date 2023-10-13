@@ -74,14 +74,18 @@
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(212, 33);
             txtUsuario.TabIndex = 3;
+            txtUsuario.TextAlign = HorizontalAlignment.Center;
+            txtUsuario.KeyPress += txtUsuario_KeyPress;
             // 
             // txtContrasenia
             // 
             txtContrasenia.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             txtContrasenia.Location = new Point(93, 456);
             txtContrasenia.Name = "txtContrasenia";
+            txtContrasenia.PasswordChar = '*';
             txtContrasenia.Size = new Size(212, 33);
             txtContrasenia.TabIndex = 4;
+            txtContrasenia.TextAlign = HorizontalAlignment.Center;
             // 
             // btnAceptar
             // 

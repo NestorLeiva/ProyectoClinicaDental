@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Utils;
 
 namespace ProyectoClinicaDental
 {
@@ -28,6 +29,14 @@ namespace ProyectoClinicaDental
         {
             txtUsuario.Text = "";
             txtContrasenia.Text = "";
+        }
+
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!metodosValidaciones.soloLetras(e.KeyChar.ToString()))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
