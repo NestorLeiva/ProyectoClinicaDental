@@ -360,6 +360,7 @@
             txtDireccionCanton.Name = "txtDireccionCanton";
             txtDireccionCanton.Size = new Size(518, 29);
             txtDireccionCanton.TabIndex = 31;
+            txtDireccionCanton.KeyPress += txtDireccionCanton_KeyPress;
             // 
             // txtNombreHijo
             // 
@@ -385,6 +386,7 @@
             txtDireccionDistrito.Name = "txtDireccionDistrito";
             txtDireccionDistrito.Size = new Size(518, 29);
             txtDireccionDistrito.TabIndex = 34;
+            txtDireccionDistrito.KeyPress += txtDireccionDistrito_KeyPress;
             // 
             // txtTelefonoHIjo
             // 
