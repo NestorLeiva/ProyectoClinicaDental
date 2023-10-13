@@ -39,7 +39,7 @@
             txtPuestoFuncionario = new TextBox();
             txtUsuarioFuncionario = new TextBox();
             txtContraseniaFuncionario = new TextBox();
-            btnAceptar = new Button();
+            btnGuardar = new Button();
             btnCancerlar = new Button();
             pbLogo = new PictureBox();
             txtApellidoFuncionario = new TextBox();
@@ -162,15 +162,15 @@
             txtContraseniaFuncionario.Size = new Size(203, 29);
             txtContraseniaFuncionario.TabIndex = 11;
             // 
-            // btnAceptar
+            // btnGuardar
             // 
-            btnAceptar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnAceptar.Location = new Point(213, 623);
-            btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(112, 28);
-            btnAceptar.TabIndex = 12;
-            btnAceptar.Text = "Aceptar";
-            btnAceptar.UseVisualStyleBackColor = true;
+            btnGuardar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnGuardar.Location = new Point(213, 623);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(112, 28);
+            btnGuardar.TabIndex = 12;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.UseVisualStyleBackColor = true;
             // 
             // btnCancerlar
             // 
@@ -336,7 +336,7 @@
             Controls.Add(lblApellidoFuncionario);
             Controls.Add(pbLogo);
             Controls.Add(btnCancerlar);
-            Controls.Add(btnAceptar);
+            Controls.Add(btnGuardar);
             Controls.Add(txtContraseniaFuncionario);
             Controls.Add(txtUsuarioFuncionario);
             Controls.Add(txtPuestoFuncionario);
@@ -369,7 +369,7 @@
         private TextBox txtPuestoFuncionario;
         private TextBox txtUsuarioFuncionario;
         private TextBox txtContraseniaFuncionario;
-        private Button btnAceptar;
+        private Button btnGuardar;
         private Button btnCancerlar;
         private PictureBox pbLogo;
         private TextBox txtApellidoFuncionario;
