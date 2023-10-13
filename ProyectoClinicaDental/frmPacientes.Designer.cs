@@ -56,7 +56,6 @@
             textBox4 = new TextBox();
             txtTelefono = new TextBox();
             txtEmail = new TextBox();
-            txtDireccionProvincia = new TextBox();
             txtDireccionCanton = new TextBox();
             textBox10 = new TextBox();
             txtDieccionOtrasSenas = new TextBox();
@@ -76,13 +75,14 @@
             btnCancelar = new Button();
             lblDatosPadre = new Label();
             lblTituloHijo = new Label();
+            cboProvinciaPaciente = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             SuspendLayout();
             // 
             // pbLogo
             // 
             pbLogo.Image = Properties.Resources.logoClinica;
-            pbLogo.Location = new Point(22, 12);
+            pbLogo.Location = new Point(38, 12);
             pbLogo.Name = "pbLogo";
             pbLogo.Size = new Size(125, 136);
             pbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -92,7 +92,7 @@
             // lblTitulo
             // 
             lblTitulo.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTitulo.Location = new Point(193, 12);
+            lblTitulo.Location = new Point(227, 12);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(348, 96);
             lblTitulo.TabIndex = 1;
@@ -347,20 +347,12 @@
             txtEmail.Size = new Size(169, 29);
             txtEmail.TabIndex = 28;
             // 
-            // txtDireccionProvincia
-            // 
-            txtDireccionProvincia.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtDireccionProvincia.Location = new Point(169, 513);
-            txtDireccionProvincia.Name = "txtDireccionProvincia";
-            txtDireccionProvincia.Size = new Size(169, 29);
-            txtDireccionProvincia.TabIndex = 30;
-            // 
             // txtDireccionCanton
             // 
             txtDireccionCanton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtDireccionCanton.Location = new Point(169, 548);
             txtDireccionCanton.Name = "txtDireccionCanton";
-            txtDireccionCanton.Size = new Size(169, 29);
+            txtDireccionCanton.Size = new Size(518, 29);
             txtDireccionCanton.TabIndex = 31;
             // 
             // textBox10
@@ -376,7 +368,7 @@
             txtDieccionOtrasSenas.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtDieccionOtrasSenas.Location = new Point(169, 618);
             txtDieccionOtrasSenas.Name = "txtDieccionOtrasSenas";
-            txtDieccionOtrasSenas.Size = new Size(169, 29);
+            txtDieccionOtrasSenas.Size = new Size(518, 29);
             txtDieccionOtrasSenas.TabIndex = 33;
             // 
             // txtDireccionDistrito
@@ -384,7 +376,7 @@
             txtDireccionDistrito.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtDireccionDistrito.Location = new Point(169, 583);
             txtDireccionDistrito.Name = "txtDireccionDistrito";
-            txtDireccionDistrito.Size = new Size(169, 29);
+            txtDireccionDistrito.Size = new Size(518, 29);
             txtDireccionDistrito.TabIndex = 34;
             // 
             // textBox7
@@ -476,7 +468,7 @@
             // btnGuardar
             // 
             btnGuardar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnGuardar.Location = new Point(193, 710);
+            btnGuardar.Location = new Point(194, 673);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(112, 30);
             btnGuardar.TabIndex = 54;
@@ -486,7 +478,7 @@
             // btnLimpiar
             // 
             btnLimpiar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnLimpiar.Location = new Point(429, 710);
+            btnLimpiar.Location = new Point(430, 673);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(112, 30);
             btnLimpiar.TabIndex = 55;
@@ -496,7 +488,7 @@
             // btnCancelar
             // 
             btnCancelar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnCancelar.Location = new Point(311, 710);
+            btnCancelar.Location = new Point(312, 673);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(112, 30);
             btnCancelar.TabIndex = 56;
@@ -523,11 +515,21 @@
             lblTituloHijo.Text = "Datos del Hijo";
             lblTituloHijo.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // cboProvinciaPaciente
+            // 
+            cboProvinciaPaciente.FormattingEnabled = true;
+            cboProvinciaPaciente.Items.AddRange(new object[] { "Cartago", "San Jose", "Alajuela", "Limon", "Guanacaste", "Heredia", "Puntarenas" });
+            cboProvinciaPaciente.Location = new Point(169, 519);
+            cboProvinciaPaciente.Name = "cboProvinciaPaciente";
+            cboProvinciaPaciente.Size = new Size(518, 23);
+            cboProvinciaPaciente.TabIndex = 59;
+            // 
             // frmPacientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(736, 752);
+            ClientSize = new Size(736, 722);
+            Controls.Add(cboProvinciaPaciente);
             Controls.Add(lblTituloHijo);
             Controls.Add(lblDatosPadre);
             Controls.Add(btnCancelar);
@@ -547,7 +549,6 @@
             Controls.Add(txtDieccionOtrasSenas);
             Controls.Add(textBox10);
             Controls.Add(txtDireccionCanton);
-            Controls.Add(txtDireccionProvincia);
             Controls.Add(txtEmail);
             Controls.Add(txtTelefono);
             Controls.Add(textBox4);
@@ -613,7 +614,6 @@
         private TextBox textBox4;
         private TextBox txtTelefono;
         private TextBox txtEmail;
-        private TextBox txtDireccionProvincia;
         private TextBox txtDireccionCanton;
         private TextBox textBox10;
         private TextBox txtDieccionOtrasSenas;
@@ -633,5 +633,6 @@
         private Button btnCancelar;
         private Label lblDatosPadre;
         private Label lblTituloHijo;
+        private ComboBox cboProvinciaPaciente;
     }
 }
