@@ -61,7 +61,7 @@
             // lblContrasenia
             // 
             lblContrasenia.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lblContrasenia.Location = new Point(93, 519);
+            lblContrasenia.Location = new Point(93, 490);
             lblContrasenia.Name = "lblContrasenia";
             lblContrasenia.Size = new Size(212, 35);
             lblContrasenia.TabIndex = 2;
@@ -70,7 +70,7 @@
             // txtUsuario
             // 
             txtUsuario.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtUsuario.Location = new Point(93, 465);
+            txtUsuario.Location = new Point(93, 454);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(212, 33);
             txtUsuario.TabIndex = 3;
@@ -78,7 +78,7 @@
             // txtContrasenia
             // 
             txtContrasenia.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtContrasenia.Location = new Point(93, 568);
+            txtContrasenia.Location = new Point(93, 528);
             txtContrasenia.Name = "txtContrasenia";
             txtContrasenia.Size = new Size(212, 33);
             txtContrasenia.TabIndex = 4;
@@ -86,7 +86,7 @@
             // btnAceptar
             // 
             btnAceptar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnAceptar.Location = new Point(39, 651);
+            btnAceptar.Location = new Point(39, 582);
             btnAceptar.Name = "btnAceptar";
             btnAceptar.Size = new Size(131, 35);
             btnAceptar.TabIndex = 5;
@@ -96,7 +96,7 @@
             // btnLimpiar
             // 
             btnLimpiar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnLimpiar.Location = new Point(213, 651);
+            btnLimpiar.Location = new Point(213, 582);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(131, 35);
             btnLimpiar.TabIndex = 6;
@@ -119,7 +119,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(391, 714);
+            ClientSize = new Size(391, 635);
             Controls.Add(pbLogo);
             Controls.Add(btnLimpiar);
             Controls.Add(btnAceptar);
