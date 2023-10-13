@@ -22,21 +22,7 @@ namespace ProyectoClinicaDental
         {
 
         }
-
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        {
-            txtNombreFuncionario.Text = "";
-            txtApellidoFuncionario.Text = "";
-            txtIdentificacionFuncionario.Text = "";
-            lblResEdadFuncionario.Text = "";
-            cboSexoFuncionario.Text = "";
-            txtEmailFuncionario.Text = "";
-            txtTelefonoFuncionario.Text = "";
-            txtPuestoFuncionario.Text = "";
-            txtUsuarioFuncionario.Text = "";
-            txtContraseniaFuncionario.Text = "";
-        }
-
+        //   ------------------------------------------------------- Validaciones TextBox  -------------------------------------------------------
         private void txtNombreFuncionario_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!metodosValidaciones.soloLetras(e.KeyChar.ToString()))
@@ -92,6 +78,21 @@ namespace ProyectoClinicaDental
             {
                 e.Handled = true;
             }
+        }
+
+        //   ------------------------------------------------------- Validaciones Botones  -------------------------------------------------------
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtNombreFuncionario.Text = "";
+            txtApellidoFuncionario.Text = "";
+            txtIdentificacionFuncionario.Text = "";
+            lblResEdadFuncionario.Text = "";
+            cboSexoFuncionario.Text = "";
+            txtEmailFuncionario.Text = "";
+            txtTelefonoFuncionario.Text = "";
+            txtPuestoFuncionario.Text = "";
+            txtUsuarioFuncionario.Text = "";
+            txtContraseniaFuncionario.Text = "";
         }
     }
 }

@@ -14,6 +14,24 @@ namespace Utils
     {
         public static bool soloNumeros(char caracter)
         {
+
+            /*
+            try
+            {
+                if (char.IsControl(caracter) || char.IsDigit(caracter) || caracter == '\b')
+                {
+                    return true;
+                }
+                throw new Exception("El campo solamente acepta Numeros!");
+               
+            }
+            catch (Exception ex)
+            {
+
+               throw MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            */
+
             return char.IsControl(caracter) || char.IsDigit(caracter) || caracter == '\b';
             /* Le paso el parametro char para realizar la validacion de los caracteres 
              * validando si es un caracter de control o numero 
