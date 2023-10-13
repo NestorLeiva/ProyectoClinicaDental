@@ -117,6 +117,22 @@ namespace ProyectoClinicaDental
             }
         }
 
+        //   ------------------------------------------------------- Validaciones TextBox  -------------------------------------------------------
+        private void txtDireccionCanton_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!metodosValidaciones.soloLetras(e.KeyChar.ToString()))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtDireccionDistrito_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!metodosValidaciones.soloLetras(e.KeyChar.ToString()))
+            {
+                e.Handled = true;
+            }
+        }
         //   ------------------------------------------------------- Botones  -------------------------------------------------------
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
@@ -142,20 +158,6 @@ namespace ProyectoClinicaDental
             txtDieccionOtrasSenas.Text = "";
         }
 
-        private void txtDireccionCanton_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!metodosValidaciones.soloLetras(e.KeyChar.ToString()))
-            {
-                e.Handled = true;
-            }
-        }
 
-        private void txtDireccionDistrito_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!metodosValidaciones.soloLetras(e.KeyChar.ToString()))
-            {
-                e.Handled = true;
-            }
-        }
     } // fin frmPacientes : Form
 } // fin ProyectoClinicaDental
