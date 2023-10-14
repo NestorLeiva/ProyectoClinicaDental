@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    public class Hijo
+    public class Hijo : Padre // herencia
     {
+
     } // fin class Hijo
 }

@@ -6,33 +6,47 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    public class Direccion
+    public class Direccion 
     {
-        private string provincia ;
-        private string canton ;
-        private string distrito ;
-        private string otrasSenas;
+        // Los campos están marcados con ?, lo que indica que son de tipo nullable, es decir, pueden ser nulos. Esto significa que pueden contener un valor o ser null.
+        private string? provincia;
+        private string? canton;
+        private string? distrito;
+        private string? otrasSenas;
 
 
-        public string Provincia
+        public Direccion(string provincia, string canton, string distrito, string otrasSenas)
+        {
+            // constructor con parametros
+            Provincia = provincia;
+            Canton = canton;
+            Distrito = distrito;
+            OtrasSenas = otrasSenas;
+            Provincia = provincia;
+            Canton = canton;
+            Distrito = distrito;
+            OtrasSenas = otrasSenas;
+        }
+
+        public string? Provincia
         {
             get { return provincia; }
             set { provincia = value; }
         }
-        public string Canton
+        public string? Canton
         {
             get { return canton; }
             set { canton = value; }
         }
-        public string Distrito
+        public string? Distrito
         {
             get { return distrito; }
             set { distrito = value; }
         }
-        public string OtrasSenas
+        public string? OtrasSenas
         {
-            get { return otrasSenas;}
-            set { otrasSenas = value;}
+            get { return otrasSenas; }
+            set { otrasSenas = value; }
         }
 
 

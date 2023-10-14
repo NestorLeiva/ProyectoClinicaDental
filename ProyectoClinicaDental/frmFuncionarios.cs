@@ -18,10 +18,7 @@ namespace ProyectoClinicaDental
             InitializeComponent();
         }
 
-        private void frmFuncionarios_Load(object sender, EventArgs e)
-        {
-
-        }
+        private void frmFuncionarios_Load(object sender, EventArgs e) { }
         //   ------------------------------------------------------- Validaciones TextBox  -------------------------------------------------------
         private void txtNombreFuncionario_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -158,7 +155,7 @@ namespace ProyectoClinicaDental
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-
+      
         }
 
 
