@@ -35,6 +35,7 @@ namespace ProyectoClinicaDental
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+
         }
 
         private void txtApellidoFuncionario_KeyPress(object sender, KeyPressEventArgs e)

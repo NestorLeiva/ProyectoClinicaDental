@@ -9,5 +9,11 @@ namespace BLL
     public class Hijo : Padre // herencia
     {
 
+        public Hijo() 
+        {
+
+        }
+
+
     } // fin class Hijo
 }

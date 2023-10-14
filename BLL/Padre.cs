@@ -8,7 +8,18 @@ namespace BLL
 {
     public class Padre : Persona
     {
-      // esta clase Hereda todo lo de Persona por ese motivo no tiene nada
+        // esta clase Hereda todo lo de Persona por ese motivo no tiene nada
+
+
+        public Padre() : base("", "", 0, new DateOnly(), 0, "", 0, "")
+        {
+            /* realizo la llamada al constructor de la clase persona 
+             * el Base  nos asegura de que los campos esten inicializados correctamente
+             * ("", "", 0, new DateOnly(), 0, "", 0, "") son los valores predeterminados  para los campos y propiedades de la clase  base 
+            */
+        }
+
+
 
         public void cantidadHijos() { }
 
