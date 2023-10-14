@@ -8,7 +8,7 @@
  Framework: <br> _<strong>.NET 6_</trong>
              
               
- Aprendizaje del proyecto: <br> _<strong>Trabajar con ficheros "XML":  Leer, Escribir, Borrar_</strong>
+ Aprendizaje del proyecto: <br> _<strong>Trabajar con ficheros "XML":  Leer, Escribir, Borrar<br> Aprender a trabajar con Objetos_</strong>
               
 
  Institucion: <br> _<strong>Colegio Universitario de Cartago_</strong>
