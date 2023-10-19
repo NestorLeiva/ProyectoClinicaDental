@@ -217,6 +217,7 @@
 			// lvwListaVenta
 			// 
 			lvwListaVenta.Dock = DockStyle.Fill;
+			lvwListaVenta.GridLines = true;
 			lvwListaVenta.Location = new Point(3, 19);
 			lvwListaVenta.Name = "lvwListaVenta";
 			lvwListaVenta.Size = new Size(646, 308);

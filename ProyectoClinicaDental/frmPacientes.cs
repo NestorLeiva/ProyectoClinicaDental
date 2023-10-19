@@ -18,15 +18,14 @@ namespace ProyectoClinicaDental
 		{
 			InitializeComponent();
 		}
-		//   ------------------------------------------------------- Validaciones TextBox  -------------------------------------------------------
+		//   ------------------------------------------------------- Validaciones TextBox Padre -------------------------------------------------------
 		private void txtIdentificacionPadre_KeyPress(object sender, KeyPressEventArgs e)
 		{
 			if (!metodosValidaciones.soloNumeros(e.KeyChar))
 			{
 				e.Handled = true;
 				MessageBox.Show("El campo debe contener solo Numeros.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				/*
-                 * realizo la validacion del metodo // valido que sea Distinto
+				/* realizo la validacion del metodo // valido que sea Distinto
                  * e.keychar es caracter que se le esta pasando al parametro 
                  * si el metodo SoloNumeros devuelve un true  se bloquan  los caracteres no validos
                  */
@@ -45,7 +44,6 @@ namespace ProyectoClinicaDental
                  * e.handled = true bloquea todos los caracteres no validos
                  */
 			}
-
 		}
 
 		private void txtApellidoPadre_KeyPress(object sender, KeyPressEventArgs e)
@@ -74,7 +72,7 @@ namespace ProyectoClinicaDental
 			}
 		}
 
-		//   ------------------------------------------------------- Validaciones TextBox  -------------------------------------------------------
+		//   ------------------------------------------------------- Validaciones TextBox Hijo  -------------------------------------------------------
 
 		private void txtNombreHijo_KeyPress(object sender, KeyPressEventArgs e)
 		{
@@ -117,7 +115,7 @@ namespace ProyectoClinicaDental
 			}
 		}
 
-		//   ------------------------------------------------------- Validaciones TextBox  -------------------------------------------------------
+		//   ------------------------------------------------------- Validaciones TextBox Direccion  -------------------------------------------------------
 		private void txtDireccionCanton_KeyPress(object sender, KeyPressEventArgs e)
 		{
 			if (!metodosValidaciones.soloLetras(e.KeyChar.ToString()))
@@ -133,6 +131,14 @@ namespace ProyectoClinicaDental
 				e.Handled = true;
 			}
 		}
+		//   ------------------------------------------------------- Validaciones TextBox Busqueda  -------------------------------------------------------
+		private void txtIdentificacionPadreBusqueda_KeyPress(object sender, KeyPressEventArgs e)
+		{
+            if (!metodosValidaciones.soloNumeros(e.KeyChar))
+            {
+				e.Handled = true;
+            }
+        }
 		//   ------------------------------------------------------- Botones  -------------------------------------------------------
 		private void btnLimpiar_Click(object sender, EventArgs e)
 		{
@@ -157,7 +163,5 @@ namespace ProyectoClinicaDental
 			txtDireccionDistrito.Text = "";
 			txtDieccionOtrasSenas.Text = "";
 		}
-
-
 	} // fin frmPacientes : Form
 } // fin ProyectoClinicaDental

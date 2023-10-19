@@ -32,7 +32,7 @@ namespace BLL
         {
             get { return provincia; }
             set { provincia = value; }
-        }
+        } 
         public string? Canton
         {
             get { return canton; }

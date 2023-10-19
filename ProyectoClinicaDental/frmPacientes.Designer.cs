@@ -81,9 +81,9 @@
 			groupBox3 = new GroupBox();
 			groupBox4 = new GroupBox();
 			groupBox5 = new GroupBox();
-			lblIdPadreBusqueda = new Label();
-			txtIdentificacionPadreBusqueda = new TextBox();
 			btnBusquedaIdPadre = new Button();
+			txtIdentificacionPadreBusqueda = new TextBox();
+			lblIdPadreBusqueda = new Label();
 			((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
 			groupBox1.SuspendLayout();
 			groupBox2.SuspendLayout();
@@ -638,22 +638,6 @@
 			groupBox5.TabIndex = 64;
 			groupBox5.TabStop = false;
 			// 
-			// lblIdPadreBusqueda
-			// 
-			lblIdPadreBusqueda.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			lblIdPadreBusqueda.Location = new Point(6, 19);
-			lblIdPadreBusqueda.Name = "lblIdPadreBusqueda";
-			lblIdPadreBusqueda.Size = new Size(177, 23);
-			lblIdPadreBusqueda.TabIndex = 0;
-			lblIdPadreBusqueda.Text = "Buscar por Id del Padre";
-			// 
-			// txtIdentificacionPadreBusqueda
-			// 
-			txtIdentificacionPadreBusqueda.Location = new Point(179, 19);
-			txtIdentificacionPadreBusqueda.Name = "txtIdentificacionPadreBusqueda";
-			txtIdentificacionPadreBusqueda.Size = new Size(343, 23);
-			txtIdentificacionPadreBusqueda.TabIndex = 1;
-			// 
 			// btnBusquedaIdPadre
 			// 
 			btnBusquedaIdPadre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -663,6 +647,24 @@
 			btnBusquedaIdPadre.TabIndex = 2;
 			btnBusquedaIdPadre.Text = "Consultar";
 			btnBusquedaIdPadre.UseVisualStyleBackColor = true;
+			// 
+			// txtIdentificacionPadreBusqueda
+			// 
+			txtIdentificacionPadreBusqueda.Location = new Point(179, 19);
+			txtIdentificacionPadreBusqueda.Name = "txtIdentificacionPadreBusqueda";
+			txtIdentificacionPadreBusqueda.Size = new Size(343, 23);
+			txtIdentificacionPadreBusqueda.TabIndex = 1;
+			txtIdentificacionPadreBusqueda.TextChanged += txtIdentificacionPadreBusqueda_TextChanged;
+			txtIdentificacionPadreBusqueda.KeyPress += txtIdentificacionPadreBusqueda_KeyPress;
+			// 
+			// lblIdPadreBusqueda
+			// 
+			lblIdPadreBusqueda.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+			lblIdPadreBusqueda.Location = new Point(6, 19);
+			lblIdPadreBusqueda.Name = "lblIdPadreBusqueda";
+			lblIdPadreBusqueda.Size = new Size(177, 23);
+			lblIdPadreBusqueda.TabIndex = 0;
+			lblIdPadreBusqueda.Text = "Buscar por Id del Padre";
 			// 
 			// frmPacientes
 			// 
