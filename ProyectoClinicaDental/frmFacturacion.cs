@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace ProyectoClinicaDental
 {
-    public partial class frmFacturacion : Form
-    {
-        public frmFacturacion()
-        {
-            InitializeComponent();
-        }
-    }
+	public partial class frmFacturacion : Form
+	{
+		public frmFacturacion()
+		{
+			InitializeComponent();
+		}
+	}
 }

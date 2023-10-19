@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProyectoClinicaDental", "Pr
 		{5ECF2FA6-F311-45F6-A500-C6BC8373F2EC} = {5ECF2FA6-F311-45F6-A500-C6BC8373F2EC}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{5ECF2FA6-F311-45F6-A500-C6BC8373F2EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BLL", "BLL\BLL.csproj", "{5ECF2FA6-F311-45F6-A500-C6BC8373F2EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{220FBC47-7298-4B7B-8B7A-90FDBEB3FE6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utils", "Utils\Utils.csproj", "{220FBC47-7298-4B7B-8B7A-90FDBEB3FE6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{B20CF946-7686-4794-BF21-122A59672676}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{220FBC47-7298-4B7B-8B7A-90FDBEB3FE6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{220FBC47-7298-4B7B-8B7A-90FDBEB3FE6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{220FBC47-7298-4B7B-8B7A-90FDBEB3FE6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B20CF946-7686-4794-BF21-122A59672676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B20CF946-7686-4794-BF21-122A59672676}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B20CF946-7686-4794-BF21-122A59672676}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B20CF946-7686-4794-BF21-122A59672676}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
