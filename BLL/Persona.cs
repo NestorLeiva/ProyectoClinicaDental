@@ -18,7 +18,9 @@
         private int telefono;
         private string? email;
 
-        
+        public Persona() {
+        // constructor vacio 
+        }    
 
         public Persona(string nombre, string apellido, int identificacion, DateOnly fecha, int edad, string sexo, int telefono, string email)
         {

@@ -18,6 +18,11 @@ namespace BLL
          * el Base  nos asegura de que los campos esten inicializados correctamente
          * ("", "", 0, new DateOnly(), 0, "", 0, "") son los valores predeterminados  para los campos y propiedades de la clase  base 
         */
+
+        public Funcionario() {
+        // constructor 
+        }
+
         public Funcionario(string puesto, string usuario, string contrasenia) :
             base("", "", 0, new DateOnly(), 0, "", 0, "")
         {
