@@ -167,6 +167,7 @@
 			txtContraseniaFuncionario.Name = "txtContraseniaFuncionario";
 			txtContraseniaFuncionario.Size = new Size(203, 29);
 			txtContraseniaFuncionario.TabIndex = 11;
+			txtContraseniaFuncionario.KeyPress += txtContraseniaFuncionario_KeyPress;
 			// 
 			// btnGuardar
 			// 

@@ -28,9 +28,9 @@ namespace Utils
             catch (Exception ex)
             {
 
-               throw MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            */
+              throw MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }*/
+            
 
             return char.IsControl(caracter) || char.IsDigit(caracter) || caracter == '\b';
             /* Le paso el parametro char para realizar la validacion de los caracteres 

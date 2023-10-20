@@ -32,9 +32,8 @@
 			lblTitulo = new Label();
 			lblNombrePadre = new Label();
 			lblApellidoPadre = new Label();
-			lblIdPadre = new Label();
+			lblIdentificacionPadre = new Label();
 			lblSexo = new Label();
-			lblDireccion = new Label();
 			lblTelefono = new Label();
 			lblProvincia = new Label();
 			lblEmail = new Label();
@@ -47,7 +46,7 @@
 			lblNombreHijo = new Label();
 			lblApellidoHijo = new Label();
 			lblFechaNacHijo = new Label();
-			lblIdHijo = new Label();
+			lblIdentificacionHijo = new Label();
 			lblSexoHijo = new Label();
 			lblEdadHijo = new Label();
 			txtNombrePadre = new TextBox();
@@ -63,7 +62,7 @@
 			txtTelefonoHIjo = new TextBox();
 			dtpFechaNac = new DateTimePicker();
 			cboSexoPadre = new ComboBox();
-			dateTimePicker1 = new DateTimePicker();
+			dtpFechaHijo = new DateTimePicker();
 			lblResEdadHijo = new Label();
 			cboSexoHijo = new ComboBox();
 			lblTelefonoHijo = new Label();
@@ -73,29 +72,32 @@
 			btnGuardar = new Button();
 			btnLimpiar = new Button();
 			btnCancelar = new Button();
-			lblDatosPadre = new Label();
-			lblTituloHijo = new Label();
+			lblTituloDatosPadre = new Label();
+			lblTituloDatosHijo = new Label();
 			cboDireccionProvincia = new ComboBox();
-			groupBox1 = new GroupBox();
-			groupBox2 = new GroupBox();
-			groupBox3 = new GroupBox();
-			groupBox4 = new GroupBox();
-			groupBox5 = new GroupBox();
+			gbDatosPadre = new GroupBox();
+			gbDatosHijo = new GroupBox();
+			gbDireccion = new GroupBox();
+			gbBotones = new GroupBox();
+			btnModificar = new Button();
+			gbConsulta = new GroupBox();
 			btnBusquedaIdPadre = new Button();
 			txtIdentificacionPadreBusqueda = new TextBox();
 			lblIdPadreBusqueda = new Label();
+			gbCabezera = new GroupBox();
 			((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
-			groupBox1.SuspendLayout();
-			groupBox2.SuspendLayout();
-			groupBox3.SuspendLayout();
-			groupBox4.SuspendLayout();
-			groupBox5.SuspendLayout();
+			gbDatosPadre.SuspendLayout();
+			gbDatosHijo.SuspendLayout();
+			gbDireccion.SuspendLayout();
+			gbBotones.SuspendLayout();
+			gbConsulta.SuspendLayout();
+			gbCabezera.SuspendLayout();
 			SuspendLayout();
 			// 
 			// pbLogo
 			// 
 			pbLogo.Image = Properties.Resources.logoClinica;
-			pbLogo.Location = new Point(38, 12);
+			pbLogo.Location = new Point(6, 22);
 			pbLogo.Name = "pbLogo";
 			pbLogo.Size = new Size(125, 136);
 			pbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -105,7 +107,7 @@
 			// lblTitulo
 			// 
 			lblTitulo.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
-			lblTitulo.Location = new Point(175, 12);
+			lblTitulo.Location = new Point(137, 19);
 			lblTitulo.Name = "lblTitulo";
 			lblTitulo.Size = new Size(348, 48);
 			lblTitulo.TabIndex = 1;
@@ -132,15 +134,15 @@
 			lblApellidoPadre.Text = "Apellido del Padre";
 			lblApellidoPadre.TextAlign = ContentAlignment.MiddleRight;
 			// 
-			// lblIdPadre
+			// lblIdentificacionPadre
 			// 
-			lblIdPadre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			lblIdPadre.Location = new Point(6, 125);
-			lblIdPadre.Name = "lblIdPadre";
-			lblIdPadre.Size = new Size(141, 23);
-			lblIdPadre.TabIndex = 4;
-			lblIdPadre.Text = "Id del Padre";
-			lblIdPadre.TextAlign = ContentAlignment.MiddleRight;
+			lblIdentificacionPadre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+			lblIdentificacionPadre.Location = new Point(6, 125);
+			lblIdentificacionPadre.Name = "lblIdentificacionPadre";
+			lblIdentificacionPadre.Size = new Size(141, 23);
+			lblIdentificacionPadre.TabIndex = 4;
+			lblIdentificacionPadre.Text = "Id del Padre";
+			lblIdentificacionPadre.TextAlign = ContentAlignment.MiddleRight;
 			// 
 			// lblSexo
 			// 
@@ -151,16 +153,6 @@
 			lblSexo.TabIndex = 5;
 			lblSexo.Text = "Sexo";
 			lblSexo.TextAlign = ContentAlignment.MiddleRight;
-			// 
-			// lblDireccion
-			// 
-			lblDireccion.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			lblDireccion.Location = new Point(22, 478);
-			lblDireccion.Name = "lblDireccion";
-			lblDireccion.Size = new Size(316, 23);
-			lblDireccion.TabIndex = 6;
-			lblDireccion.Text = "Direccion";
-			lblDireccion.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// lblTelefono
 			// 
@@ -282,15 +274,15 @@
 			lblFechaNacHijo.Text = "Fecha Nacimiento Hijo";
 			lblFechaNacHijo.TextAlign = ContentAlignment.MiddleRight;
 			// 
-			// lblIdHijo
+			// lblIdentificacionHijo
 			// 
-			lblIdHijo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			lblIdHijo.Location = new Point(6, 131);
-			lblIdHijo.Name = "lblIdHijo";
-			lblIdHijo.Size = new Size(168, 23);
-			lblIdHijo.TabIndex = 19;
-			lblIdHijo.Text = "Id Hijo";
-			lblIdHijo.TextAlign = ContentAlignment.MiddleRight;
+			lblIdentificacionHijo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+			lblIdentificacionHijo.Location = new Point(6, 131);
+			lblIdentificacionHijo.Name = "lblIdentificacionHijo";
+			lblIdentificacionHijo.Size = new Size(168, 23);
+			lblIdentificacionHijo.TabIndex = 19;
+			lblIdentificacionHijo.Text = "Id Hijo";
+			lblIdentificacionHijo.TextAlign = ContentAlignment.MiddleRight;
 			// 
 			// lblSexoHijo
 			// 
@@ -391,6 +383,7 @@
 			txtDieccionOtrasSenas.Name = "txtDieccionOtrasSenas";
 			txtDieccionOtrasSenas.Size = new Size(581, 29);
 			txtDieccionOtrasSenas.TabIndex = 33;
+			txtDieccionOtrasSenas.KeyPress += txtDieccionOtrasSenas_KeyPress;
 			// 
 			// txtDireccionDistrito
 			// 
@@ -426,12 +419,12 @@
 			cboSexoPadre.Size = new Size(169, 23);
 			cboSexoPadre.TabIndex = 37;
 			// 
-			// dateTimePicker1
+			// dtpFechaHijo
 			// 
-			dateTimePicker1.Location = new Point(180, 166);
-			dateTimePicker1.Name = "dateTimePicker1";
-			dateTimePicker1.Size = new Size(169, 23);
-			dateTimePicker1.TabIndex = 39;
+			dtpFechaHijo.Location = new Point(180, 166);
+			dtpFechaHijo.Name = "dtpFechaHijo";
+			dtpFechaHijo.Size = new Size(169, 23);
+			dtpFechaHijo.TabIndex = 39;
 			// 
 			// lblResEdadHijo
 			// 
@@ -493,7 +486,7 @@
 			// btnGuardar
 			// 
 			btnGuardar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			btnGuardar.Location = new Point(6, 31);
+			btnGuardar.Location = new Point(29, 31);
 			btnGuardar.Name = "btnGuardar";
 			btnGuardar.Size = new Size(112, 30);
 			btnGuardar.TabIndex = 54;
@@ -503,7 +496,7 @@
 			// btnLimpiar
 			// 
 			btnLimpiar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			btnLimpiar.Location = new Point(242, 31);
+			btnLimpiar.Location = new Point(398, 31);
 			btnLimpiar.Name = "btnLimpiar";
 			btnLimpiar.Size = new Size(112, 30);
 			btnLimpiar.TabIndex = 55;
@@ -514,32 +507,32 @@
 			// btnCancelar
 			// 
 			btnCancelar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			btnCancelar.Location = new Point(124, 31);
+			btnCancelar.Location = new Point(218, 31);
 			btnCancelar.Name = "btnCancelar";
 			btnCancelar.Size = new Size(112, 30);
 			btnCancelar.TabIndex = 56;
 			btnCancelar.Text = "Cancelar";
 			btnCancelar.UseVisualStyleBackColor = true;
 			// 
-			// lblDatosPadre
+			// lblTituloDatosPadre
 			// 
-			lblDatosPadre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			lblDatosPadre.Location = new Point(6, 19);
-			lblDatosPadre.Name = "lblDatosPadre";
-			lblDatosPadre.Size = new Size(316, 23);
-			lblDatosPadre.TabIndex = 57;
-			lblDatosPadre.Text = "Datos del Padre";
-			lblDatosPadre.TextAlign = ContentAlignment.MiddleCenter;
+			lblTituloDatosPadre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+			lblTituloDatosPadre.Location = new Point(6, 19);
+			lblTituloDatosPadre.Name = "lblTituloDatosPadre";
+			lblTituloDatosPadre.Size = new Size(316, 23);
+			lblTituloDatosPadre.TabIndex = 57;
+			lblTituloDatosPadre.Text = "Datos del Padre";
+			lblTituloDatosPadre.TextAlign = ContentAlignment.MiddleCenter;
 			// 
-			// lblTituloHijo
+			// lblTituloDatosHijo
 			// 
-			lblTituloHijo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			lblTituloHijo.Location = new Point(6, 19);
-			lblTituloHijo.Name = "lblTituloHijo";
-			lblTituloHijo.Size = new Size(343, 23);
-			lblTituloHijo.TabIndex = 58;
-			lblTituloHijo.Text = "Datos del Hijo";
-			lblTituloHijo.TextAlign = ContentAlignment.MiddleCenter;
+			lblTituloDatosHijo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+			lblTituloDatosHijo.Location = new Point(6, 19);
+			lblTituloDatosHijo.Name = "lblTituloDatosHijo";
+			lblTituloDatosHijo.Size = new Size(343, 23);
+			lblTituloDatosHijo.TabIndex = 58;
+			lblTituloDatosHijo.Text = "Datos del Hijo";
+			lblTituloDatosHijo.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// cboDireccionProvincia
 			// 
@@ -550,93 +543,104 @@
 			cboDireccionProvincia.Size = new Size(581, 23);
 			cboDireccionProvincia.TabIndex = 59;
 			// 
-			// groupBox1
+			// gbDatosPadre
 			// 
-			groupBox1.Controls.Add(lblDatosPadre);
-			groupBox1.Controls.Add(lblNombrePadre);
-			groupBox1.Controls.Add(lblApellidoPadre);
-			groupBox1.Controls.Add(lblIdPadre);
-			groupBox1.Controls.Add(lblSexo);
-			groupBox1.Controls.Add(lblTelefono);
-			groupBox1.Controls.Add(lblEmail);
-			groupBox1.Controls.Add(lblResEdadPadre);
-			groupBox1.Controls.Add(lblEdad);
-			groupBox1.Controls.Add(lblFechaNacPadre);
-			groupBox1.Controls.Add(txtNombrePadre);
-			groupBox1.Controls.Add(txtApellidoPadre);
-			groupBox1.Controls.Add(txtIdentificacionPadre);
-			groupBox1.Controls.Add(txtTelefonoPadre);
-			groupBox1.Controls.Add(cboSexoPadre);
-			groupBox1.Controls.Add(txtEmailPadre);
-			groupBox1.Controls.Add(dtpFechaNac);
-			groupBox1.Location = new Point(22, 154);
-			groupBox1.Name = "groupBox1";
-			groupBox1.Size = new Size(336, 342);
-			groupBox1.TabIndex = 60;
-			groupBox1.TabStop = false;
+			gbDatosPadre.Controls.Add(lblTituloDatosPadre);
+			gbDatosPadre.Controls.Add(lblNombrePadre);
+			gbDatosPadre.Controls.Add(txtNombrePadre);
+			gbDatosPadre.Controls.Add(lblApellidoPadre);
+			gbDatosPadre.Controls.Add(txtApellidoPadre);
+			gbDatosPadre.Controls.Add(lblIdentificacionPadre);
+			gbDatosPadre.Controls.Add(txtIdentificacionPadre);
+			gbDatosPadre.Controls.Add(lblFechaNacPadre);
+			gbDatosPadre.Controls.Add(dtpFechaNac);
+			gbDatosPadre.Controls.Add(lblEdad);
+			gbDatosPadre.Controls.Add(lblResEdadPadre);
+			gbDatosPadre.Controls.Add(lblSexo);
+			gbDatosPadre.Controls.Add(cboSexoPadre);
+			gbDatosPadre.Controls.Add(lblTelefono);
+			gbDatosPadre.Controls.Add(txtTelefonoPadre);
+			gbDatosPadre.Controls.Add(lblEmail);
+			gbDatosPadre.Controls.Add(txtEmailPadre);
+			gbDatosPadre.Location = new Point(22, 191);
+			gbDatosPadre.Name = "gbDatosPadre";
+			gbDatosPadre.Size = new Size(336, 342);
+			gbDatosPadre.TabIndex = 60;
+			gbDatosPadre.TabStop = false;
 			// 
-			// groupBox2
+			// gbDatosHijo
 			// 
-			groupBox2.Controls.Add(lblTituloHijo);
-			groupBox2.Controls.Add(lblNombreHijo);
-			groupBox2.Controls.Add(lblApellidoHijo);
-			groupBox2.Controls.Add(lblFechaNacHijo);
-			groupBox2.Controls.Add(lblIdHijo);
-			groupBox2.Controls.Add(lblSexoHijo);
-			groupBox2.Controls.Add(lblEdadHijo);
-			groupBox2.Controls.Add(txtIdentificacionHijo);
-			groupBox2.Controls.Add(txtEmailHijo);
-			groupBox2.Controls.Add(txtApellidoHijo);
-			groupBox2.Controls.Add(txtNombreHijo);
-			groupBox2.Controls.Add(lblEmailHijo);
-			groupBox2.Controls.Add(txtTelefonoHIjo);
-			groupBox2.Controls.Add(lblTelefonoHijo);
-			groupBox2.Controls.Add(lblResEdadHijo);
-			groupBox2.Controls.Add(cboSexoHijo);
-			groupBox2.Controls.Add(dateTimePicker1);
-			groupBox2.Location = new Point(364, 154);
-			groupBox2.Name = "groupBox2";
-			groupBox2.Size = new Size(373, 342);
-			groupBox2.TabIndex = 61;
-			groupBox2.TabStop = false;
+			gbDatosHijo.Controls.Add(lblTituloDatosHijo);
+			gbDatosHijo.Controls.Add(lblNombreHijo);
+			gbDatosHijo.Controls.Add(txtNombreHijo);
+			gbDatosHijo.Controls.Add(lblApellidoHijo);
+			gbDatosHijo.Controls.Add(txtApellidoHijo);
+			gbDatosHijo.Controls.Add(lblIdentificacionHijo);
+			gbDatosHijo.Controls.Add(txtIdentificacionHijo);
+			gbDatosHijo.Controls.Add(lblFechaNacHijo);
+			gbDatosHijo.Controls.Add(dtpFechaHijo);
+			gbDatosHijo.Controls.Add(lblEdadHijo);
+			gbDatosHijo.Controls.Add(lblResEdadHijo);
+			gbDatosHijo.Controls.Add(lblSexoHijo);
+			gbDatosHijo.Controls.Add(cboSexoHijo);
+			gbDatosHijo.Controls.Add(lblTelefonoHijo);
+			gbDatosHijo.Controls.Add(txtTelefonoHIjo);
+			gbDatosHijo.Controls.Add(lblEmailHijo);
+			gbDatosHijo.Controls.Add(txtEmailHijo);
+			gbDatosHijo.Location = new Point(364, 191);
+			gbDatosHijo.Name = "gbDatosHijo";
+			gbDatosHijo.Size = new Size(373, 342);
+			gbDatosHijo.TabIndex = 61;
+			gbDatosHijo.TabStop = false;
 			// 
-			// groupBox3
+			// gbDireccion
 			// 
-			groupBox3.Controls.Add(lblProvincia);
-			groupBox3.Controls.Add(lblCanton);
-			groupBox3.Controls.Add(lblOtrasSenas);
-			groupBox3.Controls.Add(cboDireccionProvincia);
-			groupBox3.Controls.Add(lblDistrito);
-			groupBox3.Controls.Add(txtDireccionCanton);
-			groupBox3.Controls.Add(txtDieccionOtrasSenas);
-			groupBox3.Controls.Add(txtDireccionDistrito);
-			groupBox3.Location = new Point(22, 504);
-			groupBox3.Name = "groupBox3";
-			groupBox3.Size = new Size(715, 163);
-			groupBox3.TabIndex = 62;
-			groupBox3.TabStop = false;
+			gbDireccion.Controls.Add(lblProvincia);
+			gbDireccion.Controls.Add(cboDireccionProvincia);
+			gbDireccion.Controls.Add(lblCanton);
+			gbDireccion.Controls.Add(txtDireccionCanton);
+			gbDireccion.Controls.Add(lblDistrito);
+			gbDireccion.Controls.Add(txtDireccionDistrito);
+			gbDireccion.Controls.Add(lblOtrasSenas);
+			gbDireccion.Controls.Add(txtDieccionOtrasSenas);
+			gbDireccion.Location = new Point(22, 539);
+			gbDireccion.Name = "gbDireccion";
+			gbDireccion.Size = new Size(715, 163);
+			gbDireccion.TabIndex = 62;
+			gbDireccion.TabStop = false;
 			// 
-			// groupBox4
+			// gbBotones
 			// 
-			groupBox4.Controls.Add(btnGuardar);
-			groupBox4.Controls.Add(btnLimpiar);
-			groupBox4.Controls.Add(btnCancelar);
-			groupBox4.Location = new Point(227, 673);
-			groupBox4.Name = "groupBox4";
-			groupBox4.Size = new Size(370, 76);
-			groupBox4.TabIndex = 63;
-			groupBox4.TabStop = false;
+			gbBotones.Controls.Add(btnModificar);
+			gbBotones.Controls.Add(btnGuardar);
+			gbBotones.Controls.Add(btnLimpiar);
+			gbBotones.Controls.Add(btnCancelar);
+			gbBotones.Location = new Point(28, 708);
+			gbBotones.Name = "gbBotones";
+			gbBotones.Size = new Size(709, 76);
+			gbBotones.TabIndex = 63;
+			gbBotones.TabStop = false;
 			// 
-			// groupBox5
+			// btnModificar
 			// 
-			groupBox5.Controls.Add(btnBusquedaIdPadre);
-			groupBox5.Controls.Add(txtIdentificacionPadreBusqueda);
-			groupBox5.Controls.Add(lblIdPadreBusqueda);
-			groupBox5.Location = new Point(191, 63);
-			groupBox5.Name = "groupBox5";
-			groupBox5.Size = new Size(546, 85);
-			groupBox5.TabIndex = 64;
-			groupBox5.TabStop = false;
+			btnModificar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+			btnModificar.Location = new Point(532, 31);
+			btnModificar.Name = "btnModificar";
+			btnModificar.Size = new Size(112, 30);
+			btnModificar.TabIndex = 57;
+			btnModificar.Text = "Modificar";
+			btnModificar.UseVisualStyleBackColor = true;
+			// 
+			// gbConsulta
+			// 
+			gbConsulta.Controls.Add(btnBusquedaIdPadre);
+			gbConsulta.Controls.Add(txtIdentificacionPadreBusqueda);
+			gbConsulta.Controls.Add(lblIdPadreBusqueda);
+			gbConsulta.Location = new Point(137, 70);
+			gbConsulta.Name = "gbConsulta";
+			gbConsulta.Size = new Size(546, 85);
+			gbConsulta.TabIndex = 64;
+			gbConsulta.TabStop = false;
 			// 
 			// btnBusquedaIdPadre
 			// 
@@ -650,11 +654,10 @@
 			// 
 			// txtIdentificacionPadreBusqueda
 			// 
-			txtIdentificacionPadreBusqueda.Location = new Point(179, 19);
+			txtIdentificacionPadreBusqueda.Location = new Point(189, 19);
 			txtIdentificacionPadreBusqueda.Name = "txtIdentificacionPadreBusqueda";
 			txtIdentificacionPadreBusqueda.Size = new Size(343, 23);
 			txtIdentificacionPadreBusqueda.TabIndex = 1;
-			txtIdentificacionPadreBusqueda.TextChanged += txtIdentificacionPadreBusqueda_TextChanged;
 			txtIdentificacionPadreBusqueda.KeyPress += txtIdentificacionPadreBusqueda_KeyPress;
 			// 
 			// lblIdPadreBusqueda
@@ -666,31 +669,40 @@
 			lblIdPadreBusqueda.TabIndex = 0;
 			lblIdPadreBusqueda.Text = "Buscar por Id del Padre";
 			// 
+			// gbCabezera
+			// 
+			gbCabezera.Controls.Add(pbLogo);
+			gbCabezera.Controls.Add(lblTitulo);
+			gbCabezera.Controls.Add(gbConsulta);
+			gbCabezera.Location = new Point(22, 12);
+			gbCabezera.Name = "gbCabezera";
+			gbCabezera.Size = new Size(715, 173);
+			gbCabezera.TabIndex = 65;
+			gbCabezera.TabStop = false;
+			// 
 			// frmPacientes
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(784, 761);
-			Controls.Add(groupBox5);
-			Controls.Add(groupBox4);
-			Controls.Add(groupBox3);
-			Controls.Add(groupBox2);
-			Controls.Add(groupBox1);
-			Controls.Add(lblDireccion);
-			Controls.Add(lblTitulo);
-			Controls.Add(pbLogo);
+			ClientSize = new Size(760, 799);
+			Controls.Add(gbCabezera);
+			Controls.Add(gbBotones);
+			Controls.Add(gbDireccion);
+			Controls.Add(gbDatosHijo);
+			Controls.Add(gbDatosPadre);
 			Name = "frmPacientes";
 			Text = "Registro Pacientes";
 			((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
-			groupBox1.ResumeLayout(false);
-			groupBox1.PerformLayout();
-			groupBox2.ResumeLayout(false);
-			groupBox2.PerformLayout();
-			groupBox3.ResumeLayout(false);
-			groupBox3.PerformLayout();
-			groupBox4.ResumeLayout(false);
-			groupBox5.ResumeLayout(false);
-			groupBox5.PerformLayout();
+			gbDatosPadre.ResumeLayout(false);
+			gbDatosPadre.PerformLayout();
+			gbDatosHijo.ResumeLayout(false);
+			gbDatosHijo.PerformLayout();
+			gbDireccion.ResumeLayout(false);
+			gbDireccion.PerformLayout();
+			gbBotones.ResumeLayout(false);
+			gbConsulta.ResumeLayout(false);
+			gbConsulta.PerformLayout();
+			gbCabezera.ResumeLayout(false);
 			ResumeLayout(false);
 		}
 
@@ -700,9 +712,8 @@
 		private Label lblTitulo;
 		private Label lblNombrePadre;
 		private Label lblApellidoPadre;
-		private Label lblIdPadre;
+		private Label lblIdentificacionPadre;
 		private Label lblSexo;
-		private Label lblDireccion;
 		private Label lblTelefono;
 		private Label lblProvincia;
 		private Label lblEmail;
@@ -715,7 +726,7 @@
 		private Label lblNombreHijo;
 		private Label lblApellidoHijo;
 		private Label lblFechaNacHijo;
-		private Label lblIdHijo;
+		private Label lblIdentificacionHijo;
 		private Label lblSexoHijo;
 		private Label lblEdadHijo;
 		private TextBox txtNombrePadre;
@@ -731,7 +742,7 @@
 		private TextBox txtTelefonoHIjo;
 		private DateTimePicker dtpFechaNac;
 		private ComboBox cboSexoPadre;
-		private DateTimePicker dateTimePicker1;
+		private DateTimePicker dtpFechaHijo;
 		private Label lblResEdadHijo;
 		private ComboBox cboSexoHijo;
 		private Label lblTelefonoHijo;
@@ -741,16 +752,18 @@
 		private Button btnGuardar;
 		private Button btnLimpiar;
 		private Button btnCancelar;
-		private Label lblDatosPadre;
-		private Label lblTituloHijo;
+		private Label lblTituloDatosPadre;
+		private Label lblTituloDatosHijo;
 		private ComboBox cboDireccionProvincia;
-		private GroupBox groupBox1;
-		private GroupBox groupBox2;
-		private GroupBox groupBox3;
-		private GroupBox groupBox4;
-		private GroupBox groupBox5;
+		private GroupBox gbDatosPadre;
+		private GroupBox gbDatosHijo;
+		private GroupBox gbDireccion;
+		private GroupBox gbBotones;
+		private GroupBox gbConsulta;
 		private Label lblIdPadreBusqueda;
 		private Button btnBusquedaIdPadre;
 		private TextBox txtIdentificacionPadreBusqueda;
+		private Button btnModificar;
+		private GroupBox gbCabezera;
 	}
 }
