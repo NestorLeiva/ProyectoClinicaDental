@@ -9,6 +9,8 @@ namespace DAL
 			// constructor vacio
 		}
 
+		public List<string> ListaXML = new List<string>();
+
 		public XmlDocument leerXML(string rutaArchivo)
 		{
 			XmlDocument xmlDoc = new XmlDocument();
@@ -38,7 +40,7 @@ namespace DAL
 		public void escribirXML(string rutaArchivo, XmlDocument datosXMl)
 		{
 			datosXMl.Save(rutaArchivo);
-			/* el método Save de XmlDocument para guardar los datos XML en el archivo especificado.*/
+			/* el método guardar los datos XML en el archivo especificado.*/
 		}
 
 		public void modificarMXL(string rutaArchivo, string nodoXMLMod, string nuevoNodoXML)
@@ -50,16 +52,13 @@ namespace DAL
 			XmlNode nodoXML = xmlDoc.SelectSingleNode(nodoXMLMod);
 			//Selecciono el nodo  a modificar por medio del parametro 
 
-            if (nodoXML != null )
-            {
+			if (nodoXML != null)
+			{
 				nodoXML.InnerText = nuevoNodoXML;
 				// actualizo el valor del nodo 
 				xmlDoc.Save(rutaArchivo);
 				// guardo los cambios en el archivo XML
-            }
-        }
-
-
-
+			}
+		}
 	} // fin class ArchivoXML
 }// fin namespace DAL
