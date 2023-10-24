@@ -9,7 +9,7 @@
     public class Persona
     {
         // Los campos están marcados con ?, lo que indica que son de tipo nullable, es decir, pueden ser nulos. Esto significa que pueden contener un valor o ser null.
-        private string? nombre;
+        private string? nombre ;
         private string? apellido;
         private int? identificacion;
         private DateTime  fecha;
