@@ -11,9 +11,10 @@ namespace BLL
         // esta clase Hereda todo lo de Persona por ese motivo no tiene nada
 
 
-        public Padre() : base("", "", 0, new DateOnly(), 0, "", 0, "")
+        public Padre() : base("", "", 0, new DateTime(), 0, "", 0, "")
         {
-            /* realizo la llamada al constructor de la clase persona 
+            /* constructor vacio
+             * realizo la llamada al constructor de la clase persona 
              * el Base  nos asegura de que los campos esten inicializados correctamente
              * ("", "", 0, new DateOnly(), 0, "", 0, "") son los valores predeterminados  para los campos y propiedades de la clase  base 
             */
@@ -21,7 +22,8 @@ namespace BLL
 
 
 
-        public void cantidadHijos() { }
+        public List<Hijo> Hijo { get; set; } = new List<Hijo>();
+        // lista para guardar los hijos
 
 
     } // fin class padre

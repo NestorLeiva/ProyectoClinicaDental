@@ -12,9 +12,9 @@
         private string? nombre;
         private string? apellido;
         private int? identificacion;
-        private DateOnly fecha; // ???
+        private DateTime  fecha;
         private int edad;
-        private string? sexo;
+        private string? genero;
         private int telefono;
         private string? email;
 
@@ -22,14 +22,14 @@
         // constructor vacio 
         }    
 
-        public Persona(string nombre, string apellido, int identificacion, DateOnly fecha, int edad, string sexo, int telefono, string email)
+        public Persona(string nombre, string apellido, int identificacion, DateTime fecha, int edad, string genero, int telefono, string email)
         {
             this.nombre = nombre;
             this.apellido = apellido;
             this.identificacion = identificacion;
             this.fecha = fecha;
             this.edad = edad;
-            this.sexo = sexo;
+            this.genero = genero;
             this.telefono = telefono;
             this.email = email;
         }
@@ -50,7 +50,7 @@
             get { return identificacion; }
             set { identificacion = value; }
         }
-        public DateOnly Fecha
+        public DateTime Fecha
         {
             get { return fecha; }
             set { fecha = value; }
@@ -60,10 +60,10 @@
             get { return edad; }
             set { edad = value; }
         }
-        public string? Sexo
+        public string? Genero
         {
-            get { return sexo; }
-            set { sexo = value; }
+            get { return genero; }
+            set { genero = value; }
         }
         public int Telefono
         {

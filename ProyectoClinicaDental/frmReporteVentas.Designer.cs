@@ -28,51 +28,53 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			groupBox1 = new GroupBox();
-			lvwReporteVentas = new ListView();
-			groupBox2 = new GroupBox();
+			gbListaFactura = new GroupBox();
+			lvwReporteFacturas = new ListView();
+			gbConsultaFactura = new GroupBox();
 			btnConsultar = new Button();
 			cboFechaReporteVentas = new ComboBox();
 			lblConsultarFecha = new Label();
-			groupBox1.SuspendLayout();
-			groupBox2.SuspendLayout();
+			gbListaFactura.SuspendLayout();
+			gbConsultaFactura.SuspendLayout();
 			SuspendLayout();
 			// 
-			// groupBox1
+			// gbListaFactura
 			// 
-			groupBox1.Controls.Add(lvwReporteVentas);
-			groupBox1.Location = new Point(12, 118);
-			groupBox1.Name = "groupBox1";
-			groupBox1.Size = new Size(768, 647);
-			groupBox1.TabIndex = 67;
-			groupBox1.TabStop = false;
+			gbListaFactura.Controls.Add(lvwReporteFacturas);
+			gbListaFactura.Dock = DockStyle.Fill;
+			gbListaFactura.Location = new Point(0, 0);
+			gbListaFactura.Name = "gbListaFactura";
+			gbListaFactura.Size = new Size(792, 550);
+			gbListaFactura.TabIndex = 67;
+			gbListaFactura.TabStop = false;
 			// 
-			// lvwReporteVentas
+			// lvwReporteFacturas
 			// 
-			lvwReporteVentas.Dock = DockStyle.Fill;
-			lvwReporteVentas.GridLines = true;
-			lvwReporteVentas.Location = new Point(3, 19);
-			lvwReporteVentas.Name = "lvwReporteVentas";
-			lvwReporteVentas.Size = new Size(762, 625);
-			lvwReporteVentas.TabIndex = 0;
-			lvwReporteVentas.UseCompatibleStateImageBehavior = false;
-			lvwReporteVentas.View = View.Details;
+			lvwReporteFacturas.Dock = DockStyle.Fill;
+			lvwReporteFacturas.GridLines = true;
+			lvwReporteFacturas.Location = new Point(3, 19);
+			lvwReporteFacturas.Name = "lvwReporteFacturas";
+			lvwReporteFacturas.Size = new Size(786, 528);
+			lvwReporteFacturas.TabIndex = 0;
+			lvwReporteFacturas.UseCompatibleStateImageBehavior = false;
+			lvwReporteFacturas.View = View.Details;
 			// 
-			// groupBox2
+			// gbConsultaFactura
 			// 
-			groupBox2.Controls.Add(btnConsultar);
-			groupBox2.Controls.Add(cboFechaReporteVentas);
-			groupBox2.Controls.Add(lblConsultarFecha);
-			groupBox2.Location = new Point(12, 12);
-			groupBox2.Name = "groupBox2";
-			groupBox2.Size = new Size(768, 100);
-			groupBox2.TabIndex = 68;
-			groupBox2.TabStop = false;
+			gbConsultaFactura.Controls.Add(btnConsultar);
+			gbConsultaFactura.Controls.Add(cboFechaReporteVentas);
+			gbConsultaFactura.Controls.Add(lblConsultarFecha);
+			gbConsultaFactura.Dock = DockStyle.Top;
+			gbConsultaFactura.Location = new Point(0, 0);
+			gbConsultaFactura.Name = "gbConsultaFactura";
+			gbConsultaFactura.Size = new Size(792, 100);
+			gbConsultaFactura.TabIndex = 68;
+			gbConsultaFactura.TabStop = false;
 			// 
 			// btnConsultar
 			// 
 			btnConsultar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			btnConsultar.Location = new Point(355, 32);
+			btnConsultar.Location = new Point(433, 32);
 			btnConsultar.Name = "btnConsultar";
 			btnConsultar.Size = new Size(109, 29);
 			btnConsultar.TabIndex = 2;
@@ -86,7 +88,7 @@
 			cboFechaReporteVentas.Items.AddRange(new object[] { "Dia", "Mes", "Anio" });
 			cboFechaReporteVentas.Location = new Point(167, 32);
 			cboFechaReporteVentas.Name = "cboFechaReporteVentas";
-			cboFechaReporteVentas.Size = new Size(182, 29);
+			cboFechaReporteVentas.Size = new Size(245, 29);
 			cboFechaReporteVentas.TabIndex = 1;
 			// 
 			// lblConsultarFecha
@@ -102,21 +104,21 @@
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(796, 779);
-			Controls.Add(groupBox2);
-			Controls.Add(groupBox1);
+			ClientSize = new Size(792, 550);
+			Controls.Add(gbConsultaFactura);
+			Controls.Add(gbListaFactura);
 			Name = "frmReporteVentas";
 			Text = "Reporte Ventas";
-			groupBox1.ResumeLayout(false);
-			groupBox2.ResumeLayout(false);
+			gbListaFactura.ResumeLayout(false);
+			gbConsultaFactura.ResumeLayout(false);
 			ResumeLayout(false);
 		}
 
 		#endregion
 
-		private GroupBox groupBox1;
-		private ListView lvwReporteVentas;
-		private GroupBox groupBox2;
+		private GroupBox gbListaFactura;
+		private ListView lvwReporteFacturas;
+		private GroupBox gbConsultaFactura;
 		private Button btnConsultar;
 		private ComboBox cboFechaReporteVentas;
 		private Label lblConsultarFecha;

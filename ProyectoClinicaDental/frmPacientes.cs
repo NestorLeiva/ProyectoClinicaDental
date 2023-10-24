@@ -215,7 +215,7 @@ namespace ProyectoClinicaDental
 			txtNombrePadre.Text = "";
 			txtApellidoPadre.Text = "";
 			txtIdentificacionPadre.Text = "";
-			cboSexoPadre.Text = "";
+
 			lblResEdadPadre.Text = "";
 			txtTelefonoPadre.Text = "";
 			txtEmailPadre.Text = "";
@@ -224,7 +224,7 @@ namespace ProyectoClinicaDental
 			txtApellidoHijo.Text = "";
 			txtIdentificacionHijo.Text = "";
 			lblResEdadHijo.Text = "";
-			cboSexoHijo.Text = "";
+
 			txtTelefonoHIjo.Text = "";
 			txtEmailHijo.Text = "";
 			//- ---------------------------------------------
@@ -234,6 +234,9 @@ namespace ProyectoClinicaDental
 			txtDieccionOtrasSenas.Text = "";
 		}
 
+		private void gbDatosPadre_Enter(object sender, EventArgs e)
+		{
 
+		}
 	} // fin frmPacientes : Form
 } // fin ProyectoClinicaDental

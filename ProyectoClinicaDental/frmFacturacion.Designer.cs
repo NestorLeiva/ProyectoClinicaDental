@@ -28,152 +28,121 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			label1 = new Label();
-			label2 = new Label();
-			label3 = new Label();
-			label4 = new Label();
-			label5 = new Label();
-			label6 = new Label();
-			label7 = new Label();
-			label8 = new Label();
-			label9 = new Label();
-			label10 = new Label();
-			textBox1 = new TextBox();
-			textBox2 = new TextBox();
+			lblNombreFactura = new Label();
+			lblIdentificacionFactura = new Label();
+			lblSubTotal = new Label();
+			lblResSubTotal = new Label();
+			lblTotal = new Label();
+			lblIVA = new Label();
+			lblResTotal = new Label();
+			lblResIVA = new Label();
+			txtIdentificacionFactura = new TextBox();
 			btnPagar = new Button();
 			btnCancelar = new Button();
-			groupBox1 = new GroupBox();
-			groupBox2 = new GroupBox();
-			lvwListaVenta = new ListView();
-			groupBox3 = new GroupBox();
-			groupBox1.SuspendLayout();
-			groupBox2.SuspendLayout();
-			groupBox3.SuspendLayout();
+			gbDatosFactura = new GroupBox();
+			gbListaFacruta = new GroupBox();
+			lvwListaFactura = new ListView();
+			gbTotalFactura = new GroupBox();
+			lblNombreFacturaPadre = new Label();
+			gbDatosFactura.SuspendLayout();
+			gbListaFacruta.SuspendLayout();
+			gbTotalFactura.SuspendLayout();
 			SuspendLayout();
 			// 
-			// label1
+			// lblNombreFactura
 			// 
-			label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-			label1.Location = new Point(6, 19);
-			label1.Name = "label1";
-			label1.Size = new Size(135, 29);
-			label1.TabIndex = 0;
-			label1.Text = "Cliente";
-			label1.TextAlign = ContentAlignment.MiddleLeft;
+			lblNombreFactura.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+			lblNombreFactura.Location = new Point(12, 64);
+			lblNombreFactura.Name = "lblNombreFactura";
+			lblNombreFactura.Size = new Size(135, 29);
+			lblNombreFactura.TabIndex = 0;
+			lblNombreFactura.Text = "Cliente";
+			lblNombreFactura.TextAlign = ContentAlignment.MiddleRight;
 			// 
-			// label2
+			// lblIdentificacionFactura
 			// 
-			label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-			label2.Location = new Point(6, 50);
-			label2.Name = "label2";
-			label2.Size = new Size(135, 37);
-			label2.TabIndex = 1;
-			label2.Text = "Identificacion";
-			label2.TextAlign = ContentAlignment.MiddleLeft;
+			lblIdentificacionFactura.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+			lblIdentificacionFactura.Location = new Point(12, 18);
+			lblIdentificacionFactura.Name = "lblIdentificacionFactura";
+			lblIdentificacionFactura.Size = new Size(135, 37);
+			lblIdentificacionFactura.TabIndex = 1;
+			lblIdentificacionFactura.Text = "Identificacion";
+			lblIdentificacionFactura.TextAlign = ContentAlignment.MiddleRight;
 			// 
-			// label3
+			// lblSubTotal
 			// 
-			label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-			label3.Location = new Point(536, 25);
-			label3.Name = "label3";
-			label3.Size = new Size(100, 23);
-			label3.TabIndex = 2;
-			label3.Text = "N. Factura";
-			label3.TextAlign = ContentAlignment.MiddleLeft;
+			lblSubTotal.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+			lblSubTotal.Location = new Point(6, 19);
+			lblSubTotal.Name = "lblSubTotal";
+			lblSubTotal.Size = new Size(100, 23);
+			lblSubTotal.TabIndex = 4;
+			lblSubTotal.Text = "SubTotal";
+			lblSubTotal.TextAlign = ContentAlignment.MiddleRight;
 			// 
-			// label4
+			// lblResSubTotal
 			// 
-			label4.BackColor = SystemColors.ButtonShadow;
-			label4.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-			label4.Location = new Point(536, 58);
-			label4.Name = "label4";
-			label4.Size = new Size(100, 23);
-			label4.TabIndex = 3;
-			label4.Text = "0";
-			label4.TextAlign = ContentAlignment.MiddleCenter;
+			lblResSubTotal.BackColor = SystemColors.ActiveBorder;
+			lblResSubTotal.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+			lblResSubTotal.Location = new Point(112, 19);
+			lblResSubTotal.Name = "lblResSubTotal";
+			lblResSubTotal.Size = new Size(100, 23);
+			lblResSubTotal.TabIndex = 5;
+			lblResSubTotal.Text = "0.0";
+			lblResSubTotal.TextAlign = ContentAlignment.MiddleCenter;
 			// 
-			// label5
+			// lblTotal
 			// 
-			label5.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-			label5.Location = new Point(6, 19);
-			label5.Name = "label5";
-			label5.Size = new Size(100, 23);
-			label5.TabIndex = 4;
-			label5.Text = "SubTotal";
-			label5.TextAlign = ContentAlignment.MiddleRight;
+			lblTotal.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+			lblTotal.Location = new Point(429, 19);
+			lblTotal.Name = "lblTotal";
+			lblTotal.Size = new Size(100, 23);
+			lblTotal.TabIndex = 6;
+			lblTotal.Text = "Total";
+			lblTotal.TextAlign = ContentAlignment.MiddleRight;
 			// 
-			// label6
+			// lblIVA
 			// 
-			label6.BackColor = SystemColors.ActiveBorder;
-			label6.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-			label6.Location = new Point(112, 19);
-			label6.Name = "label6";
-			label6.Size = new Size(100, 23);
-			label6.TabIndex = 5;
-			label6.Text = "0.0";
-			label6.TextAlign = ContentAlignment.MiddleCenter;
+			lblIVA.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+			lblIVA.Location = new Point(6, 61);
+			lblIVA.Name = "lblIVA";
+			lblIVA.Size = new Size(100, 23);
+			lblIVA.TabIndex = 7;
+			lblIVA.Text = "IVA 13%";
+			lblIVA.TextAlign = ContentAlignment.MiddleRight;
 			// 
-			// label7
+			// lblResTotal
 			// 
-			label7.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-			label7.Location = new Point(429, 19);
-			label7.Name = "label7";
-			label7.Size = new Size(100, 23);
-			label7.TabIndex = 6;
-			label7.Text = "Total";
-			label7.TextAlign = ContentAlignment.MiddleRight;
+			lblResTotal.BackColor = SystemColors.ActiveBorder;
+			lblResTotal.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+			lblResTotal.Location = new Point(535, 19);
+			lblResTotal.Name = "lblResTotal";
+			lblResTotal.Size = new Size(111, 23);
+			lblResTotal.TabIndex = 8;
+			lblResTotal.Text = "0.0";
+			lblResTotal.TextAlign = ContentAlignment.MiddleCenter;
 			// 
-			// label8
+			// lblResIVA
 			// 
-			label8.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-			label8.Location = new Point(6, 61);
-			label8.Name = "label8";
-			label8.Size = new Size(100, 23);
-			label8.TabIndex = 7;
-			label8.Text = "IVA 13%";
-			label8.TextAlign = ContentAlignment.MiddleRight;
+			lblResIVA.BackColor = SystemColors.ActiveBorder;
+			lblResIVA.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+			lblResIVA.Location = new Point(112, 61);
+			lblResIVA.Name = "lblResIVA";
+			lblResIVA.Size = new Size(100, 23);
+			lblResIVA.TabIndex = 9;
+			lblResIVA.Text = "0.0";
+			lblResIVA.TextAlign = ContentAlignment.MiddleCenter;
 			// 
-			// label9
+			// txtIdentificacionFactura
 			// 
-			label9.BackColor = SystemColors.ActiveBorder;
-			label9.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-			label9.Location = new Point(535, 19);
-			label9.Name = "label9";
-			label9.Size = new Size(111, 23);
-			label9.TabIndex = 8;
-			label9.Text = "0.0";
-			label9.TextAlign = ContentAlignment.MiddleCenter;
-			// 
-			// label10
-			// 
-			label10.BackColor = SystemColors.ActiveBorder;
-			label10.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-			label10.Location = new Point(112, 61);
-			label10.Name = "label10";
-			label10.Size = new Size(100, 23);
-			label10.TabIndex = 9;
-			label10.Text = "0.0";
-			label10.TextAlign = ContentAlignment.MiddleCenter;
-			// 
-			// textBox1
-			// 
-			textBox1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-			textBox1.Location = new Point(147, 15);
-			textBox1.Name = "textBox1";
-			textBox1.Size = new Size(344, 33);
-			textBox1.TabIndex = 14;
-			// 
-			// textBox2
-			// 
-			textBox2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-			textBox2.Location = new Point(147, 54);
-			textBox2.Name = "textBox2";
-			textBox2.Size = new Size(344, 33);
-			textBox2.TabIndex = 15;
+			txtIdentificacionFactura.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+			txtIdentificacionFactura.Location = new Point(153, 21);
+			txtIdentificacionFactura.Name = "txtIdentificacionFactura";
+			txtIdentificacionFactura.Size = new Size(448, 33);
+			txtIdentificacionFactura.TabIndex = 15;
 			// 
 			// btnPagar
 			// 
-			btnPagar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+			btnPagar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
 			btnPagar.Location = new Point(429, 61);
 			btnPagar.Name = "btnPagar";
 			btnPagar.Size = new Size(100, 31);
@@ -183,7 +152,7 @@
 			// 
 			// btnCancelar
 			// 
-			btnCancelar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+			btnCancelar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
 			btnCancelar.Location = new Point(536, 61);
 			btnCancelar.Name = "btnCancelar";
 			btnCancelar.Size = new Size(111, 31);
@@ -191,92 +160,100 @@
 			btnCancelar.Text = "Cancerlar";
 			btnCancelar.UseVisualStyleBackColor = true;
 			// 
-			// groupBox1
+			// gbDatosFactura
 			// 
-			groupBox1.Controls.Add(textBox1);
-			groupBox1.Controls.Add(label1);
-			groupBox1.Controls.Add(label2);
-			groupBox1.Controls.Add(label3);
-			groupBox1.Controls.Add(textBox2);
-			groupBox1.Controls.Add(label4);
-			groupBox1.Location = new Point(22, 12);
-			groupBox1.Name = "groupBox1";
-			groupBox1.Size = new Size(652, 103);
-			groupBox1.TabIndex = 19;
-			groupBox1.TabStop = false;
+			gbDatosFactura.Controls.Add(lblNombreFacturaPadre);
+			gbDatosFactura.Controls.Add(lblNombreFactura);
+			gbDatosFactura.Controls.Add(lblIdentificacionFactura);
+			gbDatosFactura.Controls.Add(txtIdentificacionFactura);
+			gbDatosFactura.Dock = DockStyle.Top;
+			gbDatosFactura.Location = new Point(0, 0);
+			gbDatosFactura.Name = "gbDatosFactura";
+			gbDatosFactura.Size = new Size(665, 103);
+			gbDatosFactura.TabIndex = 19;
+			gbDatosFactura.TabStop = false;
 			// 
-			// groupBox2
+			// gbListaFacruta
 			// 
-			groupBox2.Controls.Add(lvwListaVenta);
-			groupBox2.Location = new Point(22, 121);
-			groupBox2.Name = "groupBox2";
-			groupBox2.Size = new Size(652, 330);
-			groupBox2.TabIndex = 20;
-			groupBox2.TabStop = false;
+			gbListaFacruta.Controls.Add(lvwListaFactura);
+			gbListaFacruta.Dock = DockStyle.Fill;
+			gbListaFacruta.Location = new Point(0, 103);
+			gbListaFacruta.Name = "gbListaFacruta";
+			gbListaFacruta.Size = new Size(665, 504);
+			gbListaFacruta.TabIndex = 20;
+			gbListaFacruta.TabStop = false;
 			// 
-			// lvwListaVenta
+			// lvwListaFactura
 			// 
-			lvwListaVenta.Dock = DockStyle.Fill;
-			lvwListaVenta.GridLines = true;
-			lvwListaVenta.Location = new Point(3, 19);
-			lvwListaVenta.Name = "lvwListaVenta";
-			lvwListaVenta.Size = new Size(646, 308);
-			lvwListaVenta.TabIndex = 0;
-			lvwListaVenta.UseCompatibleStateImageBehavior = false;
-			lvwListaVenta.View = View.Details;
+			lvwListaFactura.Dock = DockStyle.Fill;
+			lvwListaFactura.GridLines = true;
+			lvwListaFactura.Location = new Point(3, 19);
+			lvwListaFactura.Name = "lvwListaFactura";
+			lvwListaFactura.Size = new Size(659, 482);
+			lvwListaFactura.TabIndex = 0;
+			lvwListaFactura.UseCompatibleStateImageBehavior = false;
+			lvwListaFactura.View = View.Details;
 			// 
-			// groupBox3
+			// gbTotalFactura
 			// 
-			groupBox3.Controls.Add(label5);
-			groupBox3.Controls.Add(label6);
-			groupBox3.Controls.Add(label7);
-			groupBox3.Controls.Add(btnCancelar);
-			groupBox3.Controls.Add(label8);
-			groupBox3.Controls.Add(btnPagar);
-			groupBox3.Controls.Add(label9);
-			groupBox3.Controls.Add(label10);
-			groupBox3.Location = new Point(22, 457);
-			groupBox3.Name = "groupBox3";
-			groupBox3.Size = new Size(652, 101);
-			groupBox3.TabIndex = 21;
-			groupBox3.TabStop = false;
+			gbTotalFactura.Controls.Add(lblSubTotal);
+			gbTotalFactura.Controls.Add(lblResSubTotal);
+			gbTotalFactura.Controls.Add(lblTotal);
+			gbTotalFactura.Controls.Add(btnCancelar);
+			gbTotalFactura.Controls.Add(lblIVA);
+			gbTotalFactura.Controls.Add(btnPagar);
+			gbTotalFactura.Controls.Add(lblResTotal);
+			gbTotalFactura.Controls.Add(lblResIVA);
+			gbTotalFactura.Dock = DockStyle.Bottom;
+			gbTotalFactura.Location = new Point(0, 506);
+			gbTotalFactura.Name = "gbTotalFactura";
+			gbTotalFactura.Size = new Size(665, 101);
+			gbTotalFactura.TabIndex = 21;
+			gbTotalFactura.TabStop = false;
+			// 
+			// lblNombreFacturaPadre
+			// 
+			lblNombreFacturaPadre.BackColor = SystemColors.ButtonShadow;
+			lblNombreFacturaPadre.Location = new Point(153, 60);
+			lblNombreFacturaPadre.Name = "lblNombreFacturaPadre";
+			lblNombreFacturaPadre.Size = new Size(448, 33);
+			lblNombreFacturaPadre.TabIndex = 16;
+			lblNombreFacturaPadre.TextAlign = ContentAlignment.MiddleLeft;
 			// 
 			// frmFacturacion
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(696, 568);
-			Controls.Add(groupBox3);
-			Controls.Add(groupBox2);
-			Controls.Add(groupBox1);
+			ClientSize = new Size(665, 607);
+			Controls.Add(gbTotalFactura);
+			Controls.Add(gbListaFacruta);
+			Controls.Add(gbDatosFactura);
 			Name = "frmFacturacion";
-			Text = "Ventas";
-			groupBox1.ResumeLayout(false);
-			groupBox1.PerformLayout();
-			groupBox2.ResumeLayout(false);
-			groupBox3.ResumeLayout(false);
+			Text = "Facturacion";
+			gbDatosFactura.ResumeLayout(false);
+			gbDatosFactura.PerformLayout();
+			gbListaFacruta.ResumeLayout(false);
+			gbTotalFactura.ResumeLayout(false);
 			ResumeLayout(false);
 		}
 
 		#endregion
 
-		private Label label1;
-		private Label label2;
-		private Label label3;
-		private Label label4;
-		private Label label5;
-		private Label label6;
-		private Label label7;
-		private Label label8;
-		private Label label9;
-		private Label label10;
-		private TextBox textBox1;
-		private TextBox textBox2;
+		private Label lblNombreFactura;
+		private Label lblIdentificacionFactura;
+		private Label lblSubTotal;
+		private Label lblResSubTotal;
+		private Label lblTotal;
+		private Label lblIVA;
+		private Label lblResTotal;
+		private Label lblResIVA;
+		private TextBox txtIdentificacionFactura;
 		private Button btnPagar;
 		private Button btnCancelar;
-		private GroupBox groupBox1;
-		private GroupBox groupBox2;
-		private ListView lvwListaVenta;
-		private GroupBox groupBox3;
+		private GroupBox gbDatosFactura;
+		private GroupBox gbListaFacruta;
+		private ListView lvwListaFactura;
+		private GroupBox gbTotalFactura;
+		private Label lblNombreFacturaPadre;
 	}
 }

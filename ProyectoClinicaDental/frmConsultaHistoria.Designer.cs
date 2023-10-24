@@ -28,26 +28,31 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			groupBox5 = new GroupBox();
+			gbConsulta = new GroupBox();
 			btnBusqueda = new Button();
 			txtIdentificacionPadreBusqueda = new TextBox();
 			lblIdBusqueda = new Label();
-			groupBox1 = new GroupBox();
+			gbListaConsulta = new GroupBox();
 			lvwConsultaHistorialPaciente = new ListView();
-			groupBox5.SuspendLayout();
-			groupBox1.SuspendLayout();
+			btnModificar = new Button();
+			lblModificar = new Label();
+			gbConsulta.SuspendLayout();
+			gbListaConsulta.SuspendLayout();
 			SuspendLayout();
 			// 
-			// groupBox5
+			// gbConsulta
 			// 
-			groupBox5.Controls.Add(btnBusqueda);
-			groupBox5.Controls.Add(txtIdentificacionPadreBusqueda);
-			groupBox5.Controls.Add(lblIdBusqueda);
-			groupBox5.Location = new Point(12, 12);
-			groupBox5.Name = "groupBox5";
-			groupBox5.Size = new Size(743, 85);
-			groupBox5.TabIndex = 65;
-			groupBox5.TabStop = false;
+			gbConsulta.Controls.Add(lblModificar);
+			gbConsulta.Controls.Add(btnModificar);
+			gbConsulta.Controls.Add(btnBusqueda);
+			gbConsulta.Controls.Add(txtIdentificacionPadreBusqueda);
+			gbConsulta.Controls.Add(lblIdBusqueda);
+			gbConsulta.Dock = DockStyle.Top;
+			gbConsulta.Location = new Point(0, 0);
+			gbConsulta.Name = "gbConsulta";
+			gbConsulta.Size = new Size(780, 85);
+			gbConsulta.TabIndex = 65;
+			gbConsulta.TabStop = false;
 			// 
 			// btnBusqueda
 			// 
@@ -75,14 +80,15 @@
 			lblIdBusqueda.TabIndex = 0;
 			lblIdBusqueda.Text = "Buscar por Id ";
 			// 
-			// groupBox1
+			// gbListaConsulta
 			// 
-			groupBox1.Controls.Add(lvwConsultaHistorialPaciente);
-			groupBox1.Location = new Point(12, 103);
-			groupBox1.Name = "groupBox1";
-			groupBox1.Size = new Size(743, 622);
-			groupBox1.TabIndex = 66;
-			groupBox1.TabStop = false;
+			gbListaConsulta.Controls.Add(lvwConsultaHistorialPaciente);
+			gbListaConsulta.Dock = DockStyle.Fill;
+			gbListaConsulta.Location = new Point(0, 85);
+			gbListaConsulta.Name = "gbListaConsulta";
+			gbListaConsulta.Size = new Size(780, 659);
+			gbListaConsulta.TabIndex = 66;
+			gbListaConsulta.TabStop = false;
 			// 
 			// lvwConsultaHistorialPaciente
 			// 
@@ -90,33 +96,54 @@
 			lvwConsultaHistorialPaciente.GridLines = true;
 			lvwConsultaHistorialPaciente.Location = new Point(3, 19);
 			lvwConsultaHistorialPaciente.Name = "lvwConsultaHistorialPaciente";
-			lvwConsultaHistorialPaciente.Size = new Size(737, 600);
+			lvwConsultaHistorialPaciente.Size = new Size(774, 637);
 			lvwConsultaHistorialPaciente.TabIndex = 0;
 			lvwConsultaHistorialPaciente.UseCompatibleStateImageBehavior = false;
 			lvwConsultaHistorialPaciente.View = View.Details;
+			// 
+			// btnModificar
+			// 
+			btnModificar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+			btnModificar.Location = new Point(528, 50);
+			btnModificar.Name = "btnModificar";
+			btnModificar.Size = new Size(118, 31);
+			btnModificar.TabIndex = 3;
+			btnModificar.Text = "Modificar";
+			btnModificar.UseVisualStyleBackColor = true;
+			// 
+			// lblModificar
+			// 
+			lblModificar.AutoSize = true;
+			lblModificar.Location = new Point(6, 60);
+			lblModificar.Name = "lblModificar";
+			lblModificar.Size = new Size(146, 15);
+			lblModificar.TabIndex = 4;
+			lblModificar.Text = "Marque la fila del paciente";
 			// 
 			// frmConsultaHistoria
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(780, 744);
-			Controls.Add(groupBox1);
-			Controls.Add(groupBox5);
+			Controls.Add(gbListaConsulta);
+			Controls.Add(gbConsulta);
 			Name = "frmConsultaHistoria";
-			Text = "frmConsultaHistoria";
-			groupBox5.ResumeLayout(false);
-			groupBox5.PerformLayout();
-			groupBox1.ResumeLayout(false);
+			Text = "Consulta Historial Paciente";
+			gbConsulta.ResumeLayout(false);
+			gbConsulta.PerformLayout();
+			gbListaConsulta.ResumeLayout(false);
 			ResumeLayout(false);
 		}
 
 		#endregion
 
-		private GroupBox groupBox5;
+		private GroupBox gbConsulta;
 		private Button btnBusqueda;
 		private TextBox txtIdentificacionPadreBusqueda;
 		private Label lblIdBusqueda;
-		private GroupBox groupBox1;
+		private GroupBox gbListaConsulta;
 		private ListView lvwConsultaHistorialPaciente;
+		private Label lblModificar;
+		private Button btnModificar;
 	}
 }
