@@ -19,7 +19,6 @@ namespace ProyectoClinicaDental
 		public frmFuncionarios()
 		{
 			InitializeComponent();
-			nFuncionario = new Funcionario();   // inicializacion de la clase Funcionario
 		}
 
 		private void frmFuncionarios_Load(object sender, EventArgs e) { }
@@ -32,15 +31,9 @@ namespace ProyectoClinicaDental
 				{
 					e.Handled = true;
 				}
-				else
-				{
-					// obtengo el string y es asignado al get&set de la clase persona
-					nFuncionario.Nombre = txtNombreFuncionario.Text;
-				}
 			}
 			catch (Exception ex)
 			{
-
 				MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
@@ -53,14 +46,9 @@ namespace ProyectoClinicaDental
 				{
 					e.Handled = true;
 				}
-				else
-				{
-					nFuncionario.Apellido = txtApellidoFuncionario.Text;
-				}
 			}
 			catch (Exception ex)
 			{
-
 				MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
@@ -73,15 +61,9 @@ namespace ProyectoClinicaDental
 				{
 					e.Handled = true;
 				}
-				else
-				{
-					nFuncionario.Identificacion = Convert.ToInt32(txtIdentificacionFuncionario.Text);
-				}
-
 			}
 			catch (Exception ex)
 			{
-
 				MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
@@ -93,10 +75,6 @@ namespace ProyectoClinicaDental
 				if (!metodosValidaciones.soloNumeros(e.KeyChar))
 				{
 					e.Handled = true;
-				}
-				else
-				{
-					nFuncionario.Telefono = Convert.ToInt32(txtTelefonoFuncionario.Text);
 				}
 			}
 			catch (Exception ex)
@@ -114,10 +92,6 @@ namespace ProyectoClinicaDental
 				{
 					e.Handled = true;
 				}
-				else
-				{
-					nFuncionario.Email = txtEmailFuncionario.Text;
-				}
 			}
 			catch (Exception ex)
 			{
@@ -133,14 +107,9 @@ namespace ProyectoClinicaDental
 				{
 					e.Handled = true;
 				}
-				else
-				{
-					nFuncionario.Puesto = txtPuestoFuncionario.Text;
-				}
 			}
 			catch (Exception ex)
 			{
-
 				MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
@@ -153,10 +122,6 @@ namespace ProyectoClinicaDental
 				{
 					e.Handled = true;
 				}
-				else
-				{
-					nFuncionario.Usuario = txtUsuarioFuncionario.Text;
-				}
 			}
 			catch (Exception ex)
 			{
@@ -166,23 +131,63 @@ namespace ProyectoClinicaDental
 
 		private void txtContraseniaFuncionario_KeyPress(object sender, KeyPressEventArgs e)
 		{
-			if (!metodosValidaciones.soloLetras(e.KeyChar.ToString()))
+			try
+			{
+				if (!metodosValidaciones.soloLetras(e.KeyChar.ToString()))
+				{
+					e.Handled = true;
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+		private void txtBuscarIdFuncionario_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (!metodosValidaciones.soloNumeros(e.KeyChar))
 			{
 				e.Handled = true;
-			}
-			else
-			{
-				nFuncionario.Contrasenia = txtContraseniaFuncionario.Text;
 			}
 		}
 
 		//   -------------------------------------------------------  Botones  -------------------------------------------------------
+		private void btnGuardar_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				nFuncionario = new Funcionario() /* inicializacion de la clase Funcionario*/
+				{
+					Nombre = this.txtNombreFuncionario.Text,
+					Apellido = this.txtApellidoFuncionario.Text,
+					Identificacion = Convert.ToInt32(this.txtIdentificacionFuncionario.Text),
+					Genero = (this.rbtnGeneroMFuncionario.Checked ? "M" : "F"),
+					Telefono = Convert.ToInt32(this.txtTelefonoFuncionario.Text),
+					Email = this.txtEmailFuncionario.Text,
+					Puesto = this.txtPuestoFuncionario.Text,
+					Usuario = this.txtUsuarioFuncionario.Text,
+					Contrasenia = this.txtContraseniaFuncionario.Text
+					/*se agregan los string */
+				};
+
+				nFuncionario.grabarXML("Funcionarios.xml");
+				// ruta para escribir el XML
+				MessageBox.Show("Se registro al Funcionario Exitosamente", "Registrar Funcionario", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				// mensaje de exito 
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Registrar Funcionario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				// mensaje de error 
+			}
+		}
+
 		private void btnLimpiar_Click(object sender, EventArgs e)
 		{
 			txtNombreFuncionario.Text = "";
 			txtApellidoFuncionario.Text = "";
 			txtIdentificacionFuncionario.Text = "";
-			lblResEdadFuncionario.Text = "";
+			//lblResEdadFuncionario.Text = "";
 			txtEmailFuncionario.Text = "";
 			txtTelefonoFuncionario.Text = "";
 			txtPuestoFuncionario.Text = "";
@@ -193,14 +198,8 @@ namespace ProyectoClinicaDental
 		{
 			this.Close();
 		}
-		private void btnGuardar_Click(object sender, EventArgs e)
-		{
 
-		}
 
-		private void gbDatosFuncionarios_Enter(object sender, EventArgs e)
-		{
 
-		}
 	} // fin frmFuncionarios : Form
 }
