@@ -12,8 +12,6 @@
 		private string nombre = string.Empty;
 		private string apellido = string.Empty;
 		private int identificacion;
-		private DateTime fecha;
-		private int edad;
 		private string genero = string.Empty;
 		private int telefono;
 		private string email = string.Empty;
@@ -23,13 +21,11 @@
 			// constructor vacio 
 		}
 
-		public Persona(string nombre, string apellido, int identificacion, DateTime fecha, int edad, string genero, int telefono, string email)
+		public Persona(string nombre, string apellido, int identificacion,  string genero, int telefono, string email)
 		{
 			this.nombre = nombre;
 			this.apellido = apellido;
 			this.identificacion = identificacion;
-			this.fecha = fecha;
-			this.edad = edad;
 			this.genero = genero;
 			this.telefono = telefono;
 			this.email = email;
@@ -51,16 +47,7 @@
 			get { return identificacion; }
 			set { identificacion = value; }
 		}
-		public DateTime Fecha
-		{
-			get { return fecha; }
-			set { fecha = value; }
-		}
-		public int Edad
-		{
-			get { return edad; }
-			set { edad = value; }
-		}
+		
 		public string Genero
 		{
 			get { return genero; }
@@ -79,15 +66,5 @@
 
 	} // fin class Persona
 
-	/*
-    public static int  calcularEdad() {
-        DateTime fechaActual = DateTime.Today;
-        int edad = fechaActual.Year - FechaNacimiento.Value.Year;
-        if (fechaActual < FechaNacimeito.Value.AddYears(edad)) edad--;
-        {
-            lblResEdad.text = edad.ToString() + " anos";
-        }
-    }
-    */
-
+	
 }

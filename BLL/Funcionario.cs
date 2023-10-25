@@ -26,7 +26,7 @@ namespace BLL
 		}
 
 		public Funcionario(string puesto, string usuario, string contrasenia) :
-			base("", "", 0, new DateTime(), 0, "", 0, "")
+			base("", "", 0, "", 0, "")
 		{
 			// constuctor con parametros
 			Puesto = puesto;

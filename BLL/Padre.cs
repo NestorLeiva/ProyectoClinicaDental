@@ -11,7 +11,7 @@ namespace BLL
         // esta clase Hereda todo lo de Persona por ese motivo no tiene nada
 
 
-        public Padre() : base("", "", 0, new DateTime(), 0, "", 0, "")
+        public Padre() : base("", "", 0,  "", 0, "")
         {
             /* constructor vacio
              * realizo la llamada al constructor de la clase persona 
