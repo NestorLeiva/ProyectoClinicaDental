@@ -25,6 +25,30 @@ namespace ProyectoClinicaDental
 			nHijo = new Hijo();     // inicializacion de la clase 
 			nDireccion = new Direccion(); // inicializacion de la clase 
 		}
+		//   ------------------------------------------------------- Validaciones label Edad -------------------------------------------------------
+		private void dtpFechaHijo_ValueChanged(object sender, EventArgs e)
+		/*ValueChanged evento que se dispara al acceder al objeto*/
+		{
+			try
+			{
+				
+				nHijo.setFechaNacimiento(dtpFechaHijo.Value); /*asigno la fecha seleccionada en el DateTimePicker al objeto hijo.*/
+				// Calcula la edad en años y meses
+				int edadAnos = nHijo.edadAnio;
+				int edadMeses = nHijo.edadMeses;
+				/*se calcula la edad en años y meses utilizando las propiedades EdadAnos y EdadMeses de la clase */
+
+				// Muestra la edad en el Label
+				lblResEdadHijo.Text = $"{edadAnos} años y {edadMeses} meses";
+				/*$ = cadena interpolada... permitiendo la combinacion de texto estatico y valores estaticos*/ 
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Error al ingresar la fecha de naciemiento", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+			
+		}
+
 		//   ------------------------------------------------------- Validaciones TextBox Padre -------------------------------------------------------
 		private void txtIdentificacionPadre_KeyPress(object sender, KeyPressEventArgs e)
 		{
@@ -216,7 +240,6 @@ namespace ProyectoClinicaDental
 			txtApellidoPadre.Text = "";
 			txtIdentificacionPadre.Text = "";
 
-			lblResEdadPadre.Text = "";
 			txtTelefonoPadre.Text = "";
 			txtEmailPadre.Text = "";
 			//- ---------------------------------------------
@@ -234,9 +257,5 @@ namespace ProyectoClinicaDental
 			txtDieccionOtrasSenas.Text = "";
 		}
 
-		private void gbDatosPadre_Enter(object sender, EventArgs e)
-		{
-
-		}
 	} // fin frmPacientes : Form
 } // fin ProyectoClinicaDental

@@ -38,9 +38,6 @@
 			lblCanton = new Label();
 			lblOtrasSenas = new Label();
 			lblDistrito = new Label();
-			lblResEdadPadre = new Label();
-			lblEdad = new Label();
-			lblFechaNacPadre = new Label();
 			lblNombreHijo = new Label();
 			lblApellidoHijo = new Label();
 			lblFechaNacHijo = new Label();
@@ -58,7 +55,6 @@
 			txtDieccionOtrasSenas = new TextBox();
 			txtDireccionDistrito = new TextBox();
 			txtTelefonoHIjo = new TextBox();
-			dtpFechaNac = new DateTimePicker();
 			dtpFechaHijo = new DateTimePicker();
 			lblResEdadHijo = new Label();
 			lblTelefonoHijo = new Label();
@@ -136,7 +132,7 @@
 			// lblTelefono
 			// 
 			lblTelefono.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			lblTelefono.Location = new Point(6, 262);
+			lblTelefono.Location = new Point(6, 187);
 			lblTelefono.Name = "lblTelefono";
 			lblTelefono.Size = new Size(141, 23);
 			lblTelefono.TabIndex = 7;
@@ -156,7 +152,7 @@
 			// lblEmail
 			// 
 			lblEmail.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			lblEmail.Location = new Point(6, 297);
+			lblEmail.Location = new Point(6, 222);
 			lblEmail.Name = "lblEmail";
 			lblEmail.Size = new Size(141, 23);
 			lblEmail.TabIndex = 9;
@@ -192,36 +188,6 @@
 			lblDistrito.TabIndex = 12;
 			lblDistrito.Text = "Distrito";
 			lblDistrito.TextAlign = ContentAlignment.MiddleRight;
-			// 
-			// lblResEdadPadre
-			// 
-			lblResEdadPadre.BackColor = SystemColors.ActiveBorder;
-			lblResEdadPadre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			lblResEdadPadre.Location = new Point(153, 177);
-			lblResEdadPadre.Name = "lblResEdadPadre";
-			lblResEdadPadre.Size = new Size(169, 29);
-			lblResEdadPadre.TabIndex = 13;
-			lblResEdadPadre.TextAlign = ContentAlignment.MiddleCenter;
-			// 
-			// lblEdad
-			// 
-			lblEdad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			lblEdad.Location = new Point(6, 180);
-			lblEdad.Name = "lblEdad";
-			lblEdad.Size = new Size(141, 23);
-			lblEdad.TabIndex = 14;
-			lblEdad.Text = "Edad";
-			lblEdad.TextAlign = ContentAlignment.MiddleRight;
-			// 
-			// lblFechaNacPadre
-			// 
-			lblFechaNacPadre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			lblFechaNacPadre.Location = new Point(6, 151);
-			lblFechaNacPadre.Name = "lblFechaNacPadre";
-			lblFechaNacPadre.Size = new Size(141, 23);
-			lblFechaNacPadre.TabIndex = 15;
-			lblFechaNacPadre.Text = "Fecha Nacimiento";
-			lblFechaNacPadre.TextAlign = ContentAlignment.MiddleRight;
 			// 
 			// lblNombreHijo
 			// 
@@ -322,7 +288,7 @@
 			// txtTelefonoPadre
 			// 
 			txtTelefonoPadre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			txtTelefonoPadre.Location = new Point(153, 256);
+			txtTelefonoPadre.Location = new Point(153, 181);
 			txtTelefonoPadre.Name = "txtTelefonoPadre";
 			txtTelefonoPadre.Size = new Size(169, 29);
 			txtTelefonoPadre.TabIndex = 27;
@@ -331,7 +297,7 @@
 			// txtEmailPadre
 			// 
 			txtEmailPadre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			txtEmailPadre.Location = new Point(153, 291);
+			txtEmailPadre.Location = new Point(153, 216);
 			txtEmailPadre.Name = "txtEmailPadre";
 			txtEmailPadre.Size = new Size(169, 29);
 			txtEmailPadre.TabIndex = 28;
@@ -382,31 +348,23 @@
 			txtTelefonoHIjo.TabIndex = 35;
 			txtTelefonoHIjo.KeyPress += txtTelefonoHIjo_KeyPress;
 			// 
-			// dtpFechaNac
-			// 
-			dtpFechaNac.CustomFormat = "dd/MM/yyyy";
-			dtpFechaNac.Format = DateTimePickerFormat.Custom;
-			dtpFechaNac.Location = new Point(153, 151);
-			dtpFechaNac.Name = "dtpFechaNac";
-			dtpFechaNac.Size = new Size(169, 23);
-			dtpFechaNac.TabIndex = 36;
-			// 
 			// dtpFechaHijo
 			// 
 			dtpFechaHijo.Location = new Point(180, 145);
 			dtpFechaHijo.Name = "dtpFechaHijo";
 			dtpFechaHijo.Size = new Size(169, 23);
 			dtpFechaHijo.TabIndex = 39;
+			dtpFechaHijo.ValueChanged += dtpFechaHijo_ValueChanged;
 			// 
 			// lblResEdadHijo
 			// 
 			lblResEdadHijo.BackColor = SystemColors.ActiveBorder;
-			lblResEdadHijo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+			lblResEdadHijo.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
 			lblResEdadHijo.Location = new Point(180, 180);
 			lblResEdadHijo.Name = "lblResEdadHijo";
 			lblResEdadHijo.Size = new Size(169, 29);
 			lblResEdadHijo.TabIndex = 38;
-			lblResEdadHijo.TextAlign = ContentAlignment.MiddleCenter;
+			lblResEdadHijo.TextAlign = ContentAlignment.MiddleLeft;
 			// 
 			// lblTelefonoHijo
 			// 
@@ -497,10 +455,6 @@
 			gbDatosPadre.Controls.Add(txtApellidoPadre);
 			gbDatosPadre.Controls.Add(lblIdentificacionPadre);
 			gbDatosPadre.Controls.Add(txtIdentificacionPadre);
-			gbDatosPadre.Controls.Add(lblFechaNacPadre);
-			gbDatosPadre.Controls.Add(dtpFechaNac);
-			gbDatosPadre.Controls.Add(lblEdad);
-			gbDatosPadre.Controls.Add(lblResEdadPadre);
 			gbDatosPadre.Controls.Add(lblTelefono);
 			gbDatosPadre.Controls.Add(txtTelefonoPadre);
 			gbDatosPadre.Controls.Add(lblEmail);
@@ -511,12 +465,11 @@
 			gbDatosPadre.TabIndex = 60;
 			gbDatosPadre.TabStop = false;
 			gbDatosPadre.Text = "DATOS DEL PADRE";
-			gbDatosPadre.Enter += gbDatosPadre_Enter;
 			// 
 			// rbtnGeneroFPadre
 			// 
 			rbtnGeneroFPadre.AutoSize = true;
-			rbtnGeneroFPadre.Location = new Point(241, 225);
+			rbtnGeneroFPadre.Location = new Point(241, 150);
 			rbtnGeneroFPadre.Name = "rbtnGeneroFPadre";
 			rbtnGeneroFPadre.Size = new Size(78, 19);
 			rbtnGeneroFPadre.TabIndex = 54;
@@ -527,7 +480,7 @@
 			// rbtnGeneroMPadre
 			// 
 			rbtnGeneroMPadre.AutoSize = true;
-			rbtnGeneroMPadre.Location = new Point(160, 227);
+			rbtnGeneroMPadre.Location = new Point(160, 152);
 			rbtnGeneroMPadre.Name = "rbtnGeneroMPadre";
 			rbtnGeneroMPadre.Size = new Size(75, 19);
 			rbtnGeneroMPadre.TabIndex = 53;
@@ -538,7 +491,7 @@
 			// lblGeneroPadre
 			// 
 			lblGeneroPadre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			lblGeneroPadre.Location = new Point(6, 221);
+			lblGeneroPadre.Location = new Point(6, 146);
 			lblGeneroPadre.Name = "lblGeneroPadre";
 			lblGeneroPadre.Size = new Size(141, 23);
 			lblGeneroPadre.TabIndex = 52;
@@ -721,9 +674,6 @@
 		private Label lblCanton;
 		private Label lblOtrasSenas;
 		private Label lblDistrito;
-		private Label lblResEdadPadre;
-		private Label lblEdad;
-		private Label lblFechaNacPadre;
 		private Label lblNombreHijo;
 		private Label lblApellidoHijo;
 		private Label lblFechaNacHijo;
@@ -741,7 +691,6 @@
 		private TextBox txtDieccionOtrasSenas;
 		private TextBox txtDireccionDistrito;
 		private TextBox txtTelefonoHIjo;
-		private DateTimePicker dtpFechaNac;
 		private DateTimePicker dtpFechaHijo;
 		private Label lblResEdadHijo;
 		private Label lblTelefonoHijo;
