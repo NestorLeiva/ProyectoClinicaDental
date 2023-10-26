@@ -86,7 +86,6 @@
 			txtContrasenia.Size = new Size(212, 33);
 			txtContrasenia.TabIndex = 4;
 			txtContrasenia.TextAlign = HorizontalAlignment.Center;
-			txtContrasenia.KeyPress += txtContrasenia_KeyPress;
 			// 
 			// btnAceptar
 			// 
@@ -97,6 +96,7 @@
 			btnAceptar.TabIndex = 5;
 			btnAceptar.Text = "Aceptar";
 			btnAceptar.UseVisualStyleBackColor = true;
+			btnAceptar.Click += btnAceptar_Click;
 			// 
 			// btnLimpiar
 			// 
@@ -118,7 +118,6 @@
 			pbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
 			pbLogo.TabIndex = 7;
 			pbLogo.TabStop = false;
-			pbLogo.Click += pbLogo_Click;
 			// 
 			// frmLogin
 			// 

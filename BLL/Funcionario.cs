@@ -9,30 +9,9 @@ namespace BLL
 {
 	public class Funcionario : Persona  // herencia
 	{
-		// Los campos están marcados con ?, lo que indica que son de tipo nullable, es decir, pueden ser nulos. Esto significa que pueden contener un valor o ser null.
-
 		private string puesto = string.Empty;
 		private string usuario = string.Empty;
 		private string contrasenia = string.Empty;
-
-		/* el : base realiza la llamada al constructor de la clase persona
-         * el Base  nos asegura de que los campos esten inicializados correctamente
-         * ("", "", 0, new DateOnly(), 0, "", 0, "") son los valores predeterminados  para los campos y propiedades de la clase  base 
-        */
-
-		public Funcionario()
-		{
-			// constructor 
-		}
-
-		public Funcionario(string puesto, string usuario, string contrasenia) 
-			
-		{
-			// constuctor con parametros
-			Puesto = puesto;
-			Usuario = usuario;
-			Contrasenia = contrasenia;
-		}
 
 		public string Puesto
 		{
@@ -112,7 +91,7 @@ namespace BLL
 			/*nodo usuario*/
 			XmlNode xmlUsuario = xmlDocFuncionario.CreateElement("Usuario");
 			xmlUsuario.InnerText = this.Usuario;
-			xmlFuncionario.AppendChild(xmlPuesto);
+			xmlFuncionario.AppendChild(xmlUsuario);
 
 			/*nodo contrasenia*/
 			XmlNode xmlContrasenia = xmlDocFuncionario.CreateElement("Contrasenia");
@@ -126,6 +105,39 @@ namespace BLL
 			xmlDocFuncionario.Save(rutaArchivo);
 
 		} // fin btn grabarXML
+
+
+		public static List<Funcionario> LeerFuncionariosDesdeXML(string rutaArchivo)
+		{
+			List<Funcionario> funcionarios = new List<Funcionario>(); 
+			/*Se crea una lista de objetos Funcionario para almacenar los funcionarios que se leerán del archivo XML.*/
+			XmlDocument xmlDoc = new XmlDocument();
+			xmlDoc.Load(rutaArchivo);
+			/*Se carga el archivo xml*/
+
+			XmlNodeList funcionarioNodes = xmlDoc.SelectNodes("/Funcionarios/Funcionrario");
+			/*  método SelectNodes para selecciona todos los nodos <Funcionrario> dentro del elemento <Funcionarios> en el archivo XML.*/
+
+			foreach (XmlNode funcionarioNode in funcionarioNodes)
+			{
+				Funcionario funcionario = new Funcionario
+				{
+					Usuario = funcionarioNode.SelectSingleNode("Usuario").InnerText,
+					Contrasenia = funcionarioNode.SelectSingleNode("Contrasenia").InnerText
+					// Asigna otros datos del funcionario si es necesario
+				};
+				funcionarios.Add(funcionario);
+				/*Una vez que se han asignado todas las propiedades del objeto Funcionario, se agrega el objeto a la lista funcionarios utilizando el método Add*/
+			}
+			/* foreach para iterar a través de todos los nodos de funcionario encontrados en el archivo XML.*/
+
+			return funcionarios; // devuelve la lista de funcionarios
+		}
+
+
+
+
+
 
 	} // fin class Funcionario
 }
