@@ -8,28 +8,13 @@
 
 	public class Persona
 	{
-		// Los campos están marcados con ?, lo que indica que son de tipo nullable, es decir, pueden ser nulos. Esto significa que pueden contener un valor o ser null.
 		private string nombre = string.Empty;
 		private string apellido = string.Empty;
 		private int identificacion;
 		private string genero = string.Empty;
 		private int telefono;
 		private string email = string.Empty;
-
-		public Persona()
-		{
-			// constructor vacio 
-		}
-
-		public Persona(string nombre, string apellido, int identificacion,  string genero, int telefono, string email)
-		{
-			this.nombre = nombre;
-			this.apellido = apellido;
-			this.identificacion = identificacion;
-			this.genero = genero;
-			this.telefono = telefono;
-			this.email = email;
-		}
+		
 
 		public string Nombre
 		{
