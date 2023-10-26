@@ -158,9 +158,9 @@ namespace ProyectoClinicaDental
 			{
 				nFuncionario = new Funcionario() /* inicializacion de la clase Funcionario*/
 				{
+					Identificacion = Convert.ToInt32(this.txtIdentificacionFuncionario.Text),
 					Nombre = this.txtNombreFuncionario.Text,
 					Apellido = this.txtApellidoFuncionario.Text,
-					Identificacion = Convert.ToInt32(this.txtIdentificacionFuncionario.Text),
 					Genero = (this.rbtnGeneroMFuncionario.Checked ? "M" : "F"),
 					Telefono = Convert.ToInt32(this.txtTelefonoFuncionario.Text),
 					Email = this.txtEmailFuncionario.Text,
@@ -184,15 +184,14 @@ namespace ProyectoClinicaDental
 
 		private void btnLimpiar_Click(object sender, EventArgs e)
 		{
-			txtNombreFuncionario.Text = "";
-			txtApellidoFuncionario.Text = "";
-			txtIdentificacionFuncionario.Text = "";
-			//lblResEdadFuncionario.Text = "";
-			txtEmailFuncionario.Text = "";
-			txtTelefonoFuncionario.Text = "";
-			txtPuestoFuncionario.Text = "";
-			txtUsuarioFuncionario.Text = "";
-			txtContraseniaFuncionario.Text = "";
+			txtNombreFuncionario.Text = string.Empty;
+			txtApellidoFuncionario.Text = string.Empty;
+			txtIdentificacionFuncionario.Text = string.Empty;
+			txtEmailFuncionario.Text = string.Empty;
+			txtTelefonoFuncionario.Text = string.Empty;
+			txtPuestoFuncionario.Text = string.Empty;
+			txtUsuarioFuncionario.Text = string.Empty;
+			txtContraseniaFuncionario.Text = string.Empty;
 		}
 		private void btnCancerlar_Click(object sender, EventArgs e)
 		{

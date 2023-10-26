@@ -31,9 +31,9 @@
 			lblTitulo = new Label();
 			lblNombreFuncionario = new Label();
 			lblIdentificacionFuncionario = new Label();
-			lblPuesto = new Label();
-			lblContrasenia = new Label();
-			lblUsuario = new Label();
+			lblPuestoFuncionario = new Label();
+			lblContraseniaFuncionario = new Label();
+			lblUsuarioFuncionario = new Label();
 			txtNombreFuncionario = new TextBox();
 			txtIdentificacionFuncionario = new TextBox();
 			txtPuestoFuncionario = new TextBox();
@@ -44,11 +44,11 @@
 			pbLogo = new PictureBox();
 			txtApellidoFuncionario = new TextBox();
 			lblApellidoFuncionario = new Label();
-			lblGenero = new Label();
+			lblGeneroFuncionario = new Label();
 			txtTelefonoFuncionario = new TextBox();
-			lblTelefono = new Label();
+			lblTelefonoFuncionario = new Label();
 			txtEmailFuncionario = new TextBox();
-			lblEmail = new Label();
+			lblEmailFuncionario = new Label();
 			btnLimpiar = new Button();
 			gbTitulo = new GroupBox();
 			gbBusquedaFuncionario = new GroupBox();
@@ -97,35 +97,35 @@
 			lblIdentificacionFuncionario.Text = "Identificacion";
 			lblIdentificacionFuncionario.TextAlign = ContentAlignment.MiddleRight;
 			// 
-			// lblPuesto
+			// lblPuestoFuncionario
 			// 
-			lblPuesto.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			lblPuesto.Location = new Point(360, 78);
-			lblPuesto.Name = "lblPuesto";
-			lblPuesto.Size = new Size(106, 21);
-			lblPuesto.TabIndex = 3;
-			lblPuesto.Text = "Puesto";
-			lblPuesto.TextAlign = ContentAlignment.MiddleRight;
+			lblPuestoFuncionario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+			lblPuestoFuncionario.Location = new Point(360, 78);
+			lblPuestoFuncionario.Name = "lblPuestoFuncionario";
+			lblPuestoFuncionario.Size = new Size(106, 21);
+			lblPuestoFuncionario.TabIndex = 3;
+			lblPuestoFuncionario.Text = "Puesto";
+			lblPuestoFuncionario.TextAlign = ContentAlignment.MiddleRight;
 			// 
-			// lblContrasenia
+			// lblContraseniaFuncionario
 			// 
-			lblContrasenia.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			lblContrasenia.Location = new Point(360, 185);
-			lblContrasenia.Name = "lblContrasenia";
-			lblContrasenia.Size = new Size(106, 21);
-			lblContrasenia.TabIndex = 5;
-			lblContrasenia.Text = "Contrasena";
-			lblContrasenia.TextAlign = ContentAlignment.MiddleRight;
+			lblContraseniaFuncionario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+			lblContraseniaFuncionario.Location = new Point(360, 185);
+			lblContraseniaFuncionario.Name = "lblContraseniaFuncionario";
+			lblContraseniaFuncionario.Size = new Size(106, 21);
+			lblContraseniaFuncionario.TabIndex = 5;
+			lblContraseniaFuncionario.Text = "Contrasena";
+			lblContraseniaFuncionario.TextAlign = ContentAlignment.MiddleRight;
 			// 
-			// lblUsuario
+			// lblUsuarioFuncionario
 			// 
-			lblUsuario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			lblUsuario.Location = new Point(360, 127);
-			lblUsuario.Name = "lblUsuario";
-			lblUsuario.Size = new Size(106, 21);
-			lblUsuario.TabIndex = 6;
-			lblUsuario.Text = "Usuario";
-			lblUsuario.TextAlign = ContentAlignment.MiddleRight;
+			lblUsuarioFuncionario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+			lblUsuarioFuncionario.Location = new Point(360, 127);
+			lblUsuarioFuncionario.Name = "lblUsuarioFuncionario";
+			lblUsuarioFuncionario.Size = new Size(106, 21);
+			lblUsuarioFuncionario.TabIndex = 6;
+			lblUsuarioFuncionario.Text = "Usuario";
+			lblUsuarioFuncionario.TextAlign = ContentAlignment.MiddleRight;
 			// 
 			// txtNombreFuncionario
 			// 
@@ -223,15 +223,15 @@
 			lblApellidoFuncionario.Text = "Apellido";
 			lblApellidoFuncionario.TextAlign = ContentAlignment.MiddleRight;
 			// 
-			// lblGenero
+			// lblGeneroFuncionario
 			// 
-			lblGenero.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			lblGenero.Location = new Point(3, 162);
-			lblGenero.Name = "lblGenero";
-			lblGenero.Size = new Size(106, 21);
-			lblGenero.TabIndex = 17;
-			lblGenero.Text = "Genero";
-			lblGenero.TextAlign = ContentAlignment.MiddleRight;
+			lblGeneroFuncionario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+			lblGeneroFuncionario.Location = new Point(3, 162);
+			lblGeneroFuncionario.Name = "lblGeneroFuncionario";
+			lblGeneroFuncionario.Size = new Size(106, 21);
+			lblGeneroFuncionario.TabIndex = 17;
+			lblGeneroFuncionario.Text = "Genero";
+			lblGeneroFuncionario.TextAlign = ContentAlignment.MiddleRight;
 			// 
 			// txtTelefonoFuncionario
 			// 
@@ -242,15 +242,15 @@
 			txtTelefonoFuncionario.TabIndex = 22;
 			txtTelefonoFuncionario.KeyPress += txtTelefonoFuncionario_KeyPress;
 			// 
-			// lblTelefono
+			// lblTelefonoFuncionario
 			// 
-			lblTelefono.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			lblTelefono.Location = new Point(12, 223);
-			lblTelefono.Name = "lblTelefono";
-			lblTelefono.Size = new Size(106, 21);
-			lblTelefono.TabIndex = 21;
-			lblTelefono.Text = "Telefono";
-			lblTelefono.TextAlign = ContentAlignment.MiddleRight;
+			lblTelefonoFuncionario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+			lblTelefonoFuncionario.Location = new Point(12, 223);
+			lblTelefonoFuncionario.Name = "lblTelefonoFuncionario";
+			lblTelefonoFuncionario.Size = new Size(106, 21);
+			lblTelefonoFuncionario.TabIndex = 21;
+			lblTelefonoFuncionario.Text = "Telefono";
+			lblTelefonoFuncionario.TextAlign = ContentAlignment.MiddleRight;
 			// 
 			// txtEmailFuncionario
 			// 
@@ -261,15 +261,15 @@
 			txtEmailFuncionario.TabIndex = 24;
 			txtEmailFuncionario.KeyPress += txtEmailFuncionario_KeyPress;
 			// 
-			// lblEmail
+			// lblEmailFuncionario
 			// 
-			lblEmail.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			lblEmail.Location = new Point(360, 30);
-			lblEmail.Name = "lblEmail";
-			lblEmail.Size = new Size(106, 21);
-			lblEmail.TabIndex = 23;
-			lblEmail.Text = "Email";
-			lblEmail.TextAlign = ContentAlignment.MiddleRight;
+			lblEmailFuncionario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+			lblEmailFuncionario.Location = new Point(360, 30);
+			lblEmailFuncionario.Name = "lblEmailFuncionario";
+			lblEmailFuncionario.Size = new Size(106, 21);
+			lblEmailFuncionario.TabIndex = 23;
+			lblEmailFuncionario.Text = "Email";
+			lblEmailFuncionario.TextAlign = ContentAlignment.MiddleRight;
 			// 
 			// btnLimpiar
 			// 
@@ -339,21 +339,21 @@
 			gbDatosFuncionarios.Controls.Add(rbtnGeneroMFuncionario);
 			gbDatosFuncionarios.Controls.Add(lblNombreFuncionario);
 			gbDatosFuncionarios.Controls.Add(lblIdentificacionFuncionario);
-			gbDatosFuncionarios.Controls.Add(lblPuesto);
-			gbDatosFuncionarios.Controls.Add(lblContrasenia);
-			gbDatosFuncionarios.Controls.Add(lblUsuario);
+			gbDatosFuncionarios.Controls.Add(lblPuestoFuncionario);
+			gbDatosFuncionarios.Controls.Add(lblContraseniaFuncionario);
+			gbDatosFuncionarios.Controls.Add(lblUsuarioFuncionario);
 			gbDatosFuncionarios.Controls.Add(txtEmailFuncionario);
 			gbDatosFuncionarios.Controls.Add(txtNombreFuncionario);
-			gbDatosFuncionarios.Controls.Add(lblEmail);
+			gbDatosFuncionarios.Controls.Add(lblEmailFuncionario);
 			gbDatosFuncionarios.Controls.Add(txtIdentificacionFuncionario);
 			gbDatosFuncionarios.Controls.Add(txtTelefonoFuncionario);
 			gbDatosFuncionarios.Controls.Add(txtPuestoFuncionario);
-			gbDatosFuncionarios.Controls.Add(lblTelefono);
+			gbDatosFuncionarios.Controls.Add(lblTelefonoFuncionario);
 			gbDatosFuncionarios.Controls.Add(txtUsuarioFuncionario);
 			gbDatosFuncionarios.Controls.Add(txtContraseniaFuncionario);
 			gbDatosFuncionarios.Controls.Add(lblApellidoFuncionario);
 			gbDatosFuncionarios.Controls.Add(txtApellidoFuncionario);
-			gbDatosFuncionarios.Controls.Add(lblGenero);
+			gbDatosFuncionarios.Controls.Add(lblGeneroFuncionario);
 			gbDatosFuncionarios.Dock = DockStyle.Fill;
 			gbDatosFuncionarios.Location = new Point(0, 186);
 			gbDatosFuncionarios.Name = "gbDatosFuncionarios";
@@ -433,9 +433,9 @@
 		private Label lblTitulo;
 		private Label lblNombreFuncionario;
 		private Label lblIdentificacionFuncionario;
-		private Label lblPuesto;
-		private Label lblContrasenia;
-		private Label lblUsuario;
+		private Label lblPuestoFuncionario;
+		private Label lblContraseniaFuncionario;
+		private Label lblUsuarioFuncionario;
 		private TextBox txtNombreFuncionario;
 		private TextBox txtIdentificacionFuncionario;
 		private TextBox txtPuestoFuncionario;
@@ -446,11 +446,11 @@
 		private PictureBox pbLogo;
 		private TextBox txtApellidoFuncionario;
 		private Label lblApellidoFuncionario;
-		private Label lblGenero;
+		private Label lblGeneroFuncionario;
 		private TextBox txtTelefonoFuncionario;
-		private Label lblTelefono;
+		private Label lblTelefonoFuncionario;
 		private TextBox txtEmailFuncionario;
-		private Label lblEmail;
+		private Label lblEmailFuncionario;
 		private Button btnLimpiar;
 		private GroupBox gbTitulo;
 		private GroupBox gbDatosFuncionarios;
