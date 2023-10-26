@@ -75,6 +75,13 @@ namespace ProyectoClinicaDental
 
 		}
 
+		private void mnCerrarSesion_Click(object sender, EventArgs e)
+		{
+			this.Close();
+			/*cierro el formulario principal*/
+			frmLogin frm_Login = new frmLogin();
+			frm_Login.Show();
 
+		}
 	}
 }

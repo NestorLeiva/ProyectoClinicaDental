@@ -29,34 +29,35 @@
 		private void InitializeComponent()
 		{
 			menuStrip1 = new MenuStrip();
-			archivoToolStripMenuItem = new ToolStripMenuItem();
+			mnArchivo = new ToolStripMenuItem();
 			mnLogin = new ToolStripMenuItem();
 			mnRegistroPacientes = new ToolStripMenuItem();
-			registroNuevosFuncionariosToolStripMenuItem = new ToolStripMenuItem();
+			registroNuevosFuncionarios = new ToolStripMenuItem();
 			mnMantenimientoServicios = new ToolStripMenuItem();
 			mnConsultaHistorial = new ToolStripMenuItem();
 			mnVentas = new ToolStripMenuItem();
-			reporteDeVentasToolStripMenuItem = new ToolStripMenuItem();
+			reporteDeVentas = new ToolStripMenuItem();
 			mnAcercaDe = new ToolStripMenuItem();
 			mnSalir = new ToolStripMenuItem();
+			mnCerrarSesion = new ToolStripMenuItem();
 			menuStrip1.SuspendLayout();
 			SuspendLayout();
 			// 
 			// menuStrip1
 			// 
-			menuStrip1.Items.AddRange(new ToolStripItem[] { archivoToolStripMenuItem, mnAcercaDe, mnSalir });
+			menuStrip1.Items.AddRange(new ToolStripItem[] { mnArchivo, mnAcercaDe, mnSalir });
 			menuStrip1.Location = new Point(0, 0);
 			menuStrip1.Name = "menuStrip1";
 			menuStrip1.Size = new Size(1132, 24);
 			menuStrip1.TabIndex = 1;
 			menuStrip1.Text = "menuStrip1";
 			// 
-			// archivoToolStripMenuItem
+			// mnArchivo
 			// 
-			archivoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mnLogin, mnRegistroPacientes, registroNuevosFuncionariosToolStripMenuItem, mnMantenimientoServicios, mnConsultaHistorial, mnVentas, reporteDeVentasToolStripMenuItem });
-			archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-			archivoToolStripMenuItem.Size = new Size(60, 20);
-			archivoToolStripMenuItem.Text = "Archivo";
+			mnArchivo.DropDownItems.AddRange(new ToolStripItem[] { mnLogin, mnRegistroPacientes, registroNuevosFuncionarios, mnMantenimientoServicios, mnConsultaHistorial, mnVentas, reporteDeVentas, mnCerrarSesion });
+			mnArchivo.Name = "mnArchivo";
+			mnArchivo.Size = new Size(60, 20);
+			mnArchivo.Text = "Archivo";
 			// 
 			// mnLogin
 			// 
@@ -72,12 +73,12 @@
 			mnRegistroPacientes.Text = "Registro Pacientes";
 			mnRegistroPacientes.Click += mnRegistroPacientes_Click;
 			// 
-			// registroNuevosFuncionariosToolStripMenuItem
+			// registroNuevosFuncionarios
 			// 
-			registroNuevosFuncionariosToolStripMenuItem.Name = "registroNuevosFuncionariosToolStripMenuItem";
-			registroNuevosFuncionariosToolStripMenuItem.Size = new Size(281, 22);
-			registroNuevosFuncionariosToolStripMenuItem.Text = "Registro Funcionarios";
-			registroNuevosFuncionariosToolStripMenuItem.Click += registroNuevosFuncionariosToolStripMenuItem_Click;
+			registroNuevosFuncionarios.Name = "registroNuevosFuncionarios";
+			registroNuevosFuncionarios.Size = new Size(281, 22);
+			registroNuevosFuncionarios.Text = "Registro Funcionarios";
+			registroNuevosFuncionarios.Click += registroNuevosFuncionariosToolStripMenuItem_Click;
 			// 
 			// mnMantenimientoServicios
 			// 
@@ -100,12 +101,12 @@
 			mnVentas.Text = "Facturacion";
 			mnVentas.Click += mnVentas_Click;
 			// 
-			// reporteDeVentasToolStripMenuItem
+			// reporteDeVentas
 			// 
-			reporteDeVentasToolStripMenuItem.Name = "reporteDeVentasToolStripMenuItem";
-			reporteDeVentasToolStripMenuItem.Size = new Size(281, 22);
-			reporteDeVentasToolStripMenuItem.Text = "Reporte de Ventas";
-			reporteDeVentasToolStripMenuItem.Click += reporteDeVentasToolStripMenuItem_Click;
+			reporteDeVentas.Name = "reporteDeVentas";
+			reporteDeVentas.Size = new Size(281, 22);
+			reporteDeVentas.Text = "Reporte de Ventas";
+			reporteDeVentas.Click += reporteDeVentasToolStripMenuItem_Click;
 			// 
 			// mnAcercaDe
 			// 
@@ -120,6 +121,13 @@
 			mnSalir.Size = new Size(41, 20);
 			mnSalir.Text = "Salir";
 			mnSalir.Click += mnSalir_Click;
+			// 
+			// mnCerrarSesion
+			// 
+			mnCerrarSesion.Name = "mnCerrarSesion";
+			mnCerrarSesion.Size = new Size(281, 22);
+			mnCerrarSesion.Text = "Cerrar Sesion";
+			mnCerrarSesion.Click += mnCerrarSesion_Click;
 			// 
 			// frmPrincipal
 			// 
@@ -141,7 +149,7 @@
 		#endregion
 
 		private MenuStrip menuStrip1;
-		private ToolStripMenuItem archivoToolStripMenuItem;
+		private ToolStripMenuItem mnArchivo;
 		private ToolStripMenuItem mnAcercaDe;
 		private ToolStripMenuItem mnSalir;
 		private ToolStripMenuItem mnVentas;
@@ -149,7 +157,8 @@
 		private ToolStripMenuItem mnMantenimientoServicios;
 		private ToolStripMenuItem mnConsultaHistorial;
 		private ToolStripMenuItem mnLogin;
-		private ToolStripMenuItem registroNuevosFuncionariosToolStripMenuItem;
-		private ToolStripMenuItem reporteDeVentasToolStripMenuItem;
+		private ToolStripMenuItem registroNuevosFuncionarios;
+		private ToolStripMenuItem reporteDeVentas;
+		private ToolStripMenuItem mnCerrarSesion;
 	}
 }

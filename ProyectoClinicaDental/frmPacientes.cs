@@ -190,9 +190,9 @@ namespace ProyectoClinicaDental
 					Genero = (this.rbtnGeneroMPadre.Checked ? "M" : "F"),
 					Telefono = Convert.ToInt32(this.txtTelefonoPadre.Text),
 					Email = this.txtEmailPadre.Text,
-				// ------------------------------------------ direccion -------------------------------------------------------
+					// ------------------------------------------ direccion -------------------------------------------------------
 					nDireccion = nDireccion, // accedo al metodo y le asigno los datos 
-				// ------------------------------------------   Hijos   -------------------------------------------------------
+											 // ------------------------------------------   Hijos   -------------------------------------------------------
 					Hijos = this.lstHijos // agrego a la lista
 
 				};

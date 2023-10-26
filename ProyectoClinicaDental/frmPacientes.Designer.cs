@@ -71,6 +71,7 @@
 			lblGeneroPadre = new Label();
 			lblNombrePadre = new Label();
 			gbDatosHijo = new GroupBox();
+			btnAgregar = new Button();
 			rbtnGeneroFHijo = new RadioButton();
 			rbtnGeneroMHijo = new RadioButton();
 			gbDireccion = new GroupBox();
@@ -80,7 +81,6 @@
 			txtIBusquedaIdentificacionPadre = new TextBox();
 			lblIdPadreBusqueda = new Label();
 			gbTitulo = new GroupBox();
-			btnAgregar = new Button();
 			((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
 			gbDatosPadre.SuspendLayout();
 			gbDatosHijo.SuspendLayout();
@@ -536,6 +536,17 @@
 			gbDatosHijo.TabStop = false;
 			gbDatosHijo.Text = "DATOS DEL HIJO";
 			// 
+			// btnAgregar
+			// 
+			btnAgregar.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+			btnAgregar.Location = new Point(6, 311);
+			btnAgregar.Name = "btnAgregar";
+			btnAgregar.Size = new Size(82, 25);
+			btnAgregar.TabIndex = 52;
+			btnAgregar.Text = "Agregar";
+			btnAgregar.UseVisualStyleBackColor = true;
+			btnAgregar.Click += btnAgregar_Click;
+			// 
 			// rbtnGeneroFHijo
 			// 
 			rbtnGeneroFHijo.AutoSize = true;
@@ -637,17 +648,6 @@
 			gbTitulo.Size = new Size(748, 173);
 			gbTitulo.TabIndex = 65;
 			gbTitulo.TabStop = false;
-			// 
-			// btnAgregar
-			// 
-			btnAgregar.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-			btnAgregar.Location = new Point(6, 311);
-			btnAgregar.Name = "btnAgregar";
-			btnAgregar.Size = new Size(82, 25);
-			btnAgregar.TabIndex = 52;
-			btnAgregar.Text = "Agregar";
-			btnAgregar.UseVisualStyleBackColor = true;
-			btnAgregar.Click += btnAgregar_Click;
 			// 
 			// frmPacientes
 			// 
