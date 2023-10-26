@@ -25,8 +25,8 @@ namespace BLL
 			// constructor 
 		}
 
-		public Funcionario(string puesto, string usuario, string contrasenia) :
-			base("", "", 0, "", 0, "")
+		public Funcionario(string puesto, string usuario, string contrasenia) 
+			
 		{
 			// constuctor con parametros
 			Puesto = puesto;
@@ -74,6 +74,11 @@ namespace BLL
 			/*accedo al nodo padre por medio del DocumentElement y posterior agrego los nodos Hijos */
 
 			// -----------------------------------------------------------------------------------
+			/*nodo Identificacion*/
+			XmlNode xmlId = xmlDocFuncionario.CreateElement("Id");
+			xmlId.InnerText = this.Identificacion.ToString();
+			xmlFuncionario.AppendChild(xmlId);
+
 			/*nodo nombre*/
 			XmlNode xmlNombre = xmlDocFuncionario.CreateElement("Nombre");
 			xmlNombre.InnerText = this.Nombre;
@@ -83,11 +88,6 @@ namespace BLL
 			XmlNode xmlApellido = xmlDocFuncionario.CreateElement("Apellido");
 			xmlApellido.InnerText = this.Apellido;
 			xmlFuncionario.AppendChild(xmlApellido);
-
-			/*nodo Identificacion*/
-			XmlNode xmlId = xmlDocFuncionario.CreateElement("Id");
-			xmlId.InnerText = this.Identificacion.ToString();
-			xmlFuncionario.AppendChild(xmlId);
 
 			/*nodo Genero*/
 			XmlNode xmlGenero = xmlDocFuncionario.CreateElement("Genero");
