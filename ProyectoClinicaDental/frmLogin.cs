@@ -55,6 +55,12 @@ namespace ProyectoClinicaDental
 						/* Para cada Funcionario en la lista, se compara el nombre de usuario (funcionario.Usuario) y la contraseña (funcionario.Contrasenia)
 						 * con los valores ingresados por el usuario (usuarios y contrasenia).*/
 						MessageBox.Show("Inicio de Sesión Exitoso", "Clinica Dental Happy Teeth");
+						/*mensaje de exito*/
+
+						frmPrincipal frm_Principal = new frmPrincipal(); /*objeto del frmPrincipal*/
+						frm_Principal.Show(); /*muestro la pantalla principal*/
+						this.Hide();/* oculto la pantalla*/
+
 						return;
 					}
 				}
