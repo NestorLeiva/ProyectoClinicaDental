@@ -14,13 +14,13 @@ namespace BLL
 			// constructor que recibe la fecha de nacimiento al  crear el objeto
 		}
 
-		private DateTime fechaNaciemiento { get; set; }
+		public DateTime fechaNaciemiento { get; set; }
 
 		public void setFechaNacimiento(DateTime fecha) {
 			fechaNaciemiento = fecha;
 		}
-		public int edadAnio
-		{/*metodo para calcular la edad por medio del get*/
+		public int edadAnio /*metodo para calcular la edad por medio del get*/
+		{
 			get
 			{
 				DateTime fechaActual = DateTime.Now; /*obtenemos la fecha actual*/
