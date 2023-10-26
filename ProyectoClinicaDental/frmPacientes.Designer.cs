@@ -80,6 +80,7 @@
 			txtIBusquedaIdentificacionPadre = new TextBox();
 			lblIdPadreBusqueda = new Label();
 			gbTitulo = new GroupBox();
+			btnAgregar = new Button();
 			((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
 			gbDatosPadre.SuspendLayout();
 			gbDatosHijo.SuspendLayout();
@@ -328,7 +329,6 @@
 			txtDieccionOtrasSenas.Name = "txtDieccionOtrasSenas";
 			txtDieccionOtrasSenas.Size = new Size(581, 29);
 			txtDieccionOtrasSenas.TabIndex = 33;
-			txtDieccionOtrasSenas.KeyPress += txtDieccionOtrasSenas_KeyPress;
 			// 
 			// txtDireccionDistrito
 			// 
@@ -413,6 +413,7 @@
 			btnGuardar.TabIndex = 54;
 			btnGuardar.Text = "Guardar";
 			btnGuardar.UseVisualStyleBackColor = true;
+			btnGuardar.Click += btnGuardar_Click;
 			// 
 			// btnLimpiar
 			// 
@@ -510,6 +511,7 @@
 			// 
 			// gbDatosHijo
 			// 
+			gbDatosHijo.Controls.Add(btnAgregar);
 			gbDatosHijo.Controls.Add(rbtnGeneroFHijo);
 			gbDatosHijo.Controls.Add(rbtnGeneroMHijo);
 			gbDatosHijo.Controls.Add(lblNombreHijo);
@@ -636,6 +638,17 @@
 			gbTitulo.TabIndex = 65;
 			gbTitulo.TabStop = false;
 			// 
+			// btnAgregar
+			// 
+			btnAgregar.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+			btnAgregar.Location = new Point(6, 311);
+			btnAgregar.Name = "btnAgregar";
+			btnAgregar.Size = new Size(82, 25);
+			btnAgregar.TabIndex = 52;
+			btnAgregar.Text = "Agregar";
+			btnAgregar.UseVisualStyleBackColor = true;
+			btnAgregar.Click += btnAgregar_Click;
+			// 
 			// frmPacientes
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
@@ -648,6 +661,7 @@
 			Controls.Add(gbDatosPadre);
 			Name = "frmPacientes";
 			Text = "Registro Pacientes";
+			Load += frmPacientes_Load;
 			((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
 			gbDatosPadre.ResumeLayout(false);
 			gbDatosPadre.PerformLayout();
@@ -716,5 +730,6 @@
 		private RadioButton rbtnGeneroFPadre;
 		private RadioButton rbtnGeneroMPadre;
 		private Label lblGeneroPadre;
+		private Button btnAgregar;
 	}
 }

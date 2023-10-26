@@ -14,24 +14,31 @@ namespace ProyectoClinicaDental
 {
 	public partial class frmPacientes : Form
 	{
-		Padre nPadre;   // instancia de la clase padre
-		Hijo nHijo;     // instancia de la clase hijo
-		Direccion nDireccion; // instancia de la clase direccion
+		List<Hijo> lstHijos; // instancia de la clase padre
+		Padre nPadre;
 
 		public frmPacientes()
 		{
 			InitializeComponent();
-			nPadre = new Padre();   // inicializacion de la clase 
-			nHijo = new Hijo();     // inicializacion de la clase 
-			nDireccion = new Direccion(); // inicializacion de la clase 
 		}
-		//   ------------------------------------------------------- Validaciones label Edad -------------------------------------------------------
-		private void dtpFechaHijo_ValueChanged(object sender, EventArgs e)
-		/*ValueChanged evento que se dispara al acceder al objeto*/
+
+		private void frmPacientes_Load(object sender, EventArgs e)
 		{
 			try
 			{
-				
+				lstHijos = new List<Hijo>(); // inicializacion de la Lista Hijo
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Registrar Padre", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+		//   ------------------------------------------------------- Validaciones  Edad -------------------------------------------------------
+		private void dtpFechaHijo_ValueChanged(object sender, EventArgs e) /*ValueChanged evento que se dispara al acceder al objeto*/
+		{
+			Hijo nHijo = new Hijo();
+			try
+			{
 				nHijo.setFechaNacimiento(dtpFechaHijo.Value); /*asigno la fecha seleccionada en el DateTimePicker al objeto hijo.*/
 				// Calcula la edad en años y meses
 				int edadAnos = nHijo.edadAnio;
@@ -40,30 +47,22 @@ namespace ProyectoClinicaDental
 
 				// Muestra la edad en el Label
 				lblResEdadHijo.Text = $"{edadAnos} años y {edadMeses} meses";
-				/*$ = cadena interpolada... permitiendo la combinacion de texto estatico y valores estaticos*/ 
+				/*$ = cadena interpolada... permitiendo la combinacion de texto estatico y valores estaticos*/
 			}
 			catch (Exception ex)
 			{
 				MessageBox.Show(ex.Message, "Error al ingresar la fecha de naciemiento", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
-			
 		}
-
 		//   ------------------------------------------------------- Validaciones TextBox Padre -------------------------------------------------------
 		private void txtIdentificacionPadre_KeyPress(object sender, KeyPressEventArgs e)
 		{
 			if (!metodosValidaciones.soloNumeros(e.KeyChar))
 			{
 				e.Handled = true;
-				MessageBox.Show("El campo debe contener solo Numeros.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				/* realizo la validacion del metodo // valido que sea Distinto
                  * e.keychar es caracter que se le esta pasando al parametro 
-                 * si el metodo SoloNumeros devuelve un true  se bloquan  los caracteres no validos
-                 */
-			}
-			else
-			{
-				nPadre.Identificacion = Convert.ToInt32(txtIdentificacionPadre.Text);
+                 * si el metodo SoloNumeros devuelve un true  se bloquan  los caracteres no validos*/
 			}
 		}
 
@@ -73,26 +72,15 @@ namespace ProyectoClinicaDental
 			if (!metodosValidaciones.soloLetras(e.KeyChar.ToString()))
 			{
 				e.Handled = true;
-				MessageBox.Show("El campo debe contener solo Texto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				/* e.keychar.toString() convierto el caracter en string antes de ser enviado al metodo
                  * e.handled = true bloquea todos los caracteres no validos */
 			}
-			else
-			{
-				nPadre.Nombre = txtNombrePadre.Text;
-			}
 		}
-
 		private void txtApellidoPadre_KeyPress(object sender, KeyPressEventArgs e)
 		{
 			if (!metodosValidaciones.soloLetras(e.KeyChar.ToString()))
 			{
 				e.Handled = true;
-				MessageBox.Show("El campo debe contener solo Texto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			}
-			else
-			{
-				nPadre.Apellido = txtApellidoPadre.Text;
 			}
 		}
 
@@ -101,10 +89,6 @@ namespace ProyectoClinicaDental
 			if (!metodosValidaciones.soloNumeros(e.KeyChar))
 			{
 				e.Handled = true;
-			}
-			else
-			{
-				nPadre.Telefono = Convert.ToInt32(txtTelefonoPadre);
 			}
 		}
 		private void txtEmailPadre_KeyPress(object sender, KeyPressEventArgs e)
@@ -115,11 +99,6 @@ namespace ProyectoClinicaDental
 			{
 				e.Handled = true;
 			}
-			else
-			{
-				nPadre.Email = txtEmailPadre.Text;
-
-			}
 		}
 
 		//   ------------------------------------------------------- Validaciones TextBox Hijo  -------------------------------------------------------
@@ -129,11 +108,6 @@ namespace ProyectoClinicaDental
 			if (!metodosValidaciones.soloLetras(e.KeyChar.ToString()))
 			{
 				e.Handled = true;
-				MessageBox.Show("El campo debe contener solo Texto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			}
-			else
-			{
-				nHijo.Nombre = txtNombreHijo.Text;
 			}
 		}
 
@@ -143,20 +117,12 @@ namespace ProyectoClinicaDental
 			{
 				e.Handled = true;
 			}
-			else
-			{
-				nHijo.Apellido = txtApellidoHijo.Text;
-			}
 		}
 		private void txtIdentificacionHijo_KeyPress(object sender, KeyPressEventArgs e)
 		{
 			if (!metodosValidaciones.soloNumeros(e.KeyChar))
 			{
 				e.Handled = true;
-			}
-			else
-			{
-				nHijo.Identificacion = Convert.ToInt32(txtIdentificacionHijo.Text);
 			}
 		}
 
@@ -165,10 +131,6 @@ namespace ProyectoClinicaDental
 			if (!metodosValidaciones.soloNumeros(e.KeyChar))
 			{
 				e.Handled = true;
-			}
-			else
-			{
-				nHijo.Telefono = Convert.ToInt32(txtTelefonoHIjo.Text);
 			}
 		}
 
@@ -179,22 +141,13 @@ namespace ProyectoClinicaDental
 			{
 				e.Handled = true;
 			}
-			else
-			{
-				nHijo.Email = txtEmailHijo.Text;
-			}
 		}
-
 		//   ------------------------------------------------------- Validaciones TextBox Direccion  -------------------------------------------------------
 		private void txtDireccionCanton_KeyPress(object sender, KeyPressEventArgs e)
 		{
 			if (!metodosValidaciones.soloLetras(e.KeyChar.ToString()))
 			{
 				e.Handled = true;
-			}
-			else
-			{
-				nDireccion.Canton = txtDireccionCanton.Text;
 			}
 		}
 
@@ -204,23 +157,8 @@ namespace ProyectoClinicaDental
 			{
 				e.Handled = true;
 			}
-			else
-			{
-				nDireccion.Distrito = txtDireccionDistrito.Text;
-			}
 		}
 
-		private void txtDieccionOtrasSenas_KeyPress(object sender, KeyPressEventArgs e)
-		{
-			if (!metodosValidaciones.soloLetras(e.KeyChar.ToString()))
-			{
-				e.Handled = true;
-			}
-			else
-			{
-				nDireccion.OtrasSenas = txtDieccionOtrasSenas.Text;
-			}
-		}
 		//   ------------------------------------------------------- Validaciones TextBox Busqueda  -------------------------------------------------------
 		private void txtIdentificacionPadreBusqueda_KeyPress(object sender, KeyPressEventArgs e)
 		{
@@ -228,34 +166,84 @@ namespace ProyectoClinicaDental
 			{
 				e.Handled = true;
 			}
-			else
-			{
-				nPadre.Identificacion = Convert.ToInt32(txtIdentificacionPadre);
-			}
 		}
 		//   ------------------------------------------------------- Botones  -------------------------------------------------------
+
+		private void btnGuardar_Click(object sender, EventArgs e)
+		{
+			try
+			{
+
+				Direccion nDireccion = new Direccion() /* inicializacion de la clase */
+				{
+					Provincia = this.cboDireccionProvincia.SelectedItem.ToString(), // selecciono el item del combobox
+					Canton = this.txtDireccionCanton.Text,
+					Distrito = this.txtDireccionDistrito.Text,
+					OtrasSenas = this.txtDieccionOtrasSenas.Text
+				};
+
+				nPadre = new Padre()// inicializacion de la clase  
+				{
+					Identificacion = Convert.ToInt32(this.txtIdentificacionPadre.Text),
+					Nombre = this.txtNombrePadre.Text,
+					Apellido = this.txtApellidoPadre.Text,
+					Genero = (this.rbtnGeneroMPadre.Checked ? "M" : "F"),
+					Telefono = Convert.ToInt32(this.txtTelefonoPadre.Text),
+					Email = this.txtEmailPadre.Text,
+				// ------------------------------------------ direccion -------------------------------------------------------
+					nDireccion = nDireccion, // accedo al metodo y le asigno los datos 
+				// ------------------------------------------   Hijos   -------------------------------------------------------
+					Hijos = this.lstHijos // agrego a la lista
+
+				};
+				// ruta relativa para archivo xml + nombre
+				nPadre.GrabarXML("Padres.xml");
+				MessageBox.Show("Se registro al Padre / Paciente Exitosamente", "Registrar Padre / Paciente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				// mensaje de exito 
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Registrar Padre / Paciente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				// mensaje de error 
+			}
+		}
+
+		private void btnAgregar_Click(object sender, EventArgs e)
+		{
+			Hijo _iHijo = new Hijo()
+			{
+				Identificacion = Convert.ToInt32(this.txtIdentificacionHijo.Text),
+				Nombre = this.txtNombreHijo.Text,
+				Apellido = this.txtApellidoHijo.Text,
+				Genero = (this.rbtnGeneroMHijo.Checked ? "M" : "F"),
+				fechaNaciemiento = this.dtpFechaHijo.Value.Date,
+				Telefono = Convert.ToInt32(this.txtTelefonoHIjo.Text),
+				Email = this.txtEmailHijo.Text
+			};
+			// agrego los hijos a la lista
+			this.lstHijos.Add(_iHijo);
+
+		}
 		private void btnLimpiar_Click(object sender, EventArgs e)
 		{
-			txtNombrePadre.Text = "";
-			txtApellidoPadre.Text = "";
-			txtIdentificacionPadre.Text = "";
-
-			txtTelefonoPadre.Text = "";
-			txtEmailPadre.Text = "";
+			txtNombrePadre.Text = string.Empty;
+			txtApellidoPadre.Text = string.Empty;
+			txtIdentificacionPadre.Text = string.Empty;
+			txtTelefonoPadre.Text = string.Empty;
+			txtEmailPadre.Text = string.Empty;
 			//- ---------------------------------------------
-			txtNombreHijo.Text = "";
-			txtApellidoHijo.Text = "";
-			txtIdentificacionHijo.Text = "";
-			lblResEdadHijo.Text = "";
-
-			txtTelefonoHIjo.Text = "";
-			txtEmailHijo.Text = "";
+			txtNombreHijo.Text = string.Empty;
+			txtApellidoHijo.Text = string.Empty;
+			txtIdentificacionHijo.Text = string.Empty; ;
+			lblResEdadHijo.Text = string.Empty;
+			txtTelefonoHIjo.Text = string.Empty;
+			txtEmailHijo.Text = string.Empty;
 			//- ---------------------------------------------
-			cboDireccionProvincia.Text = "";
-			txtDireccionCanton.Text = "";
-			txtDireccionDistrito.Text = "";
-			txtDieccionOtrasSenas.Text = "";
+			txtDireccionCanton.Text = string.Empty;
+			txtDireccionDistrito.Text = string.Empty;
+			txtDieccionOtrasSenas.Text = string.Empty;
 		}
+
 
 	} // fin frmPacientes : Form
 } // fin ProyectoClinicaDental
