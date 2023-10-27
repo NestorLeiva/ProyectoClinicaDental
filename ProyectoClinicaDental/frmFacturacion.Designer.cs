@@ -40,12 +40,16 @@
 			btnPagar = new Button();
 			btnCancelar = new Button();
 			gbDatosFactura = new GroupBox();
-			gbListaFacruta = new GroupBox();
+			lbl = new Label();
+			lblNombreFacturaPadre = new Label();
+			gbListaFactura = new GroupBox();
+			btnAgregar = new Button();
+			cboServicio = new ComboBox();
+			lblBuscarServicio = new Label();
 			lvwListaFactura = new ListView();
 			gbTotalFactura = new GroupBox();
-			lblNombreFacturaPadre = new Label();
 			gbDatosFactura.SuspendLayout();
-			gbListaFacruta.SuspendLayout();
+			gbListaFactura.SuspendLayout();
 			gbTotalFactura.SuspendLayout();
 			SuspendLayout();
 			// 
@@ -107,7 +111,7 @@
 			lblIVA.Name = "lblIVA";
 			lblIVA.Size = new Size(100, 23);
 			lblIVA.TabIndex = 7;
-			lblIVA.Text = "IVA 13%";
+			lblIVA.Text = "IVA 2%";
 			lblIVA.TextAlign = ContentAlignment.MiddleRight;
 			// 
 			// lblResTotal
@@ -136,9 +140,10 @@
 			// 
 			txtIdentificacionFactura.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
 			txtIdentificacionFactura.Location = new Point(153, 21);
+			txtIdentificacionFactura.MaxLength = 10;
 			txtIdentificacionFactura.Name = "txtIdentificacionFactura";
-			txtIdentificacionFactura.Size = new Size(448, 33);
-			txtIdentificacionFactura.TabIndex = 15;
+			txtIdentificacionFactura.Size = new Size(326, 33);
+			txtIdentificacionFactura.TabIndex = 1;
 			// 
 			// btnPagar
 			// 
@@ -146,7 +151,7 @@
 			btnPagar.Location = new Point(429, 61);
 			btnPagar.Name = "btnPagar";
 			btnPagar.Size = new Size(100, 31);
-			btnPagar.TabIndex = 17;
+			btnPagar.TabIndex = 4;
 			btnPagar.Text = "Pagar";
 			btnPagar.UseVisualStyleBackColor = true;
 			// 
@@ -156,12 +161,13 @@
 			btnCancelar.Location = new Point(536, 61);
 			btnCancelar.Name = "btnCancelar";
 			btnCancelar.Size = new Size(111, 31);
-			btnCancelar.TabIndex = 18;
+			btnCancelar.TabIndex = 5;
 			btnCancelar.Text = "Cancerlar";
 			btnCancelar.UseVisualStyleBackColor = true;
 			// 
 			// gbDatosFactura
 			// 
+			gbDatosFactura.Controls.Add(lbl);
 			gbDatosFactura.Controls.Add(lblNombreFacturaPadre);
 			gbDatosFactura.Controls.Add(lblNombreFactura);
 			gbDatosFactura.Controls.Add(lblIdentificacionFactura);
@@ -173,23 +179,70 @@
 			gbDatosFactura.TabIndex = 19;
 			gbDatosFactura.TabStop = false;
 			// 
-			// gbListaFacruta
+			// lbl
 			// 
-			gbListaFacruta.Controls.Add(lvwListaFactura);
-			gbListaFacruta.Dock = DockStyle.Fill;
-			gbListaFacruta.Location = new Point(0, 103);
-			gbListaFacruta.Name = "gbListaFacruta";
-			gbListaFacruta.Size = new Size(665, 504);
-			gbListaFacruta.TabIndex = 20;
-			gbListaFacruta.TabStop = false;
+			lbl.AutoSize = true;
+			lbl.Location = new Point(491, 21);
+			lbl.Name = "lbl";
+			lbl.Size = new Size(38, 15);
+			lbl.TabIndex = 17;
+			lbl.Text = "label1";
+			// 
+			// lblNombreFacturaPadre
+			// 
+			lblNombreFacturaPadre.BackColor = SystemColors.ButtonShadow;
+			lblNombreFacturaPadre.Location = new Point(153, 60);
+			lblNombreFacturaPadre.Name = "lblNombreFacturaPadre";
+			lblNombreFacturaPadre.Size = new Size(326, 33);
+			lblNombreFacturaPadre.TabIndex = 16;
+			lblNombreFacturaPadre.TextAlign = ContentAlignment.MiddleLeft;
+			// 
+			// gbListaFactura
+			// 
+			gbListaFactura.Controls.Add(btnAgregar);
+			gbListaFactura.Controls.Add(cboServicio);
+			gbListaFactura.Controls.Add(lblBuscarServicio);
+			gbListaFactura.Controls.Add(lvwListaFactura);
+			gbListaFactura.Dock = DockStyle.Fill;
+			gbListaFactura.Location = new Point(0, 103);
+			gbListaFactura.Name = "gbListaFactura";
+			gbListaFactura.Size = new Size(665, 504);
+			gbListaFactura.TabIndex = 20;
+			gbListaFactura.TabStop = false;
+			// 
+			// btnAgregar
+			// 
+			btnAgregar.Location = new Point(485, 11);
+			btnAgregar.Name = "btnAgregar";
+			btnAgregar.Size = new Size(116, 23);
+			btnAgregar.TabIndex = 3;
+			btnAgregar.Text = "Agregar";
+			btnAgregar.UseVisualStyleBackColor = true;
+			// 
+			// cboServicio
+			// 
+			cboServicio.FormattingEnabled = true;
+			cboServicio.Location = new Point(164, 11);
+			cboServicio.Name = "cboServicio";
+			cboServicio.Size = new Size(315, 23);
+			cboServicio.TabIndex = 2;
+			// 
+			// lblBuscarServicio
+			// 
+			lblBuscarServicio.AutoSize = true;
+			lblBuscarServicio.Location = new Point(12, 19);
+			lblBuscarServicio.Name = "lblBuscarServicio";
+			lblBuscarServicio.Size = new Size(146, 15);
+			lblBuscarServicio.TabIndex = 1;
+			lblBuscarServicio.Text = "Agregar Servicio a la Venta";
+			lblBuscarServicio.TextAlign = ContentAlignment.MiddleLeft;
 			// 
 			// lvwListaFactura
 			// 
-			lvwListaFactura.Dock = DockStyle.Fill;
 			lvwListaFactura.GridLines = true;
-			lvwListaFactura.Location = new Point(3, 19);
+			lvwListaFactura.Location = new Point(0, 79);
 			lvwListaFactura.Name = "lvwListaFactura";
-			lvwListaFactura.Size = new Size(659, 482);
+			lvwListaFactura.Size = new Size(659, 318);
 			lvwListaFactura.TabIndex = 0;
 			lvwListaFactura.UseCompatibleStateImageBehavior = false;
 			lvwListaFactura.View = View.Details;
@@ -211,28 +264,20 @@
 			gbTotalFactura.TabIndex = 21;
 			gbTotalFactura.TabStop = false;
 			// 
-			// lblNombreFacturaPadre
-			// 
-			lblNombreFacturaPadre.BackColor = SystemColors.ButtonShadow;
-			lblNombreFacturaPadre.Location = new Point(153, 60);
-			lblNombreFacturaPadre.Name = "lblNombreFacturaPadre";
-			lblNombreFacturaPadre.Size = new Size(448, 33);
-			lblNombreFacturaPadre.TabIndex = 16;
-			lblNombreFacturaPadre.TextAlign = ContentAlignment.MiddleLeft;
-			// 
 			// frmFacturacion
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(665, 607);
 			Controls.Add(gbTotalFactura);
-			Controls.Add(gbListaFacruta);
+			Controls.Add(gbListaFactura);
 			Controls.Add(gbDatosFactura);
 			Name = "frmFacturacion";
 			Text = "Facturacion";
 			gbDatosFactura.ResumeLayout(false);
 			gbDatosFactura.PerformLayout();
-			gbListaFacruta.ResumeLayout(false);
+			gbListaFactura.ResumeLayout(false);
+			gbListaFactura.PerformLayout();
 			gbTotalFactura.ResumeLayout(false);
 			ResumeLayout(false);
 		}
@@ -251,9 +296,13 @@
 		private Button btnPagar;
 		private Button btnCancelar;
 		private GroupBox gbDatosFactura;
-		private GroupBox gbListaFacruta;
+		private GroupBox gbListaFactura;
 		private ListView lvwListaFactura;
 		private GroupBox gbTotalFactura;
 		private Label lblNombreFacturaPadre;
+		private Button btnAgregar;
+		private ComboBox cboServicio;
+		private Label lblBuscarServicio;
+		private Label lbl;
 	}
 }

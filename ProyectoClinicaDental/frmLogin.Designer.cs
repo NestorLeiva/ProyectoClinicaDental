@@ -73,7 +73,7 @@
 			txtUsuario.Location = new Point(93, 382);
 			txtUsuario.Name = "txtUsuario";
 			txtUsuario.Size = new Size(212, 33);
-			txtUsuario.TabIndex = 3;
+			txtUsuario.TabIndex = 1;
 			txtUsuario.TextAlign = HorizontalAlignment.Center;
 			txtUsuario.KeyPress += txtUsuario_KeyPress;
 			// 
@@ -84,7 +84,7 @@
 			txtContrasenia.Name = "txtContrasenia";
 			txtContrasenia.PasswordChar = '*';
 			txtContrasenia.Size = new Size(212, 33);
-			txtContrasenia.TabIndex = 4;
+			txtContrasenia.TabIndex = 2;
 			txtContrasenia.TextAlign = HorizontalAlignment.Center;
 			// 
 			// btnAceptar
@@ -93,7 +93,7 @@
 			btnAceptar.Location = new Point(39, 510);
 			btnAceptar.Name = "btnAceptar";
 			btnAceptar.Size = new Size(131, 35);
-			btnAceptar.TabIndex = 5;
+			btnAceptar.TabIndex = 3;
 			btnAceptar.Text = "Aceptar";
 			btnAceptar.UseVisualStyleBackColor = true;
 			btnAceptar.Click += btnAceptar_Click;
@@ -104,7 +104,7 @@
 			btnLimpiar.Location = new Point(213, 510);
 			btnLimpiar.Name = "btnLimpiar";
 			btnLimpiar.Size = new Size(131, 35);
-			btnLimpiar.TabIndex = 6;
+			btnLimpiar.TabIndex = 4;
 			btnLimpiar.Text = "Limpiar";
 			btnLimpiar.UseVisualStyleBackColor = true;
 			btnLimpiar.Click += btnLimpiar_Click;

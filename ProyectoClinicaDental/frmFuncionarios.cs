@@ -159,13 +159,13 @@ namespace ProyectoClinicaDental
 				nFuncionario = new Funcionario() /* inicializacion de la clase Funcionario*/
 				{
 					Identificacion = Convert.ToInt32(this.txtIdentificacionFuncionario.Text),
-					Nombre = this.txtNombreFuncionario.Text,
-					Apellido = this.txtApellidoFuncionario.Text,
+					Nombre = this.txtNombreFuncionario.Text.ToUpper(),
+					ApellidoPrimero = this.txtApellidoFuncionario.Text.ToUpper(),
 					Genero = (this.rbtnGeneroMFuncionario.Checked ? "M" : "F"),
 					Telefono = Convert.ToInt32(this.txtTelefonoFuncionario.Text),
 					Email = this.txtEmailFuncionario.Text,
-					Puesto = this.txtPuestoFuncionario.Text,
-					Usuario = this.txtUsuarioFuncionario.Text,
+					Puesto = this.txtPuestoFuncionario.Text.ToUpper(),
+					Usuario = this.txtUsuarioFuncionario.Text.ToUpper(),
 					Contrasenia = this.txtContraseniaFuncionario.Text
 					/*se agregan los string */
 				};

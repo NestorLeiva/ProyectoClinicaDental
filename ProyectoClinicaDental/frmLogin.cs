@@ -43,8 +43,8 @@ namespace ProyectoClinicaDental
 				List<Funcionario> funcionarios = Funcionario.LeerFuncionariosDesdeXML("Funcionarios.xml");
 				// realiza la comprobación de inicio de sesión con la lista de funcionarios
 
-				string usuarios = txtUsuario.Text;
-				string contrasenia = txtContrasenia.Text;
+				string usuarios = txtUsuario.Text.ToUpper();
+				string contrasenia = txtContrasenia.Text.ToUpper();
 				/*Obtengo los valores ingresados en, txtUsuario y txtContrasenia, y se almacenan en las variables usuarios y contrasenia. \
 				 * Estos valores representan el nombre de usuario y la contraseña que el usuario ha ingresado en la interfaz.*/
 

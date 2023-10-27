@@ -133,16 +133,17 @@
 			txtNombreFuncionario.Location = new Point(135, 22);
 			txtNombreFuncionario.Name = "txtNombreFuncionario";
 			txtNombreFuncionario.Size = new Size(203, 29);
-			txtNombreFuncionario.TabIndex = 7;
+			txtNombreFuncionario.TabIndex = 1;
 			txtNombreFuncionario.KeyPress += txtNombreFuncionario_KeyPress;
 			// 
 			// txtIdentificacionFuncionario
 			// 
 			txtIdentificacionFuncionario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
 			txtIdentificacionFuncionario.Location = new Point(135, 116);
+			txtIdentificacionFuncionario.MaxLength = 10;
 			txtIdentificacionFuncionario.Name = "txtIdentificacionFuncionario";
 			txtIdentificacionFuncionario.Size = new Size(203, 29);
-			txtIdentificacionFuncionario.TabIndex = 8;
+			txtIdentificacionFuncionario.TabIndex = 3;
 			txtIdentificacionFuncionario.KeyPress += txtIdentificacionFuncionario_KeyPress;
 			// 
 			// txtPuestoFuncionario
@@ -151,7 +152,7 @@
 			txtPuestoFuncionario.Location = new Point(489, 75);
 			txtPuestoFuncionario.Name = "txtPuestoFuncionario";
 			txtPuestoFuncionario.Size = new Size(203, 29);
-			txtPuestoFuncionario.TabIndex = 9;
+			txtPuestoFuncionario.TabIndex = 8;
 			txtPuestoFuncionario.KeyPress += txtPuestoFuncionario_KeyPress;
 			// 
 			// txtUsuarioFuncionario
@@ -160,7 +161,7 @@
 			txtUsuarioFuncionario.Location = new Point(489, 124);
 			txtUsuarioFuncionario.Name = "txtUsuarioFuncionario";
 			txtUsuarioFuncionario.Size = new Size(203, 29);
-			txtUsuarioFuncionario.TabIndex = 10;
+			txtUsuarioFuncionario.TabIndex = 9;
 			txtUsuarioFuncionario.KeyPress += txtUsuarioFuncionario_KeyPress;
 			// 
 			// txtContraseniaFuncionario
@@ -169,7 +170,7 @@
 			txtContraseniaFuncionario.Location = new Point(489, 182);
 			txtContraseniaFuncionario.Name = "txtContraseniaFuncionario";
 			txtContraseniaFuncionario.Size = new Size(203, 29);
-			txtContraseniaFuncionario.TabIndex = 11;
+			txtContraseniaFuncionario.TabIndex = 10;
 			txtContraseniaFuncionario.KeyPress += txtContraseniaFuncionario_KeyPress;
 			// 
 			// btnGuardar
@@ -178,7 +179,7 @@
 			btnGuardar.Location = new Point(12, 22);
 			btnGuardar.Name = "btnGuardar";
 			btnGuardar.Size = new Size(112, 28);
-			btnGuardar.TabIndex = 12;
+			btnGuardar.TabIndex = 11;
 			btnGuardar.Text = "Guardar";
 			btnGuardar.UseVisualStyleBackColor = true;
 			btnGuardar.Click += btnGuardar_Click;
@@ -189,7 +190,7 @@
 			btnCancerlar.Location = new Point(580, 29);
 			btnCancerlar.Name = "btnCancerlar";
 			btnCancerlar.Size = new Size(112, 28);
-			btnCancerlar.TabIndex = 13;
+			btnCancerlar.TabIndex = 14;
 			btnCancerlar.Text = "Cancelar";
 			btnCancerlar.UseVisualStyleBackColor = true;
 			btnCancerlar.Click += btnCancerlar_Click;
@@ -210,7 +211,7 @@
 			txtApellidoFuncionario.Location = new Point(135, 68);
 			txtApellidoFuncionario.Name = "txtApellidoFuncionario";
 			txtApellidoFuncionario.Size = new Size(203, 29);
-			txtApellidoFuncionario.TabIndex = 16;
+			txtApellidoFuncionario.TabIndex = 2;
 			txtApellidoFuncionario.KeyPress += txtApellidoFuncionario_KeyPress;
 			// 
 			// lblApellidoFuncionario
@@ -237,9 +238,10 @@
 			// 
 			txtTelefonoFuncionario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
 			txtTelefonoFuncionario.Location = new Point(130, 220);
+			txtTelefonoFuncionario.MaxLength = 8;
 			txtTelefonoFuncionario.Name = "txtTelefonoFuncionario";
 			txtTelefonoFuncionario.Size = new Size(203, 29);
-			txtTelefonoFuncionario.TabIndex = 22;
+			txtTelefonoFuncionario.TabIndex = 6;
 			txtTelefonoFuncionario.KeyPress += txtTelefonoFuncionario_KeyPress;
 			// 
 			// lblTelefonoFuncionario
@@ -258,7 +260,7 @@
 			txtEmailFuncionario.Location = new Point(489, 27);
 			txtEmailFuncionario.Name = "txtEmailFuncionario";
 			txtEmailFuncionario.Size = new Size(203, 29);
-			txtEmailFuncionario.TabIndex = 24;
+			txtEmailFuncionario.TabIndex = 7;
 			txtEmailFuncionario.KeyPress += txtEmailFuncionario_KeyPress;
 			// 
 			// lblEmailFuncionario
@@ -277,7 +279,7 @@
 			btnLimpiar.Location = new Point(130, 22);
 			btnLimpiar.Name = "btnLimpiar";
 			btnLimpiar.Size = new Size(112, 28);
-			btnLimpiar.TabIndex = 27;
+			btnLimpiar.TabIndex = 12;
 			btnLimpiar.Text = "Limpiar";
 			btnLimpiar.UseVisualStyleBackColor = true;
 			btnLimpiar.Click += btnLimpiar_Click;
@@ -368,7 +370,7 @@
 			rbtnGeneroFuncionario.Location = new Point(221, 165);
 			rbtnGeneroFuncionario.Name = "rbtnGeneroFuncionario";
 			rbtnGeneroFuncionario.Size = new Size(78, 19);
-			rbtnGeneroFuncionario.TabIndex = 28;
+			rbtnGeneroFuncionario.TabIndex = 5;
 			rbtnGeneroFuncionario.TabStop = true;
 			rbtnGeneroFuncionario.Text = "Femenino";
 			rbtnGeneroFuncionario.UseVisualStyleBackColor = true;
@@ -379,7 +381,7 @@
 			rbtnGeneroMFuncionario.Location = new Point(135, 165);
 			rbtnGeneroMFuncionario.Name = "rbtnGeneroMFuncionario";
 			rbtnGeneroMFuncionario.Size = new Size(80, 19);
-			rbtnGeneroMFuncionario.TabIndex = 27;
+			rbtnGeneroMFuncionario.TabIndex = 4;
 			rbtnGeneroMFuncionario.TabStop = true;
 			rbtnGeneroMFuncionario.Text = "Masculino";
 			rbtnGeneroMFuncionario.UseVisualStyleBackColor = true;
@@ -403,7 +405,7 @@
 			btnModificar.Location = new Point(462, 29);
 			btnModificar.Name = "btnModificar";
 			btnModificar.Size = new Size(112, 28);
-			btnModificar.TabIndex = 28;
+			btnModificar.TabIndex = 13;
 			btnModificar.Text = "Modificar";
 			btnModificar.UseVisualStyleBackColor = true;
 			// 
