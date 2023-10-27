@@ -14,6 +14,14 @@ namespace BLL
 			// constructor que recibe la fecha de nacimiento al  crear el objeto
 		}
 
+		public Hijo(DateTime fechaNacimiento)
+		{
+			this.fechaNaciemiento = fechaNacimiento;
+		}
+
+
+
+
 		public DateTime fechaNaciemiento { get; set; }
 
 		public void setFechaNacimiento(DateTime fecha) {
