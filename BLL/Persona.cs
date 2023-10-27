@@ -9,7 +9,8 @@
 	public class Persona
 	{
 		private string nombre = string.Empty;
-		private string apellido = string.Empty;
+		private string apellidoPrimero = string.Empty;
+		private string apellidoSegundo = string.Empty;
 		private int identificacion;
 		private string genero = string.Empty;
 		private int telefono;
@@ -21,10 +22,16 @@
 			get { return nombre; }
 			set { nombre = value; }
 		}
-		public string Apellido
+		public string ApellidoPrimero
 		{
-			get { return apellido; }
-			set { apellido = value; }
+			get { return apellidoPrimero; }
+			set { apellidoPrimero = value; }
+		}
+
+		public string ApellidoSegundo
+		{
+			get { return apellidoSegundo; }
+			set { apellidoSegundo = value; }
 		}
 
 		public int Identificacion
