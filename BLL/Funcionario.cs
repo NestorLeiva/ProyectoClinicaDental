@@ -64,8 +64,8 @@ namespace BLL
 			xmlFuncionario.AppendChild(xmlNombre);
 
 			/*nodo apellido*/
-			XmlNode xmlApellido = xmlDocFuncionario.CreateElement("Apellido");
-			xmlApellido.InnerText = this.Apellido;
+			XmlNode xmlApellido = xmlDocFuncionario.CreateElement("ApellidoPrimero");
+			xmlApellido.InnerText = this.ApellidoPrimero;
 			xmlFuncionario.AppendChild(xmlApellido);
 
 			/*nodo Genero*/
