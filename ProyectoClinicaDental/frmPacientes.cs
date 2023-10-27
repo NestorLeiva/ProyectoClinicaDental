@@ -84,6 +84,14 @@ namespace ProyectoClinicaDental
 			}
 		}
 
+		private void txtApellidoSegundoPadre_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (!metodosValidaciones.soloLetras(e.KeyChar.ToString()))
+			{
+				e.Handled = true;
+			}
+		}
+
 		private void txtTelefonoPadre_KeyPress(object sender, KeyPressEventArgs e)
 		{
 			if (!metodosValidaciones.soloNumeros(e.KeyChar))
@@ -112,6 +120,13 @@ namespace ProyectoClinicaDental
 		}
 
 		private void txtApellidoHijo_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (!metodosValidaciones.soloLetras(e.KeyChar.ToString()))
+			{
+				e.Handled = true;
+			}
+		}
+		private void txtApellidoPrimeroHijo_KeyPress(object sender, KeyPressEventArgs e)
 		{
 			if (!metodosValidaciones.soloLetras(e.KeyChar.ToString()))
 			{
@@ -176,23 +191,24 @@ namespace ProyectoClinicaDental
 
 				Direccion nDireccion = new Direccion() /* inicializacion de la clase */
 				{
-					Provincia = this.cboDireccionProvincia.SelectedItem.ToString(), // selecciono el item del combobox
-					Canton = this.txtDireccionCanton.Text,
-					Distrito = this.txtDireccionDistrito.Text,
-					OtrasSenas = this.txtDieccionOtrasSenas.Text
+					Provincia = this.cboDireccionProvincia.SelectedItem.ToString().ToUpper(), // selecciono el item del combobox
+					Canton = this.txtDireccionCanton.Text.ToUpper(),
+					Distrito = this.txtDireccionDistrito.Text.ToUpper(),
+					OtrasSenas = this.txtDieccionOtrasSenas.Text.ToUpper()
 				};
 
 				nPadre = new Padre()// inicializacion de la clase  
 				{
 					Identificacion = Convert.ToInt32(this.txtIdentificacionPadre.Text),
-					Nombre = this.txtNombrePadre.Text,
-					Apellido = this.txtApellidoPadre.Text,
+					Nombre = this.txtNombrePadre.Text.ToUpper(),
+					ApellidoPrimero = this.txtApellidoPrimeroPadre.Text.ToUpper(),
+					ApellidoSegundo = this.txtApellidoSegundoPadre.Text.ToUpper(),
 					Genero = (this.rbtnGeneroMPadre.Checked ? "M" : "F"),
 					Telefono = Convert.ToInt32(this.txtTelefonoPadre.Text),
 					Email = this.txtEmailPadre.Text,
-					// ------------------------------------------ direccion -------------------------------------------------------
+					/* ------------------------------------------ direccion -------------------------------------------------------*/
 					nDireccion = nDireccion, // accedo al metodo y le asigno los datos 
-											 // ------------------------------------------   Hijos   -------------------------------------------------------
+					/* ------------------------------------------   Hijos   ------------------------------------------------------- */
 					Hijos = this.lstHijos // agrego a la lista
 
 				};
@@ -210,34 +226,46 @@ namespace ProyectoClinicaDental
 
 		private void btnAgregar_Click(object sender, EventArgs e)
 		{
-			Hijo _iHijo = new Hijo()
+			try
 			{
-				Identificacion = Convert.ToInt32(this.txtIdentificacionHijo.Text),
-				Nombre = this.txtNombreHijo.Text,
-				Apellido = this.txtApellidoHijo.Text,
-				Genero = (this.rbtnGeneroMHijo.Checked ? "M" : "F"),
-				fechaNaciemiento = this.dtpFechaHijo.Value.Date,
-				Telefono = Convert.ToInt32(this.txtTelefonoHIjo.Text),
-				Email = this.txtEmailHijo.Text
-			};
-			// agrego los hijos a la lista
-			this.lstHijos.Add(_iHijo);
+				Hijo _iHijo = new Hijo()
+				{
+					Identificacion = Convert.ToInt32(this.txtIdentificacionHijo.Text),
+					Nombre = this.txtNombreHijo.Text.ToUpper(),
+					ApellidoPrimero = this.txtApellidoPrimeroHijo.Text.ToUpper(),
+					ApellidoSegundo = this.txtApellidoSegundoHijo.Text.ToUpper(),
+					Genero = (this.rbtnGeneroMHijo.Checked ? "M" : "F"),
+					fechaNaciemiento = this.dtpFechaHijo.Value.Date,
+					Telefono = Convert.ToInt32(this.txtTelefonoHIjo.Text),
+				};
+				// agrego los hijos a la lista
+				this.lstHijos.Add(_iHijo);
+				/*Mensaje de exito*/
+				MessageBox.Show("Se agrego la informacion del Hijo Exitosamente.");
+			}
+			catch (Exception ex)
+			{
+				/*Mensaje de error*/
+				MessageBox.Show(ex.Message, "Ocurrio un problema con la informacion ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+			}
 
 		}
 		private void btnLimpiar_Click(object sender, EventArgs e)
 		{
+			/*realizar la limpieza general de los TextBox*/
 			txtNombrePadre.Text = string.Empty;
-			txtApellidoPadre.Text = string.Empty;
+			txtApellidoPrimeroPadre.Text = string.Empty;
+			txtApellidoSegundoPadre.Text = string.Empty;
 			txtIdentificacionPadre.Text = string.Empty;
 			txtTelefonoPadre.Text = string.Empty;
 			txtEmailPadre.Text = string.Empty;
 			//- ---------------------------------------------
 			txtNombreHijo.Text = string.Empty;
-			txtApellidoHijo.Text = string.Empty;
+			txtApellidoPrimeroHijo.Text = string.Empty;
+			txtApellidoSegundoHijo.Text = string.Empty;
 			txtIdentificacionHijo.Text = string.Empty; ;
 			lblResEdadHijo.Text = string.Empty;
 			txtTelefonoHIjo.Text = string.Empty;
-			txtEmailHijo.Text = string.Empty;
 			//- ---------------------------------------------
 			txtDireccionCanton.Text = string.Empty;
 			txtDireccionDistrito.Text = string.Empty;
