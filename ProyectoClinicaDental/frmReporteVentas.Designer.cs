@@ -83,8 +83,10 @@
 			// 
 			// cboFechaReporteVentas
 			// 
+			cboFechaReporteVentas.DropDownStyle = ComboBoxStyle.DropDownList;
 			cboFechaReporteVentas.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
 			cboFechaReporteVentas.FormattingEnabled = true;
+			cboFechaReporteVentas.ItemHeight = 21;
 			cboFechaReporteVentas.Items.AddRange(new object[] { "Dia", "Mes", "Anio" });
 			cboFechaReporteVentas.Location = new Point(167, 32);
 			cboFechaReporteVentas.Name = "cboFechaReporteVentas";

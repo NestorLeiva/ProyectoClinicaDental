@@ -15,31 +15,13 @@ namespace Utils
         public static bool soloNumeros(char caracter)
         {
 
-            /*
-            try
-            {
-                if (char.IsControl(caracter) || char.IsDigit(caracter) || caracter == '\b')
-                {
-                    return true;
-                }
-                throw new Exception("El campo solamente acepta Numeros!");
-               
-            }
-            catch (Exception ex)
-            {
-
-              throw MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }*/
-            
-
             return char.IsControl(caracter) || char.IsDigit(caracter) || caracter == '\b';
             /* Le paso el parametro char para realizar la validacion de los caracteres 
              * validando si es un caracter de control o numero 
              * con el IsControl se valida que los caracteres sean de tipo control 
              * con el IsDigit se validan que los caracteres sean numeros
              * con la comparación al carácter de retroceso, permitimos eliminar texto.
-             * si es caracter es True / false  este es devuelto
-             */
+             * si es caracter es True / false  este es devuelto */
         }
 
         public static bool soloLetras(string texto)
@@ -48,12 +30,12 @@ namespace Utils
             foreach (char caracter in texto)
             {
                 // con este bucle realizo un recorrido por cada caracter del string 
-                if (!char.IsLetter(caracter) && caracter != '\b')
+                if (!char.IsLetter(caracter) && caracter != ' ' && caracter != '\b')
                 {
                     return false;
                     /*se valida cada caracter No es una letra y no sea el caracter de control de retroceso '\b'
-                     *si el return es false indica que el caracter no es valido
-                     */
+                     * ' ' representa la tecla de espcaio
+                     *si el return es false indica que el caracter no es valido*/
                 }
             }
             return true;
