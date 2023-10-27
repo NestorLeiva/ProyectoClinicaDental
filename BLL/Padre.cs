@@ -57,9 +57,14 @@ namespace BLL
 			xmlPadre.AppendChild(xmlNombre);
 
 			/*nodo apellido*/
-			XmlNode xmlApellido = xmlDocPacientes.CreateElement("Apellido");
-			xmlApellido.InnerText = this.Apellido;
-			xmlPadre.AppendChild(xmlApellido);
+			XmlNode xmlApellidoPrimero = xmlDocPacientes.CreateElement("ApellidoPrimero");
+			xmlApellidoPrimero.InnerText = this.ApellidoPrimero;
+			xmlPadre.AppendChild(xmlApellidoPrimero);
+
+			/*nodo apellido Segundo*/
+			XmlNode xmlApellidoSegundo = xmlDocPacientes.CreateElement("ApellidoSegundo");
+			xmlApellidoSegundo.InnerText = this.ApellidoPrimero;
+			xmlPadre.AppendChild(xmlApellidoSegundo);
 
 			/*nodo genero*/
 			XmlNode xmlGenero = xmlDocPacientes.CreateElement("Genero");
@@ -121,9 +126,14 @@ namespace BLL
 				_xmlHijo.AppendChild(xmlNombreHijo);
 
 				/*nodo apellido*/
-				XmlNode xmlApellidoHijo = xmlDocPacientes.CreateElement("Apellido");
-				xmlApellidoHijo.InnerText = mocoso.Apellido;
+				XmlNode xmlApellidoHijo = xmlDocPacientes.CreateElement("ApellidoPrimero");
+				xmlApellidoHijo.InnerText = mocoso.ApellidoPrimero;
 				_xmlHijo.AppendChild(xmlApellidoHijo);
+
+				/*nodo apellido Segundo*/
+				XmlNode xmlApellidoSegundoHijo = xmlDocPacientes.CreateElement("ApellidoSegundo");
+				xmlApellidoSegundoHijo.InnerText = mocoso.ApellidoPrimero;
+				_xmlHijo.AppendChild(xmlApellidoSegundoHijo);
 
 				/*nodo Fecha Nacimiento*/
 				XmlNode xmlFechaNacimiento = xmlDocPacientes.CreateElement("FechaNacimiento");
@@ -139,11 +149,6 @@ namespace BLL
 				XmlNode xmlTelefonoHijo = xmlDocPacientes.CreateElement("Telefono");
 				xmlTelefonoHijo.InnerText = mocoso.Telefono.ToString();
 				_xmlHijo.AppendChild(xmlTelefonoHijo);
-
-				/*nodo email*/
-				XmlNode xmlEmailHijo = xmlDocPacientes.CreateElement("Email");
-				xmlEmailHijo.InnerText = mocoso.Email;
-				_xmlHijo.AppendChild(xmlEmailHijo);
 
 			}
 			// ------------------------------------------------------------------------------------------------
