@@ -29,9 +29,10 @@
 		private void InitializeComponent()
 		{
 			gbConsultaHijo = new GroupBox();
+			btnActuarlizarHijos = new Button();
 			lblModificar = new Label();
 			btnModificar = new Button();
-			btnBusqueda = new Button();
+			btnBusquedaHijo = new Button();
 			txtBusquedaIdentificacion = new TextBox();
 			lblIdBusqueda = new Label();
 			gbListaConsulta = new GroupBox();
@@ -45,6 +46,7 @@
 			colGenero = new ColumnHeader();
 			colTelefono = new ColumnHeader();
 			gbConsultarPadres = new GroupBox();
+			btnActualizarPadre = new Button();
 			lblFilaConsulta = new Label();
 			btnModificarPadre = new Button();
 			btnConsultarIdPadre = new Button();
@@ -71,9 +73,10 @@
 			// 
 			// gbConsultaHijo
 			// 
+			gbConsultaHijo.Controls.Add(btnActuarlizarHijos);
 			gbConsultaHijo.Controls.Add(lblModificar);
 			gbConsultaHijo.Controls.Add(btnModificar);
-			gbConsultaHijo.Controls.Add(btnBusqueda);
+			gbConsultaHijo.Controls.Add(btnBusquedaHijo);
 			gbConsultaHijo.Controls.Add(txtBusquedaIdentificacion);
 			gbConsultaHijo.Controls.Add(lblIdBusqueda);
 			gbConsultaHijo.Dock = DockStyle.Top;
@@ -83,6 +86,17 @@
 			gbConsultaHijo.TabIndex = 65;
 			gbConsultaHijo.TabStop = false;
 			gbConsultaHijo.Text = "Consultar Hijo";
+			// 
+			// btnActuarlizarHijos
+			// 
+			btnActuarlizarHijos.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+			btnActuarlizarHijos.Location = new Point(649, 18);
+			btnActuarlizarHijos.Name = "btnActuarlizarHijos";
+			btnActuarlizarHijos.Size = new Size(118, 31);
+			btnActuarlizarHijos.TabIndex = 5;
+			btnActuarlizarHijos.Text = "Actualizar";
+			btnActuarlizarHijos.UseVisualStyleBackColor = true;
+			btnActuarlizarHijos.Click += btnActuarlizarHijos_Click;
 			// 
 			// lblModificar
 			// 
@@ -103,16 +117,16 @@
 			btnModificar.Text = "Modificar";
 			btnModificar.UseVisualStyleBackColor = true;
 			// 
-			// btnBusqueda
+			// btnBusquedaHijo
 			// 
-			btnBusqueda.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-			btnBusqueda.Location = new Point(528, 18);
-			btnBusqueda.Name = "btnBusqueda";
-			btnBusqueda.Size = new Size(118, 31);
-			btnBusqueda.TabIndex = 2;
-			btnBusqueda.Text = "Consultar";
-			btnBusqueda.UseVisualStyleBackColor = true;
-			btnBusqueda.Click += btnBusqueda_Click;
+			btnBusquedaHijo.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+			btnBusquedaHijo.Location = new Point(528, 18);
+			btnBusquedaHijo.Name = "btnBusquedaHijo";
+			btnBusquedaHijo.Size = new Size(118, 31);
+			btnBusquedaHijo.TabIndex = 2;
+			btnBusquedaHijo.Text = "Consultar";
+			btnBusquedaHijo.UseVisualStyleBackColor = true;
+			btnBusquedaHijo.Click += btnBusquedaHijo_Click;
 			// 
 			// txtBusquedaIdentificacion
 			// 
@@ -197,6 +211,7 @@
 			// 
 			// gbConsultarPadres
 			// 
+			gbConsultarPadres.Controls.Add(btnActualizarPadre);
 			gbConsultarPadres.Controls.Add(lblFilaConsulta);
 			gbConsultarPadres.Controls.Add(btnModificarPadre);
 			gbConsultarPadres.Controls.Add(btnConsultarIdPadre);
@@ -208,6 +223,17 @@
 			gbConsultarPadres.TabIndex = 67;
 			gbConsultarPadres.TabStop = false;
 			gbConsultarPadres.Text = "Consultar Padre";
+			// 
+			// btnActualizarPadre
+			// 
+			btnActualizarPadre.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+			btnActualizarPadre.Location = new Point(649, 14);
+			btnActualizarPadre.Name = "btnActualizarPadre";
+			btnActualizarPadre.Size = new Size(118, 31);
+			btnActualizarPadre.TabIndex = 7;
+			btnActualizarPadre.Text = "Actualizar";
+			btnActualizarPadre.UseVisualStyleBackColor = true;
+			btnActualizarPadre.Click += btnActualizarPadre_Click;
 			// 
 			// lblFilaConsulta
 			// 
@@ -237,6 +263,7 @@
 			btnConsultarIdPadre.TabIndex = 5;
 			btnConsultarIdPadre.Text = "Consultar";
 			btnConsultarIdPadre.UseVisualStyleBackColor = true;
+			btnConsultarIdPadre.Click += btnConsultarIdPadre_Click;
 			// 
 			// txtConsutarIdPadre
 			// 
@@ -357,7 +384,7 @@
 		#endregion
 
 		private GroupBox gbConsultaHijo;
-		private Button btnBusqueda;
+		private Button btnBusquedaHijo;
 		private TextBox txtBusquedaIdentificacion;
 		private Label lblIdBusqueda;
 		private GroupBox gbListaConsulta;
@@ -391,5 +418,7 @@
 		private ColumnHeader colCanton;
 		private ColumnHeader colDistrito;
 		private ColumnHeader colOtrasSenias;
+		private Button btnActuarlizarHijos;
+		private Button btnActualizarPadre;
 	}
 }
