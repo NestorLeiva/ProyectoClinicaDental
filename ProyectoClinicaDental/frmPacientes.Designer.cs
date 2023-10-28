@@ -46,7 +46,6 @@
 			lblEdadHijo = new Label();
 			txtNombrePadre = new TextBox();
 			txtApellidoPrimeroPadre = new TextBox();
-			txtIdentificacionPadre = new TextBox();
 			txtTelefonoPadre = new TextBox();
 			txtEmailPadre = new TextBox();
 			txtDireccionCanton = new TextBox();
@@ -64,6 +63,7 @@
 			btnCancelar = new Button();
 			cboDireccionProvincia = new ComboBox();
 			gbDatosPadre = new GroupBox();
+			txtIdentificacionPadre = new TextBox();
 			txtApellidoSegundoPadre = new TextBox();
 			lblApellidoSegundoPadre = new Label();
 			rbtnGeneroFPadre = new RadioButton();
@@ -265,16 +265,6 @@
 			txtApellidoPrimeroPadre.TabIndex = 2;
 			txtApellidoPrimeroPadre.KeyPress += txtApellidoPadre_KeyPress;
 			// 
-			// txtIdentificacionPadre
-			// 
-			txtIdentificacionPadre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			txtIdentificacionPadre.Location = new Point(153, 145);
-			txtIdentificacionPadre.MaxLength = 10;
-			txtIdentificacionPadre.Name = "txtIdentificacionPadre";
-			txtIdentificacionPadre.Size = new Size(169, 29);
-			txtIdentificacionPadre.TabIndex = 4;
-			txtIdentificacionPadre.KeyPress += txtIdentificacionPadre_KeyPress;
-			// 
 			// txtTelefonoPadre
 			// 
 			txtTelefonoPadre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -430,6 +420,7 @@
 			// 
 			// gbDatosPadre
 			// 
+			gbDatosPadre.Controls.Add(txtIdentificacionPadre);
 			gbDatosPadre.Controls.Add(txtApellidoSegundoPadre);
 			gbDatosPadre.Controls.Add(lblApellidoSegundoPadre);
 			gbDatosPadre.Controls.Add(rbtnGeneroFPadre);
@@ -440,7 +431,6 @@
 			gbDatosPadre.Controls.Add(lblApellidoPrimeoPadre);
 			gbDatosPadre.Controls.Add(txtApellidoPrimeroPadre);
 			gbDatosPadre.Controls.Add(lblIdentificacionPadre);
-			gbDatosPadre.Controls.Add(txtIdentificacionPadre);
 			gbDatosPadre.Controls.Add(lblTelefono);
 			gbDatosPadre.Controls.Add(txtTelefonoPadre);
 			gbDatosPadre.Controls.Add(lblEmail);
@@ -451,6 +441,16 @@
 			gbDatosPadre.TabIndex = 1;
 			gbDatosPadre.TabStop = false;
 			gbDatosPadre.Text = "DATOS DEL PADRE";
+			// 
+			// txtIdentificacionPadre
+			// 
+			txtIdentificacionPadre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+			txtIdentificacionPadre.Location = new Point(153, 145);
+			txtIdentificacionPadre.MaxLength = 10;
+			txtIdentificacionPadre.Name = "txtIdentificacionPadre";
+			txtIdentificacionPadre.Size = new Size(169, 29);
+			txtIdentificacionPadre.TabIndex = 4;
+			txtIdentificacionPadre.KeyPress += txtIdentificacionPadre_KeyPress_1;
 			// 
 			// txtApellidoSegundoPadre
 			// 
@@ -677,7 +677,6 @@
 		private Label lblEdadHijo;
 		private TextBox txtNombrePadre;
 		private TextBox txtApellidoPrimeroPadre;
-		private TextBox txtIdentificacionPadre;
 		private TextBox txtTelefonoPadre;
 		private TextBox txtEmailPadre;
 		private TextBox txtDireccionCanton;
@@ -710,5 +709,6 @@
 		private TextBox txtApellidoSegundoPadre;
 		private Label lblApellidoSegundoHijo;
 		private TextBox txtApellidoSegundoHijo;
+		private TextBox txtIdentificacionPadre;
 	}
 }

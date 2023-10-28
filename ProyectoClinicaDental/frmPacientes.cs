@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
+using DAL;
 
 namespace ProyectoClinicaDental
 {
@@ -16,10 +18,11 @@ namespace ProyectoClinicaDental
 	{
 		List<Hijo> lstHijos; // instancia de la clase padre
 		Padre nPadre;
-
+		private ArchivoXML _archivoXML;
 		public frmPacientes()
 		{
 			InitializeComponent();
+			_archivoXML = new ArchivoXML();
 		}
 
 		private void frmPacientes_Load(object sender, EventArgs e)
@@ -91,6 +94,14 @@ namespace ProyectoClinicaDental
 				e.Handled = true;
 			}
 		}
+		private void txtIdentificacionPadre_KeyPress_1(object sender, KeyPressEventArgs e)
+		{
+            if (!metodosValidaciones.soloNumeros(e.KeyChar))
+            {
+				e.Handled = true;
+            }
+        }
+
 
 		private void txtTelefonoPadre_KeyPress(object sender, KeyPressEventArgs e)
 		{
@@ -199,19 +210,35 @@ namespace ProyectoClinicaDental
 
 				nPadre = new Padre()// inicializacion de la clase  
 				{
-					Identificacion = Convert.ToInt32(this.txtIdentificacionPadre.Text),
+					Identificacion = Convert.ToInt32(this.txtIdentificacionPadre.Text.Replace("-", string.Empty)),
 					Nombre = this.txtNombrePadre.Text.ToUpper(),
 					ApellidoPrimero = this.txtApellidoPrimeroPadre.Text.ToUpper(),
 					ApellidoSegundo = this.txtApellidoSegundoPadre.Text.ToUpper(),
 					Genero = (this.rbtnGeneroMPadre.Checked ? "M" : "F"),
 					Telefono = Convert.ToInt32(this.txtTelefonoPadre.Text),
-					Email = this.txtEmailPadre.Text,
+					Email = this.txtEmailPadre.Text.ToLower(),
 					/* ------------------------------------------ direccion -------------------------------------------------------*/
 					nDireccion = nDireccion, // accedo al metodo y le asigno los datos 
 					/* ------------------------------------------   Hijos   ------------------------------------------------------- */
 					Hijos = this.lstHijos // agrego a la lista
 
 				};
+
+
+				XmlDocument xmlDocPadres = _archivoXML.leerXML("Padres.xml");
+				xmlDocPadres.Load("Padres.xml"); /*cargo el documento xml*/
+				/*Validacion si  existe un funcionario registrado*/
+				XmlNode existePadre = xmlDocPadres.SelectSingleNode($"//Padre[Identificacion='{nPadre.Identificacion}']");
+				/*Verifico si existe un servico con el mismo codigo*/
+				if ( existePadre != null)
+				{
+					MessageBox.Show("El Padre con el ID ya esta registrado", "Agregar Padres", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					return;
+				}
+
+
+
+
 				// ruta relativa para archivo xml + nombre
 				nPadre.GrabarXML("Padres.xml");
 				MessageBox.Show("Se registro al Padre / Paciente Exitosamente", "Registrar Padre / Paciente", MessageBoxButtons.OK, MessageBoxIcon.Information);
