@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 using Utils;
 
 namespace ProyectoClinicaDental
@@ -163,14 +164,28 @@ namespace ProyectoClinicaDental
 					ApellidoPrimero = this.txtApellidoFuncionario.Text.ToUpper(),
 					Genero = (this.rbtnGeneroMFuncionario.Checked ? "M" : "F"),
 					Telefono = Convert.ToInt32(this.txtTelefonoFuncionario.Text),
-					Email = this.txtEmailFuncionario.Text,
+					Email = this.txtEmailFuncionario.Text.ToLower(),
 					Puesto = this.txtPuestoFuncionario.Text.ToUpper(),
 					Usuario = this.txtUsuarioFuncionario.Text.ToUpper(),
 					Contrasenia = this.txtContraseniaFuncionario.Text
 					/*se agregan los string */
 				};
 
-				nFuncionario.grabarXML("Funcionarios.xml");
+				/*Validacion si  existe un funcionario registrado*/
+
+				XmlDocument xmlExisteFuncionario = new XmlDocument();
+				xmlExisteFuncionario.Load("Funcionarios.xml");
+
+				XmlNode ExisteFuncionario = xmlExisteFuncionario.SelectSingleNode($"//Funcionario[Identificacion='{nFuncionario.Identificacion}']");
+                /*se verifica si existe un funcionario con el mismo ID*/
+                if (ExisteFuncionario != null)
+                {
+					MessageBox.Show("El Funcionario ya existe.", "Agregar Funcionarios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					return;
+				}
+
+
+                nFuncionario.grabarXML("Funcionarios.xml");
 				// ruta para escribir el XML
 				MessageBox.Show("Se registro al Funcionario Exitosamente", "Registrar Funcionario", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				// mensaje de exito 
