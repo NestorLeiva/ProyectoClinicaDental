@@ -40,13 +40,16 @@
 			btnPagar = new Button();
 			btnCancelar = new Button();
 			gbDatosFactura = new GroupBox();
-			lbl = new Label();
+			btnBuscarPacientePaciente = new Button();
 			lblNombreFacturaPadre = new Label();
 			gbListaFactura = new GroupBox();
 			btnAgregar = new Button();
 			cboServicio = new ComboBox();
 			lblBuscarServicio = new Label();
 			lvwListaFactura = new ListView();
+			colCodigo = new ColumnHeader();
+			colServicio = new ColumnHeader();
+			colMonto = new ColumnHeader();
 			gbTotalFactura = new GroupBox();
 			gbDatosFactura.SuspendLayout();
 			gbListaFactura.SuspendLayout();
@@ -97,7 +100,7 @@
 			// lblTotal
 			// 
 			lblTotal.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-			lblTotal.Location = new Point(429, 19);
+			lblTotal.Location = new Point(262, 19);
 			lblTotal.Name = "lblTotal";
 			lblTotal.Size = new Size(100, 23);
 			lblTotal.TabIndex = 6;
@@ -118,7 +121,7 @@
 			// 
 			lblResTotal.BackColor = SystemColors.ActiveBorder;
 			lblResTotal.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-			lblResTotal.Location = new Point(535, 19);
+			lblResTotal.Location = new Point(368, 19);
 			lblResTotal.Name = "lblResTotal";
 			lblResTotal.Size = new Size(111, 23);
 			lblResTotal.TabIndex = 8;
@@ -142,13 +145,13 @@
 			txtIdentificacionFactura.Location = new Point(153, 21);
 			txtIdentificacionFactura.MaxLength = 10;
 			txtIdentificacionFactura.Name = "txtIdentificacionFactura";
-			txtIdentificacionFactura.Size = new Size(326, 33);
+			txtIdentificacionFactura.Size = new Size(218, 33);
 			txtIdentificacionFactura.TabIndex = 1;
 			// 
 			// btnPagar
 			// 
 			btnPagar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			btnPagar.Location = new Point(429, 61);
+			btnPagar.Location = new Point(262, 61);
 			btnPagar.Name = "btnPagar";
 			btnPagar.Size = new Size(100, 31);
 			btnPagar.TabIndex = 4;
@@ -158,7 +161,7 @@
 			// btnCancelar
 			// 
 			btnCancelar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			btnCancelar.Location = new Point(536, 61);
+			btnCancelar.Location = new Point(369, 61);
 			btnCancelar.Name = "btnCancelar";
 			btnCancelar.Size = new Size(111, 31);
 			btnCancelar.TabIndex = 5;
@@ -167,7 +170,7 @@
 			// 
 			// gbDatosFactura
 			// 
-			gbDatosFactura.Controls.Add(lbl);
+			gbDatosFactura.Controls.Add(btnBuscarPacientePaciente);
 			gbDatosFactura.Controls.Add(lblNombreFacturaPadre);
 			gbDatosFactura.Controls.Add(lblNombreFactura);
 			gbDatosFactura.Controls.Add(lblIdentificacionFactura);
@@ -175,25 +178,26 @@
 			gbDatosFactura.Dock = DockStyle.Top;
 			gbDatosFactura.Location = new Point(0, 0);
 			gbDatosFactura.Name = "gbDatosFactura";
-			gbDatosFactura.Size = new Size(665, 103);
+			gbDatosFactura.Size = new Size(548, 103);
 			gbDatosFactura.TabIndex = 19;
 			gbDatosFactura.TabStop = false;
 			// 
-			// lbl
+			// btnBuscarPacientePaciente
 			// 
-			lbl.AutoSize = true;
-			lbl.Location = new Point(491, 21);
-			lbl.Name = "lbl";
-			lbl.Size = new Size(38, 15);
-			lbl.TabIndex = 17;
-			lbl.Text = "label1";
+			btnBuscarPacientePaciente.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+			btnBuscarPacientePaciente.Location = new Point(406, 24);
+			btnBuscarPacientePaciente.Name = "btnBuscarPacientePaciente";
+			btnBuscarPacientePaciente.Size = new Size(73, 30);
+			btnBuscarPacientePaciente.TabIndex = 17;
+			btnBuscarPacientePaciente.Text = "Buscar";
+			btnBuscarPacientePaciente.UseVisualStyleBackColor = true;
 			// 
 			// lblNombreFacturaPadre
 			// 
 			lblNombreFacturaPadre.BackColor = SystemColors.ButtonShadow;
 			lblNombreFacturaPadre.Location = new Point(153, 60);
 			lblNombreFacturaPadre.Name = "lblNombreFacturaPadre";
-			lblNombreFacturaPadre.Size = new Size(326, 33);
+			lblNombreFacturaPadre.Size = new Size(218, 33);
 			lblNombreFacturaPadre.TabIndex = 16;
 			lblNombreFacturaPadre.TextAlign = ContentAlignment.MiddleLeft;
 			// 
@@ -206,25 +210,27 @@
 			gbListaFactura.Dock = DockStyle.Fill;
 			gbListaFactura.Location = new Point(0, 103);
 			gbListaFactura.Name = "gbListaFactura";
-			gbListaFactura.Size = new Size(665, 504);
+			gbListaFactura.Size = new Size(548, 504);
 			gbListaFactura.TabIndex = 20;
 			gbListaFactura.TabStop = false;
 			// 
 			// btnAgregar
 			// 
-			btnAgregar.Location = new Point(485, 11);
+			btnAgregar.Location = new Point(406, 10);
 			btnAgregar.Name = "btnAgregar";
-			btnAgregar.Size = new Size(116, 23);
+			btnAgregar.Size = new Size(73, 23);
 			btnAgregar.TabIndex = 3;
 			btnAgregar.Text = "Agregar";
 			btnAgregar.UseVisualStyleBackColor = true;
+			btnAgregar.Click += btnAgregar_Click;
 			// 
 			// cboServicio
 			// 
+			cboServicio.DropDownStyle = ComboBoxStyle.DropDownList;
 			cboServicio.FormattingEnabled = true;
 			cboServicio.Location = new Point(164, 11);
 			cboServicio.Name = "cboServicio";
-			cboServicio.Size = new Size(315, 23);
+			cboServicio.Size = new Size(236, 23);
 			cboServicio.TabIndex = 2;
 			// 
 			// lblBuscarServicio
@@ -239,13 +245,29 @@
 			// 
 			// lvwListaFactura
 			// 
+			lvwListaFactura.Columns.AddRange(new ColumnHeader[] { colCodigo, colServicio, colMonto });
 			lvwListaFactura.GridLines = true;
-			lvwListaFactura.Location = new Point(0, 79);
+			lvwListaFactura.Location = new Point(6, 40);
 			lvwListaFactura.Name = "lvwListaFactura";
-			lvwListaFactura.Size = new Size(659, 318);
+			lvwListaFactura.Size = new Size(509, 318);
 			lvwListaFactura.TabIndex = 0;
 			lvwListaFactura.UseCompatibleStateImageBehavior = false;
 			lvwListaFactura.View = View.Details;
+			// 
+			// colCodigo
+			// 
+			colCodigo.Text = "Codigo";
+			colCodigo.Width = 100;
+			// 
+			// colServicio
+			// 
+			colServicio.Text = "Servicio";
+			colServicio.Width = 200;
+			// 
+			// colMonto
+			// 
+			colMonto.Text = "Monto";
+			colMonto.Width = 100;
 			// 
 			// gbTotalFactura
 			// 
@@ -260,7 +282,7 @@
 			gbTotalFactura.Dock = DockStyle.Bottom;
 			gbTotalFactura.Location = new Point(0, 506);
 			gbTotalFactura.Name = "gbTotalFactura";
-			gbTotalFactura.Size = new Size(665, 101);
+			gbTotalFactura.Size = new Size(548, 101);
 			gbTotalFactura.TabIndex = 21;
 			gbTotalFactura.TabStop = false;
 			// 
@@ -268,10 +290,11 @@
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(665, 607);
+			ClientSize = new Size(548, 607);
 			Controls.Add(gbTotalFactura);
 			Controls.Add(gbListaFactura);
 			Controls.Add(gbDatosFactura);
+			MaximumSize = new Size(564, 646);
 			Name = "frmFacturacion";
 			Text = "Facturacion";
 			gbDatosFactura.ResumeLayout(false);
@@ -303,6 +326,9 @@
 		private Button btnAgregar;
 		private ComboBox cboServicio;
 		private Label lblBuscarServicio;
-		private Label lbl;
+		private ColumnHeader colCodigo;
+		private ColumnHeader colServicio;
+		private ColumnHeader colMonto;
+		private Button btnBuscarPacientePaciente;
 	}
 }
