@@ -85,10 +85,5 @@ namespace ProyectoClinicaDental
 
 		}
 
-		private void mnIngresoConsulta_Click(object sender, EventArgs e)
-		{
-			frmIngresoConsulta pantalla = new frmIngresoConsulta();
-			this.cargarPantalla(pantalla);
-		}
 	}
 }

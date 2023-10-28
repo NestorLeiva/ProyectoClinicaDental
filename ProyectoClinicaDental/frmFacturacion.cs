@@ -11,13 +11,18 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using Utils;
 
 namespace ProyectoClinicaDental
 {
 	public partial class frmFacturacion : Form
 	{
 		List<Negocio> lstNegocio;
+		List<Negocio> lstNegocioTiked;
 		private Negocio _Negocio = new Negocio();
+		private Padre _Padre = new Padre();
+
+		private static int numeroTiked = 1; /*declaracion de una variable con valor estatico*/
 
 		public frmFacturacion()
 		{
@@ -31,7 +36,9 @@ namespace ProyectoClinicaDental
 		{
 			try
 			{
+				/*Inicializacion de la lista*/
 				lstNegocio = new List<Negocio>();
+				lstNegocioTiked = new List<Negocio>();
 			}
 			catch (Exception ex)
 			{
@@ -79,9 +86,7 @@ namespace ProyectoClinicaDental
 					string monto = _xmlNode.SelectSingleNode("Monto").InnerText;/*Se obtienen los valores de los atributos del nodo _xmlNode*/
 
 
-
-
-					double dbMonto; 
+					double dbMonto;
 					if (double.TryParse(monto, out dbMonto))/*Convierto el valor de monto en doble*/
 					{
 						Negocio _negocio = new Negocio /*instancia de la clase */
@@ -145,8 +150,64 @@ namespace ProyectoClinicaDental
 
 		} /* fin calculoMatematico */
 
-		
+		private void btnBuscarPacientePaciente_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				string consultaId = txtTikedFactura.Text; /*obtengo el Id y se lo paso a una variable*/
+				XmlDocument xmlDoc = new XmlDocument(); /*instancia del objeto*/
+				xmlDoc.Load("Padres.xml"); /*Cargo el Documento*/
 
+				XmlNode xmlNodoHijo = xmlDoc.SelectSingleNode($"//Hijo[Id='{consultaId}']");
+				/* se realiza la busqueda en todos los nodos "Hijo /
+				 * [Id='{consultaID}'] exprecion de busqueda con un valor igual al de la variable consultaId  "*/
+				if (xmlNodoHijo != null)
+				{
+					/*obtengo la fecha de nacimento del nodo */
+					Hijo _hijo = new Hijo(DateTime.Parse(xmlNodoHijo.SelectSingleNode("FechaNacimiento").InnerText));
+					/*Metodos para calcular la edad*/
+					int edadAnios = _hijo.edadAnio;
+					int edadMeses = _hijo.edadMeses;
 
+					ListViewItem itemHijo = new ListViewItem(numeroTiked.ToString());
+					itemHijo.SubItems.Add(xmlNodoHijo.SelectSingleNode("Id").InnerText);
+					itemHijo.SubItems.Add(xmlNodoHijo.SelectSingleNode("Nombre").InnerText);
+					itemHijo.SubItems.Add(xmlNodoHijo.SelectSingleNode("ApellidoPrimero").InnerText);
+					itemHijo.SubItems.Add(xmlNodoHijo.SelectSingleNode("ApellidoSegundo").InnerText);
+					itemHijo.SubItems.Add(xmlNodoHijo.SelectSingleNode("FechaNacimiento").InnerText);
+					itemHijo.SubItems.Add(edadAnios.ToString() + " años " + edadMeses.ToString() + " meses"); /*Imprimo la edad */
+					itemHijo.SubItems.Add(xmlNodoHijo.SelectSingleNode("Genero").InnerText);
+					itemHijo.SubItems.Add(xmlNodoHijo.SelectSingleNode("Telefono").InnerText);
+					/*imprimo los valores en la lista*/
+					lvwListaTikedFactura.Items.Add(itemHijo);
+					/*incremento de la variable*/
+					numeroTiked++;
+					/*Mensaje de exito*/
+					MessageBox.Show("Tiked Generado con exito para el paceiente con el Id:" + txtTikedFactura.Text);
+				}
+				else
+				{
+					MessageBox.Show("No existe un paceiente con el Id:" + txtTikedFactura.Text);
+				}
+			}
+			catch (Exception ex)
+			{
+				/*mensaje de error*/
+				MessageBox.Show(ex.Message, "Error al cargar al paciente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+
+		private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (!metodosValidaciones.soloNumeros(e.KeyChar))
+			{
+				e.Handled = true;
+			}
+		}
+
+		private void btnBuscarTiked_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

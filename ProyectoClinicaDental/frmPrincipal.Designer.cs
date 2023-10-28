@@ -40,7 +40,6 @@
 			mnCerrarSesion = new ToolStripMenuItem();
 			mnAcercaDe = new ToolStripMenuItem();
 			mnSalir = new ToolStripMenuItem();
-			mnIngresoConsulta = new ToolStripMenuItem();
 			menuStrip1.SuspendLayout();
 			SuspendLayout();
 			// 
@@ -55,7 +54,7 @@
 			// 
 			// mnArchivo
 			// 
-			mnArchivo.DropDownItems.AddRange(new ToolStripItem[] { mnLogin, mnRegistroPacientes, registroNuevosFuncionarios, mnMantenimientoServicios, mnConsultaHistorial, mnIngresoConsulta, mnVentas, reporteDeVentas, mnCerrarSesion });
+			mnArchivo.DropDownItems.AddRange(new ToolStripItem[] { mnLogin, mnRegistroPacientes, registroNuevosFuncionarios, mnMantenimientoServicios, mnConsultaHistorial, mnVentas, reporteDeVentas, mnCerrarSesion });
 			mnArchivo.Name = "mnArchivo";
 			mnArchivo.Size = new Size(60, 20);
 			mnArchivo.Text = "Archivo";
@@ -130,13 +129,6 @@
 			mnSalir.Text = "Salir";
 			mnSalir.Click += mnSalir_Click;
 			// 
-			// mnIngresoConsulta
-			// 
-			mnIngresoConsulta.Name = "mnIngresoConsulta";
-			mnIngresoConsulta.Size = new Size(281, 22);
-			mnIngresoConsulta.Text = "Ingreso a Consulta";
-			mnIngresoConsulta.Click += mnIngresoConsulta_Click;
-			// 
 			// frmPrincipal
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
@@ -168,6 +160,5 @@
 		private ToolStripMenuItem registroNuevosFuncionarios;
 		private ToolStripMenuItem reporteDeVentas;
 		private ToolStripMenuItem mnCerrarSesion;
-		private ToolStripMenuItem mnIngresoConsulta;
 	}
 }

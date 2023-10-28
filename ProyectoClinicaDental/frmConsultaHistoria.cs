@@ -118,11 +118,15 @@ namespace ProyectoClinicaDental
 
 		private void btnActuarlizarHijos_Click(object sender, EventArgs e)
 		{
+			/*limpio la lista y luego llamo al metodo*/
+			lvwListaPacientes.Items.Clear();
 			this.listarHijos();
 		}
 
 		private void btnActualizarPadre_Click(object sender, EventArgs e)
 		{
+			/*limpio la lista y luego llamo al metodo*/
+			lvwListaPadres.Items.Clear();
 			this.ListarPadres();
 		}
 
@@ -200,7 +204,9 @@ namespace ProyectoClinicaDental
 				 * [Id='{consulta}'] es una exprecion de busqueda en los atributos Id con un valor igual al de la variable consultaId  "*/
 				if (hijoNode != null)
 				{
+					/*obtengo la fecha de nacimento del nodo */
 					Hijo hijo = new Hijo(DateTime.Parse(hijoNode.SelectSingleNode("FechaNacimiento").InnerText));
+					/*Metodos para calcular la edad*/
 					int edadAnios = hijo.edadAnio;
 					int edadMeses = hijo.edadMeses;
 

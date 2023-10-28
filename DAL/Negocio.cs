@@ -8,6 +8,7 @@ using DAL;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace DAL
 {
@@ -20,6 +21,7 @@ namespace DAL
 		public string NombreServicio { get; set; } = string.Empty;
 		public double Monto { get; set; }
 		public DateTime Fecha { get; set; }
+		public int NumeroTiked {  get; set; }
 
 		public double SubTotal { get; set; }
 		public double IVA { get; set; }
@@ -32,6 +34,7 @@ namespace DAL
 
 		XmlDocument xmlDocServicios = new XmlDocument();// objeto tipo xml
 		XmlDocument xmlDocConsulta = new XmlDocument();
+		XmlDocument xmlDocTiked = new XmlDocument();
 		public void GrabarXMLservicios(string rutaArchivo)
 		{
 			if (File.Exists(rutaArchivo))
@@ -75,7 +78,7 @@ namespace DAL
 
 		}// fin metodo grabarXml
 
-		public void grabarXmlVenta(string rutaArchivo, List<Negocio> listaNegocio)/*Valido que exista el archivo*/
+		public void grabarXmlVenta(string rutaArchivo, List<Negocio> listaNegocio)/*xml Factura*/
 		{
 			if (File.Exists(rutaArchivo))
 			{
@@ -102,7 +105,7 @@ namespace DAL
 
 				/*Nodo Fecha Factura*/
 				XmlNode xmlFecha = xmlDocConsulta.CreateElement("FechaFactura");
-				xmlFecha.InnerText=servicio.Fecha.ToString();
+				xmlFecha.InnerText = servicio.Fecha.ToString();
 				nodoServicio.AppendChild(xmlFecha);
 
 				/*nodo codigo*/
@@ -132,6 +135,8 @@ namespace DAL
 			//falta metodos guardar
 		} // fin grabarXMLConsulta
 
+
+		
 
 	} // fin class Negocio
 }
