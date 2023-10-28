@@ -54,7 +54,7 @@ namespace ProyectoClinicaDental
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show(ex.Message, "Error al ingresar la fecha de naciemiento", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(ex.Message, "Error al ingresar la Fecha de naciemiento", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 		//   ------------------------------------------------------- Validaciones TextBox Padre -------------------------------------------------------
@@ -235,9 +235,6 @@ namespace ProyectoClinicaDental
 					MessageBox.Show("El Padre con el ID ya esta registrado", "Agregar Padres", MessageBoxButtons.OK, MessageBoxIcon.Error);
 					return;
 				}
-
-
-
 
 				// ruta relativa para archivo xml + nombre
 				nPadre.GrabarXML("Padres.xml");
