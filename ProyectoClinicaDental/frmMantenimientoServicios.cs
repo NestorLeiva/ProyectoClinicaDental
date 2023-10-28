@@ -67,13 +67,13 @@ namespace ProyectoClinicaDental
 
 
 				XmlDocument xmlExisteServicio = new XmlDocument();
-				xmlExisteServicio.Load("Servicios.xml");
+				xmlExisteServicio.Load("Servicios.xml");/*cargo el documento xml*/
 
 				XmlNode existeServicio = xmlExisteServicio.SelectSingleNode($"//Servicio[Codigo='{nNegocio.Codigo}']");
 				/*Verifico si existe un servico con el mismo codigo*/
 
 				if (existeServicio != null) {
-					MessageBox.Show("El servicio con el mismo código ya existe.", "Agregar Servicios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					MessageBox.Show("El servicio con el código ya existe.", "Agregar Servicios", MessageBoxButtons.OK, MessageBoxIcon.Error);
 					return;
 				}
 
