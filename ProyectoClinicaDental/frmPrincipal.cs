@@ -19,50 +19,50 @@ namespace ProyectoClinicaDental
 
 		private void mnAcercaDe_Click(object sender, EventArgs e)
 		{
-			frmAcercaDe ventanaAcercade = new frmAcercaDe();
-			this.cargarPantalla(ventanaAcercade);
+			frmAcercaDe pantalla = new frmAcercaDe();
+			this.cargarPantalla(pantalla);
 		}
 
 		private void mnVentas_Click(object sender, EventArgs e)
 		{
-			frmFacturacion ventanaFactura = new frmFacturacion();
-			this.cargarPantalla(ventanaFactura);
+			frmFacturacion pantalla = new frmFacturacion();
+			this.cargarPantalla(pantalla);
 		}
 
 		private void mnLogin_Click(object sender, EventArgs e)
 		{
-			frmLogin ventanaLogin = new frmLogin();
-			this.cargarPantalla(ventanaLogin);
+			frmLogin pantalla = new frmLogin();
+			this.cargarPantalla(pantalla);
 		}
 
 		private void mnRegistroPacientes_Click(object sender, EventArgs e)
 		{
-			frmPacientes ventanaPacientes = new frmPacientes();
-			this.cargarPantalla(ventanaPacientes);
+			frmPacientes pantalla = new frmPacientes();
+			this.cargarPantalla(pantalla);
 		}
 
 		private void mnMantenimientoServicios_Click(object sender, EventArgs e)
 		{
-			frmMantenimientoServicios ventanaMantenimientoServicios = new frmMantenimientoServicios();
-			this.cargarPantalla(ventanaMantenimientoServicios);
+			frmMantenimientoServicios pantalla = new frmMantenimientoServicios();
+			this.cargarPantalla(pantalla);
 		}
 
 		private void mnConsultaHistorial_Click(object sender, EventArgs e)
 		{
-			frmConsultaHistoria ventantaConsultaHistorial = new frmConsultaHistoria();
-			this.cargarPantalla(ventantaConsultaHistorial);
+			frmConsultaHistoria pantalla = new frmConsultaHistoria();
+			this.cargarPantalla(pantalla);
 		}
 
 		private void registroNuevosFuncionariosToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			frmFuncionarios ventanaFuncionarios = new frmFuncionarios();
-			this.cargarPantalla(ventanaFuncionarios);
+			frmFuncionarios pantalla = new frmFuncionarios();
+			this.cargarPantalla(pantalla);
 		}
 
 		private void reporteDeVentasToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			frmReporteVentas ventanaReporte = new frmReporteVentas();
-			this.cargarPantalla(ventanaReporte);
+			frmReporteVentas pantalla = new frmReporteVentas();
+			this.cargarPantalla(pantalla);
 		}
 
 
@@ -73,6 +73,7 @@ namespace ProyectoClinicaDental
 			pantalla.BackColor = BackColor;
 			pantalla.Show();
 
+
 		}
 
 		private void mnCerrarSesion_Click(object sender, EventArgs e)
@@ -82,6 +83,12 @@ namespace ProyectoClinicaDental
 			frmLogin frm_Login = new frmLogin();
 			frm_Login.Show();
 
+		}
+
+		private void mnIngresoConsulta_Click(object sender, EventArgs e)
+		{
+			frmIngresoConsulta pantalla = new frmIngresoConsulta();
+			this.cargarPantalla(pantalla);
 		}
 	}
 }

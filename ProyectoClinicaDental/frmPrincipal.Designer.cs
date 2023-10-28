@@ -37,9 +37,10 @@
 			mnConsultaHistorial = new ToolStripMenuItem();
 			mnVentas = new ToolStripMenuItem();
 			reporteDeVentas = new ToolStripMenuItem();
+			mnCerrarSesion = new ToolStripMenuItem();
 			mnAcercaDe = new ToolStripMenuItem();
 			mnSalir = new ToolStripMenuItem();
-			mnCerrarSesion = new ToolStripMenuItem();
+			mnIngresoConsulta = new ToolStripMenuItem();
 			menuStrip1.SuspendLayout();
 			SuspendLayout();
 			// 
@@ -54,7 +55,7 @@
 			// 
 			// mnArchivo
 			// 
-			mnArchivo.DropDownItems.AddRange(new ToolStripItem[] { mnLogin, mnRegistroPacientes, registroNuevosFuncionarios, mnMantenimientoServicios, mnConsultaHistorial, mnVentas, reporteDeVentas, mnCerrarSesion });
+			mnArchivo.DropDownItems.AddRange(new ToolStripItem[] { mnLogin, mnRegistroPacientes, registroNuevosFuncionarios, mnMantenimientoServicios, mnConsultaHistorial, mnIngresoConsulta, mnVentas, reporteDeVentas, mnCerrarSesion });
 			mnArchivo.Name = "mnArchivo";
 			mnArchivo.Size = new Size(60, 20);
 			mnArchivo.Text = "Archivo";
@@ -108,6 +109,13 @@
 			reporteDeVentas.Text = "Reporte de Ventas";
 			reporteDeVentas.Click += reporteDeVentasToolStripMenuItem_Click;
 			// 
+			// mnCerrarSesion
+			// 
+			mnCerrarSesion.Name = "mnCerrarSesion";
+			mnCerrarSesion.Size = new Size(281, 22);
+			mnCerrarSesion.Text = "Cerrar Sesion";
+			mnCerrarSesion.Click += mnCerrarSesion_Click;
+			// 
 			// mnAcercaDe
 			// 
 			mnAcercaDe.Name = "mnAcercaDe";
@@ -122,12 +130,12 @@
 			mnSalir.Text = "Salir";
 			mnSalir.Click += mnSalir_Click;
 			// 
-			// mnCerrarSesion
+			// mnIngresoConsulta
 			// 
-			mnCerrarSesion.Name = "mnCerrarSesion";
-			mnCerrarSesion.Size = new Size(281, 22);
-			mnCerrarSesion.Text = "Cerrar Sesion";
-			mnCerrarSesion.Click += mnCerrarSesion_Click;
+			mnIngresoConsulta.Name = "mnIngresoConsulta";
+			mnIngresoConsulta.Size = new Size(281, 22);
+			mnIngresoConsulta.Text = "Ingreso a Consulta";
+			mnIngresoConsulta.Click += mnIngresoConsulta_Click;
 			// 
 			// frmPrincipal
 			// 
@@ -160,5 +168,6 @@
 		private ToolStripMenuItem registroNuevosFuncionarios;
 		private ToolStripMenuItem reporteDeVentas;
 		private ToolStripMenuItem mnCerrarSesion;
+		private ToolStripMenuItem mnIngresoConsulta;
 	}
 }
