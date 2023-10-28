@@ -1,4 +1,5 @@
-﻿using DAL;
+﻿using BLL;
+using DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,12 +16,27 @@ namespace ProyectoClinicaDental
 {
 	public partial class frmFacturacion : Form
 	{
-
+		List<Negocio> lstNegocio;
+		private Negocio _Negocio = new Negocio();
 
 		public frmFacturacion()
 		{
 			InitializeComponent();
+			//_Negocio.lstNegocio = lstNegocio;
 			llenarCboXML();
+		}
+
+
+		private void frmFacturacion_Load(object sender, EventArgs e)
+		{
+			try
+			{
+				lstNegocio = new List<Negocio>();
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Reporte Ventas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
 		}
 
 		private void llenarCboXML()
@@ -37,11 +53,13 @@ namespace ProyectoClinicaDental
 			foreach (XmlNode item in items)
 			{
 				cboServicio.Items.Add(item.InnerText);
+				/*toma el contenido textual del nodo item utilizando item.InnerText y se agrega ese contenido como un elemento al ComboBox cboServicio*/
 			}
 		}
 
 		private void btnAgregar_Click(object sender, EventArgs e)
 		{
+			DateTime fecha = dtpFechaFactura.Value;
 			string elementoObtenido = cboServicio.SelectedItem as string;
 			if (!string.IsNullOrEmpty(elementoObtenido))
 			{
@@ -56,17 +74,36 @@ namespace ProyectoClinicaDental
 				if (_xmlNode != null) /*valido que el nodo no sea nulo*/
 				{
 					// Obtener los valores de los atributos del nodo
-					string codigo = _xmlNode.SelectSingleNode("Codigo").InnerText;
-					string nombreServicio = elementoObtenido;
-					string monto = _xmlNode.SelectSingleNode("Monto").InnerText;
+					string codigo = _xmlNode.SelectSingleNode("Codigo").InnerText;/*Se obtienen los valores de los atributos del nodo _xmlNode*/
+					string nombreServicio = elementoObtenido;/*Se obtienen los valores de los atributos del nodo _xmlNode*/
+					string monto = _xmlNode.SelectSingleNode("Monto").InnerText;/*Se obtienen los valores de los atributos del nodo _xmlNode*/
 
-					// Agregar los valores al ListView
-					ListViewItem listViewFactura = new ListViewItem(codigo);
-					listViewFactura.SubItems.Add(nombreServicio);
-					listViewFactura.SubItems.Add(monto);
 
-					/*imprimo los datos en la listview*/
-					lvwListaFactura.Items.Add(listViewFactura);
+
+
+					double dbMonto; 
+					if (double.TryParse(monto, out dbMonto))/*Convierto el valor de monto en doble*/
+					{
+						Negocio _negocio = new Negocio /*instancia de la clase */
+						{
+							Fecha = fecha,
+							Codigo = codigo,
+							NombreServicio = nombreServicio,
+							Monto = dbMonto
+
+						};
+						lstNegocio.Add(_negocio);
+						/*agrega la instancia de Negocio a una lista llamada lstNegocio*/
+
+						// Agregar los valores al ListView
+						ListViewItem listViewFactura = new ListViewItem(fecha.ToString("dd/MM/yyyy"));
+						listViewFactura.SubItems.Add(codigo);
+						listViewFactura.SubItems.Add(nombreServicio);
+						listViewFactura.SubItems.Add(monto);
+						/*imprimo los datos en la listview*/
+						lvwListaFactura.Items.Add(listViewFactura);
+					}
+
 					/*llamada al metodo*/
 					this.calculoMatematico();
 				}
@@ -75,7 +112,11 @@ namespace ProyectoClinicaDental
 
 		}// fin btnAgregar
 
-
+		private void btnPagar_Click(object sender, EventArgs e)
+		{
+			/*invoca a los metodos*/
+			_Negocio.grabarXmlVenta("Consulta_Venta.xml", lstNegocio);
+		}
 
 		private void calculoMatematico()
 		{
@@ -87,12 +128,12 @@ namespace ProyectoClinicaDental
 
 			foreach (ListViewItem item in lvwListaFactura.Items) /*recorro los elementos de la listview*/
 			{
-				double monto = double.Parse(item.SubItems[2].Text);
+				double monto = double.Parse(item.SubItems[3].Text);
 				/*obtengo el valor del subindice monto y se convierte en double*/
 				subtotal += monto;
 				/*agrego los montos y acumulo la suma */
 			}
-			
+
 			iva = subtotal * iva; /*multiplico el subtotal por el IVA*/
 			total = subtotal + iva; /*sumo el subtotal + el IVA*/
 
@@ -103,5 +144,9 @@ namespace ProyectoClinicaDental
 
 
 		} /* fin calculoMatematico */
+
+		
+
+
 	}
 }

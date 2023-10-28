@@ -40,6 +40,7 @@
 			btnPagar = new Button();
 			btnCancelar = new Button();
 			gbDatosFactura = new GroupBox();
+			dtpFechaFactura = new DateTimePicker();
 			btnBuscarPacientePaciente = new Button();
 			lblNombreFacturaPadre = new Label();
 			gbListaFactura = new GroupBox();
@@ -51,6 +52,7 @@
 			colServicio = new ColumnHeader();
 			colMonto = new ColumnHeader();
 			gbTotalFactura = new GroupBox();
+			colFechaFactura = new ColumnHeader();
 			gbDatosFactura.SuspendLayout();
 			gbListaFactura.SuspendLayout();
 			gbTotalFactura.SuspendLayout();
@@ -154,9 +156,10 @@
 			btnPagar.Location = new Point(262, 61);
 			btnPagar.Name = "btnPagar";
 			btnPagar.Size = new Size(100, 31);
-			btnPagar.TabIndex = 4;
+			btnPagar.TabIndex = 6;
 			btnPagar.Text = "Pagar";
 			btnPagar.UseVisualStyleBackColor = true;
+			btnPagar.Click += btnPagar_Click;
 			// 
 			// btnCancelar
 			// 
@@ -164,12 +167,13 @@
 			btnCancelar.Location = new Point(369, 61);
 			btnCancelar.Name = "btnCancelar";
 			btnCancelar.Size = new Size(111, 31);
-			btnCancelar.TabIndex = 5;
+			btnCancelar.TabIndex = 7;
 			btnCancelar.Text = "Cancerlar";
 			btnCancelar.UseVisualStyleBackColor = true;
 			// 
 			// gbDatosFactura
 			// 
+			gbDatosFactura.Controls.Add(dtpFechaFactura);
 			gbDatosFactura.Controls.Add(btnBuscarPacientePaciente);
 			gbDatosFactura.Controls.Add(lblNombreFacturaPadre);
 			gbDatosFactura.Controls.Add(lblNombreFactura);
@@ -182,13 +186,22 @@
 			gbDatosFactura.TabIndex = 19;
 			gbDatosFactura.TabStop = false;
 			// 
+			// dtpFechaFactura
+			// 
+			dtpFechaFactura.CustomFormat = "dd/MM/yyy";
+			dtpFechaFactura.Format = DateTimePickerFormat.Custom;
+			dtpFechaFactura.Location = new Point(387, 68);
+			dtpFechaFactura.Name = "dtpFechaFactura";
+			dtpFechaFactura.Size = new Size(128, 23);
+			dtpFechaFactura.TabIndex = 3;
+			// 
 			// btnBuscarPacientePaciente
 			// 
 			btnBuscarPacientePaciente.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
 			btnBuscarPacientePaciente.Location = new Point(406, 24);
 			btnBuscarPacientePaciente.Name = "btnBuscarPacientePaciente";
 			btnBuscarPacientePaciente.Size = new Size(73, 30);
-			btnBuscarPacientePaciente.TabIndex = 17;
+			btnBuscarPacientePaciente.TabIndex = 2;
 			btnBuscarPacientePaciente.Text = "Buscar";
 			btnBuscarPacientePaciente.UseVisualStyleBackColor = true;
 			// 
@@ -219,7 +232,7 @@
 			btnAgregar.Location = new Point(406, 10);
 			btnAgregar.Name = "btnAgregar";
 			btnAgregar.Size = new Size(73, 23);
-			btnAgregar.TabIndex = 3;
+			btnAgregar.TabIndex = 5;
 			btnAgregar.Text = "Agregar";
 			btnAgregar.UseVisualStyleBackColor = true;
 			btnAgregar.Click += btnAgregar_Click;
@@ -231,7 +244,7 @@
 			cboServicio.Location = new Point(164, 11);
 			cboServicio.Name = "cboServicio";
 			cboServicio.Size = new Size(236, 23);
-			cboServicio.TabIndex = 2;
+			cboServicio.TabIndex = 4;
 			// 
 			// lblBuscarServicio
 			// 
@@ -245,7 +258,7 @@
 			// 
 			// lvwListaFactura
 			// 
-			lvwListaFactura.Columns.AddRange(new ColumnHeader[] { colCodigo, colServicio, colMonto });
+			lvwListaFactura.Columns.AddRange(new ColumnHeader[] { colFechaFactura, colCodigo, colServicio, colMonto });
 			lvwListaFactura.GridLines = true;
 			lvwListaFactura.Location = new Point(6, 40);
 			lvwListaFactura.Name = "lvwListaFactura";
@@ -286,6 +299,11 @@
 			gbTotalFactura.TabIndex = 21;
 			gbTotalFactura.TabStop = false;
 			// 
+			// colFechaFactura
+			// 
+			colFechaFactura.Text = "Fecha";
+			colFechaFactura.Width = 80;
+			// 
 			// frmFacturacion
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
@@ -297,6 +315,7 @@
 			MaximumSize = new Size(564, 646);
 			Name = "frmFacturacion";
 			Text = "Facturacion";
+			Load += frmFacturacion_Load;
 			gbDatosFactura.ResumeLayout(false);
 			gbDatosFactura.PerformLayout();
 			gbListaFactura.ResumeLayout(false);
@@ -330,5 +349,7 @@
 		private ColumnHeader colServicio;
 		private ColumnHeader colMonto;
 		private Button btnBuscarPacientePaciente;
+		private DateTimePicker dtpFechaFactura;
+		private ColumnHeader colFechaFactura;
 	}
 }
