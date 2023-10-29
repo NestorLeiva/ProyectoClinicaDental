@@ -167,22 +167,11 @@ namespace ProyectoClinicaDental
 					Email = this.txtEmailFuncionario.Text.ToLower(),
 					Puesto = this.txtPuestoFuncionario.Text.ToUpper(),
 					Usuario = this.txtUsuarioFuncionario.Text.ToUpper(),
-					Contrasenia = this.txtContraseniaFuncionario.Text
+					Contrasenia = this.txtContraseniaFuncionario.Text.ToUpper()
 					/*se agregan los string */
 				};
 
 				/*Validacion si  existe un funcionario registrado*/
-
-				XmlDocument xmlExisteFuncionario = new XmlDocument();
-				xmlExisteFuncionario.Load("Funcionarios.xml");
-
-				XmlNode ExisteFuncionario = xmlExisteFuncionario.SelectSingleNode($"//Funcionario[Identificacion='{nFuncionario.Identificacion}']");
-                /*se verifica si existe un funcionario con el mismo ID*/
-                if (ExisteFuncionario != null)
-                {
-					MessageBox.Show("El Funcionario ya existe.", "Agregar Funcionarios", MessageBoxButtons.OK, MessageBoxIcon.Error);
-					return;
-				}
 
 
                 nFuncionario.grabarXML("Funcionarios.xml");

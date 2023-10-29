@@ -51,6 +51,7 @@
 			ColTelefonoTiked = new ColumnHeader();
 			btnBuscarPacientePaciente = new Button();
 			gbListaFactura = new GroupBox();
+			btnBuscarTiked = new Button();
 			txtTikedId = new TextBox();
 			lblTiked = new Label();
 			btnAgregar = new Button();
@@ -64,7 +65,6 @@
 			colServicio = new ColumnHeader();
 			colMonto = new ColumnHeader();
 			gbTotalFactura = new GroupBox();
-			btnBuscarTiked = new Button();
 			gbDatosFactura.SuspendLayout();
 			gbListaFactura.SuspendLayout();
 			gbTotalFactura.SuspendLayout();
@@ -173,6 +173,7 @@
 			btnCancelar.TabIndex = 11;
 			btnCancelar.Text = "Cancerlar";
 			btnCancelar.UseVisualStyleBackColor = true;
+			btnCancelar.Click += btnCancelar_Click;
 			// 
 			// gbDatosFactura
 			// 
@@ -269,6 +270,17 @@
 			gbListaFactura.Size = new Size(533, 507);
 			gbListaFactura.TabIndex = 20;
 			gbListaFactura.TabStop = false;
+			// 
+			// btnBuscarTiked
+			// 
+			btnBuscarTiked.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+			btnBuscarTiked.Location = new Point(454, 14);
+			btnBuscarTiked.Name = "btnBuscarTiked";
+			btnBuscarTiked.Size = new Size(73, 23);
+			btnBuscarTiked.TabIndex = 7;
+			btnBuscarTiked.Text = "Buscar";
+			btnBuscarTiked.UseVisualStyleBackColor = true;
+			btnBuscarTiked.Click += btnBuscarTiked_Click;
 			// 
 			// txtTikedId
 			// 
@@ -383,17 +395,6 @@
 			gbTotalFactura.Size = new Size(533, 101);
 			gbTotalFactura.TabIndex = 21;
 			gbTotalFactura.TabStop = false;
-			// 
-			// btnBuscarTiked
-			// 
-			btnBuscarTiked.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-			btnBuscarTiked.Location = new Point(454, 14);
-			btnBuscarTiked.Name = "btnBuscarTiked";
-			btnBuscarTiked.Size = new Size(73, 23);
-			btnBuscarTiked.TabIndex = 7;
-			btnBuscarTiked.Text = "Buscar";
-			btnBuscarTiked.UseVisualStyleBackColor = true;
-			btnBuscarTiked.Click += btnBuscarTiked_Click;
 			// 
 			// frmFacturacion
 			// 

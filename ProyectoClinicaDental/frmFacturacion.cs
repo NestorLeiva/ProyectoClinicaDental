@@ -121,6 +121,8 @@ namespace ProyectoClinicaDental
 		{
 			/*invoca a los metodos*/
 			_Negocio.grabarXmlVenta("Consulta_Venta.xml", lstNegocio);
+			/*Mensaje de exito*/
+			MessageBox.Show("Pago realizado con Exito.");
 		}
 
 		private void calculoMatematico()
@@ -208,6 +210,11 @@ namespace ProyectoClinicaDental
 		private void btnBuscarTiked_Click(object sender, EventArgs e)
 		{
 
+		}
+
+		private void btnCancelar_Click(object sender, EventArgs e)
+		{
+			this.Close();
 		}
 	}
 }

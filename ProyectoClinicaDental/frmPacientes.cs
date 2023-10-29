@@ -224,18 +224,6 @@ namespace ProyectoClinicaDental
 
 				};
 
-
-				XmlDocument xmlDocPadres = _archivoXML.leerXML("Padres.xml");
-				xmlDocPadres.Load("Padres.xml"); /*cargo el documento xml*/
-				/*Validacion si  existe un funcionario registrado*/
-				XmlNode existePadre = xmlDocPadres.SelectSingleNode($"//Padre[Identificacion='{nPadre.Identificacion}']");
-				/*Verifico si existe un servico con el mismo codigo*/
-				if ( existePadre != null)
-				{
-					MessageBox.Show("El Padre con el ID ya esta registrado", "Agregar Padres", MessageBoxButtons.OK, MessageBoxIcon.Error);
-					return;
-				}
-
 				// ruta relativa para archivo xml + nombre
 				nPadre.GrabarXML("Padres.xml");
 				MessageBox.Show("Se registro al Padre / Paciente Exitosamente", "Registrar Padre / Paciente", MessageBoxButtons.OK, MessageBoxIcon.Information);

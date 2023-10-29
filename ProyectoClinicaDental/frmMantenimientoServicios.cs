@@ -109,6 +109,7 @@ namespace ProyectoClinicaDental
 		{
 			try
 			{
+				lvwServicios.Items.Clear(); //
 				XmlDocument xmlDocServicios = new XmlDocument(); // instancia del objeto
 				xmlDocServicios.Load("Servicios.xml"); //cargo el fichero
 				XmlNodeList nodoServicios = xmlDocServicios.SelectNodes("//Servicio");//obtengo la lista de los nodos

@@ -30,6 +30,10 @@
 		{
 			gbListaFactura = new GroupBox();
 			lvwReporteFacturas = new ListView();
+			colFechaTiked = new ColumnHeader();
+			colCodigo = new ColumnHeader();
+			colNombreServicio = new ColumnHeader();
+			colMonto = new ColumnHeader();
 			gbConsultaFactura = new GroupBox();
 			btnConsultar = new Button();
 			cboFechaReporteVentas = new ComboBox();
@@ -44,20 +48,41 @@
 			gbListaFactura.Dock = DockStyle.Fill;
 			gbListaFactura.Location = new Point(0, 0);
 			gbListaFactura.Name = "gbListaFactura";
-			gbListaFactura.Size = new Size(792, 550);
+			gbListaFactura.Size = new Size(567, 550);
 			gbListaFactura.TabIndex = 67;
 			gbListaFactura.TabStop = false;
 			// 
 			// lvwReporteFacturas
 			// 
-			lvwReporteFacturas.Dock = DockStyle.Fill;
+			lvwReporteFacturas.BackColor = SystemColors.Info;
+			lvwReporteFacturas.Columns.AddRange(new ColumnHeader[] { colFechaTiked, colCodigo, colNombreServicio, colMonto });
 			lvwReporteFacturas.GridLines = true;
-			lvwReporteFacturas.Location = new Point(3, 19);
+			lvwReporteFacturas.Location = new Point(3, 106);
 			lvwReporteFacturas.Name = "lvwReporteFacturas";
-			lvwReporteFacturas.Size = new Size(786, 528);
+			lvwReporteFacturas.Size = new Size(786, 441);
 			lvwReporteFacturas.TabIndex = 0;
 			lvwReporteFacturas.UseCompatibleStateImageBehavior = false;
 			lvwReporteFacturas.View = View.Details;
+			// 
+			// colFechaTiked
+			// 
+			colFechaTiked.Text = "Fecha";
+			colFechaTiked.Width = 100;
+			// 
+			// colCodigo
+			// 
+			colCodigo.Text = "Codigo";
+			colCodigo.Width = 100;
+			// 
+			// colNombreServicio
+			// 
+			colNombreServicio.Text = "Nombre Servicio";
+			colNombreServicio.Width = 100;
+			// 
+			// colMonto
+			// 
+			colMonto.Text = "Monto";
+			colMonto.Width = 100;
 			// 
 			// gbConsultaFactura
 			// 
@@ -67,7 +92,7 @@
 			gbConsultaFactura.Dock = DockStyle.Top;
 			gbConsultaFactura.Location = new Point(0, 0);
 			gbConsultaFactura.Name = "gbConsultaFactura";
-			gbConsultaFactura.Size = new Size(792, 100);
+			gbConsultaFactura.Size = new Size(567, 100);
 			gbConsultaFactura.TabIndex = 68;
 			gbConsultaFactura.TabStop = false;
 			// 
@@ -106,11 +131,12 @@
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(792, 550);
+			ClientSize = new Size(567, 550);
 			Controls.Add(gbConsultaFactura);
 			Controls.Add(gbListaFactura);
 			Name = "frmReporteVentas";
 			Text = "Reporte Ventas";
+			Load += frmReporteVentas_Load;
 			gbListaFactura.ResumeLayout(false);
 			gbConsultaFactura.ResumeLayout(false);
 			ResumeLayout(false);
@@ -124,5 +150,9 @@
 		private Button btnConsultar;
 		private ComboBox cboFechaReporteVentas;
 		private Label lblConsultarFecha;
+		private ColumnHeader colFechaTiked;
+		private ColumnHeader colCodigo;
+		private ColumnHeader colNombreServicio;
+		private ColumnHeader colMonto;
 	}
 }

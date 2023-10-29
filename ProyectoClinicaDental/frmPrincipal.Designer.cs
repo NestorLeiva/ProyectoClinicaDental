@@ -30,7 +30,6 @@
 		{
 			menuStrip1 = new MenuStrip();
 			mnArchivo = new ToolStripMenuItem();
-			mnLogin = new ToolStripMenuItem();
 			mnRegistroPacientes = new ToolStripMenuItem();
 			registroNuevosFuncionarios = new ToolStripMenuItem();
 			mnMantenimientoServicios = new ToolStripMenuItem();
@@ -54,17 +53,10 @@
 			// 
 			// mnArchivo
 			// 
-			mnArchivo.DropDownItems.AddRange(new ToolStripItem[] { mnLogin, mnRegistroPacientes, registroNuevosFuncionarios, mnMantenimientoServicios, mnConsultaHistorial, mnVentas, reporteDeVentas, mnCerrarSesion });
+			mnArchivo.DropDownItems.AddRange(new ToolStripItem[] { mnRegistroPacientes, registroNuevosFuncionarios, mnMantenimientoServicios, mnConsultaHistorial, mnVentas, reporteDeVentas, mnCerrarSesion });
 			mnArchivo.Name = "mnArchivo";
 			mnArchivo.Size = new Size(60, 20);
 			mnArchivo.Text = "Archivo";
-			// 
-			// mnLogin
-			// 
-			mnLogin.Name = "mnLogin";
-			mnLogin.Size = new Size(281, 22);
-			mnLogin.Text = "Inicio Sesion";
-			mnLogin.Click += mnLogin_Click;
 			// 
 			// mnRegistroPacientes
 			// 
@@ -156,7 +148,6 @@
 		private ToolStripMenuItem mnRegistroPacientes;
 		private ToolStripMenuItem mnMantenimientoServicios;
 		private ToolStripMenuItem mnConsultaHistorial;
-		private ToolStripMenuItem mnLogin;
 		private ToolStripMenuItem registroNuevosFuncionarios;
 		private ToolStripMenuItem reporteDeVentas;
 		private ToolStripMenuItem mnCerrarSesion;
