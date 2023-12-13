@@ -1,0 +1,32 @@
+<Ventas>
+  <Venta>
+    <Servicio>
+      <FechaFactura>28/10/2023 18:58:14</FechaFactura>
+      <Codigo>EDM002</Codigo>
+      <NombreServicio>EXTRACCION DE MUELAS</NombreServicio>
+      <Monto>40000</Monto>
+    </Servicio>
+  </Venta>
+  <Venta>
+    <Servicio>
+      <FechaFactura>28/10/2023 18:58:14</FechaFactura>
+      <Codigo>EDM002</Codigo>
+      <NombreServicio>EXTRACCION DE MUELAS</NombreServicio>
+      <Monto>40000</Monto>
+    </Servicio>
+    <Servicio>
+      <FechaFactura>28/10/2023 18:58:14</FechaFactura>
+      <Codigo>CDC004</Codigo>
+      <NombreServicio>CIRUGIA DE CORDALES</NombreServicio>
+      <Monto>110000</Monto>
+    </Servicio>
+  </Venta>
+  <Venta>
+    <Servicio>
+      <FechaFactura>28/10/2023 19:42:36</FechaFactura>
+      <Codigo>EDD003</Codigo>
+      <NombreServicio>EXTRACCION DE DIENTES</NombreServicio>
+      <Monto>35000</Monto>
+    </Servicio>
+  </Venta>
+</Ventas>

@@ -1,0 +1,32 @@
+<Servicios>
+  <Servicio>
+    <Codigo>LD001</Codigo>
+    <NombreServicio> LIMPIEZA DENTAL</NombreServicio>
+    <Monto>50000</Monto>
+  </Servicio>
+  <Servicio>
+    <Codigo>EDM002</Codigo>
+    <NombreServicio>EXTRACCION DE MUELAS</NombreServicio>
+    <Monto>40000</Monto>
+  </Servicio>
+  <Servicio>
+    <Codigo>EDD003</Codigo>
+    <NombreServicio>EXTRACCION DE DIENTES</NombreServicio>
+    <Monto>35000</Monto>
+  </Servicio>
+  <Servicio>
+    <Codigo>CDC004</Codigo>
+    <NombreServicio>CIRUGIA DE CORDALES</NombreServicio>
+    <Monto>110000</Monto>
+  </Servicio>
+  <Servicio>
+    <Codigo>SO005</Codigo>
+    <NombreServicio>ORTODONCIA</NombreServicio>
+    <Monto>650000</Monto>
+  </Servicio>
+  <Servicio>
+    <Codigo>LD</Codigo>
+    <NombreServicio>LIMPIEZA BARATA</NombreServicio>
+    <Monto>30000</Monto>
+  </Servicio>
+</Servicios>

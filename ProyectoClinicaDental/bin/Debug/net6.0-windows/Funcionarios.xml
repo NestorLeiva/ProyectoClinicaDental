@@ -1,0 +1,35 @@
+<Funcionarios>
+  <Funcionrario>
+    <Id>1111111111</Id>
+    <Nombre>nestor</Nombre>
+    <ApellidoPrimero>leiva</ApellidoPrimero>
+    <Genero>M</Genero>
+    <Telefono>11111111</Telefono>
+    <Email>aaa@gmail.com</Email>
+    <Puesto>admin</Puesto>
+    <Usuario>admin</Usuario>
+    <Contrasenia>admin</Contrasenia>
+  </Funcionrario>
+  <Funcionrario>
+    <Id>1122211122</Id>
+    <Nombre>JUAN</Nombre>
+    <ApellidoPrimero>KKKK</ApellidoPrimero>
+    <Genero>M</Genero>
+    <Telefono>11111222</Telefono>
+    <Email>aaaa@ddd.com</Email>
+    <Puesto>DOCTOR</Puesto>
+    <Usuario>JUANKK</Usuario>
+    <Contrasenia>DOCTOR</Contrasenia>
+  </Funcionrario>
+  <Funcionrario>
+    <Id>1</Id>
+    <Nombre>ADMIN</Nombre>
+    <ApellidoPrimero>ADMIN</ApellidoPrimero>
+    <Genero>M</Genero>
+    <Telefono>11</Telefono>
+    <Email>aaa@aa.com</Email>
+    <Puesto>ADMINISTRADOR</Puesto>
+    <Usuario>ADMIN</Usuario>
+    <Contrasenia>ADMIN</Contrasenia>
+  </Funcionrario>
+</Funcionarios>
